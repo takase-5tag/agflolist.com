@@ -1,0 +1,462 @@
+# Translation of Plugins - Flamingo - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Flamingo - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-07-12 14:03:24+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Flamingo - Stable (latest release)\n"
+
+#. Author URI of the plugin
+#: flamingo.php
+msgid "https://github.com/rocklobster-in/"
+msgstr "https://github.com/rocklobster-in/"
+
+#. Author of the plugin
+#: flamingo.php
+msgid "Rock Lobster Inc."
+msgstr "Rock Lobster Inc."
+
+#. translators: %s: Result of the submission.
+#: admin/includes/meta-boxes.php:161
+msgid "Submission result: <b>%s</b>"
+msgstr "送信結果: <b>%s</b>"
+
+#. translators: %s: Message submission date.
+#: admin/includes/meta-boxes.php:145
+msgid "Submitted on: <b>%s</b>"
+msgstr "送信日時: <b>%s</b>"
+
+#. translators: %s: Item title.
+#: admin/includes/class-contacts-list-table.php:172
+#: admin/includes/class-inbound-messages-list-table.php:311
+msgid "&#8220;%s&#8221; (Edit)"
+msgstr "&#8220;%s&#8221; (編集)"
+
+#. translators: %s: Search query.
+#: admin/admin.php:331 admin/admin.php:757
+msgid "Search results for: <strong>%s</strong>"
+msgstr "<strong>%s</strong> の検索結果"
+
+#. Plugin URI of the plugin
+#: flamingo.php
+msgid "https://contactform7.com/save-submitted-messages-with-flamingo/"
+msgstr "https://contactform7.com/save-submitted-messages-with-flamingo/"
+
+#. translators: Publish box time format, see https://www.php.net/date
+#: admin/includes/meta-boxes.php:138
+msgctxt "publish box time format"
+msgid "H:i"
+msgstr "H:i"
+
+#. translators: Publish box date format, see https://www.php.net/date
+#: admin/includes/meta-boxes.php:133
+msgctxt "publish box date format"
+msgid "M j, Y"
+msgstr "Y年n月j日"
+
+#. translators: time format, see https://www.php.net/date
+#: admin/includes/class-contacts-list-table.php:351
+#: admin/includes/class-inbound-messages-list-table.php:450
+msgid "g:i a"
+msgstr "g:i a"
+
+#. translators: 1: date, 2: time
+#. translators: Publish box date string. 1: Date, 2: Time.
+#: admin/includes/class-contacts-list-table.php:347
+#: admin/includes/class-inbound-messages-list-table.php:446
+#: admin/includes/meta-boxes.php:130
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: includes/csv.php:241
+msgid "https://contactform7.com/heads-up-about-spreadsheet-vulnerabilities"
+msgstr "https://contactform7.com/ja/2020/02/16/heads-up-about-spreadsheet-vulnerabilities/"
+
+#. translators: %s: URL
+#: includes/csv.php:233
+msgid "(Security Alert: Suspicious content is detected. See %s for details.)"
+msgstr "(セキュリティアラート: 疑わしい内容が見つかりました。詳細は %s を参照してください。)"
+
+#. translators: %s: WordPress user name
+#: includes/class-inbound-message.php:394
+msgid "%s has marked this message as spam."
+msgstr "%s によってスパムとしてマークされました。"
+
+#: includes/class-inbound-message.php:383
+msgid "Unknown"
+msgstr "不明なユーザー"
+
+#. translators: %s: reason why this message is regarded as spam
+#: admin/includes/meta-boxes.php:177
+msgid "Spam log: %s"
+msgstr "スパムログ: %s"
+
+#: admin/admin.php:705
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#: admin/includes/privacy.php:99
+msgid "Flamingo Inbound Messages: You are not allowed to delete inbound messages."
+msgstr "Flamingo 受信メッセージ: 受信メッセージを削除する権限がありません。"
+
+#: admin/includes/privacy.php:53
+msgid "Flamingo Address Book: You are not allowed to delete contact data."
+msgstr "Flamingo アドレス帳: 連絡先データを削除する権限がありません。"
+
+#: admin/includes/meta-boxes.php:223
+msgid "Update"
+msgstr "更新"
+
+#: admin/includes/meta-boxes.php:118
+msgid "Inbound message status"
+msgstr "受信メッセージのステータス"
+
+#: admin/includes/class-inbound-messages-list-table.php:338
+msgid "View"
+msgstr "表示"
+
+#: admin/admin.php:699
+msgid "Consent"
+msgstr "同意"
+
+#: admin/admin.php:688
+msgid "Status"
+msgstr "ステータス"
+
+#. Description of the plugin
+#: flamingo.php
+msgid "A trustworthy message storage plugin for Contact Form 7."
+msgstr "Contact Form 7 のための信頼できるメッセージ保存プラグイン。"
+
+#: admin/admin.php:711
+msgid "Meta"
+msgstr "メタ情報"
+
+#: includes/class-inbound-message.php:239
+msgid "(No Title)"
+msgstr "(タイトルなし)"
+
+#: includes/class-inbound-message.php:49
+msgid "Flamingo Inbound Message Channel"
+msgstr "Flamingo 受信メッセージ経路"
+
+#: includes/class-inbound-message.php:48
+msgid "Flamingo Inbound Message Channels"
+msgstr "Flamingo 受信メッセージ経路"
+
+#: includes/class-inbound-message.php:32
+msgid "Flamingo Inbound Message"
+msgstr "Flamingo の受信メッセージ"
+
+#: includes/class-contact.php:30
+msgid "Flamingo Contact Tag"
+msgstr "Flamingo の連絡先タグ"
+
+#: includes/class-contact.php:29
+msgid "Flamingo Contact Tags"
+msgstr "Flamingo の連絡先タグ"
+
+#: includes/class-contact.php:21
+msgid "Flamingo Contact"
+msgstr "Flamingo の連絡先"
+
+#: includes/class-contact.php:20
+msgid "Flamingo Contacts"
+msgstr "Flamingo の連絡先"
+
+#: admin/includes/meta-boxes.php:87
+msgid "Choose from the most used tags"
+msgstr "最もよく使われているタグから選択"
+
+#: admin/includes/meta-boxes.php:84
+msgid "Separate tags with commas"
+msgstr "タグが複数ある場合はコンマで区切ってください"
+
+#: admin/includes/meta-boxes.php:36
+msgid "Add contact"
+msgstr "連絡先を追加"
+
+#: admin/includes/meta-boxes.php:34
+msgid "Update contact"
+msgstr "連絡先を更新"
+
+#: admin/includes/class-inbound-messages-list-table.php:376
+#: admin/includes/meta-boxes.php:119 includes/class-inbound-message.php:39
+msgid "Spam"
+msgstr "スパム"
+
+#: admin/includes/class-inbound-messages-list-table.php:272
+msgid "Empty trash"
+msgstr "ゴミ箱を空にする"
+
+#: admin/includes/class-inbound-messages-list-table.php:248
+msgid "View all channels"
+msgstr "すべての経路を表示する"
+
+#: admin/includes/class-inbound-messages-list-table.php:211
+msgid "Mark as spam"
+msgstr "スパムとしてマーク"
+
+#: admin/includes/class-inbound-messages-list-table.php:209
+#: admin/includes/class-inbound-messages-list-table.php:357
+#: admin/includes/meta-boxes.php:120
+msgid "Not spam"
+msgstr "非スパム"
+
+#: admin/includes/class-inbound-messages-list-table.php:205
+#: admin/includes/meta-boxes.php:197
+msgid "Move to trash"
+msgstr "ゴミ箱へ移動"
+
+#: admin/includes/class-inbound-messages-list-table.php:203
+#: admin/includes/meta-boxes.php:195
+msgid "Delete permanently"
+msgstr "完全に削除する"
+
+#: admin/includes/class-inbound-messages-list-table.php:199
+msgid "Restore"
+msgstr "復元"
+
+#. translators: %s: Number of items.
+#: admin/includes/class-inbound-messages-list-table.php:163
+msgctxt "posts"
+msgid "Trash <span class=\"count\">(%s)</span>"
+msgid_plural "Trash <span class=\"count\">(%s)</span>"
+msgstr[0] "ゴミ箱 <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of items.
+#: admin/includes/class-inbound-messages-list-table.php:139
+msgctxt "posts"
+msgid "Spam <span class=\"count\">(%s)</span>"
+msgid_plural "Spam <span class=\"count\">(%s)</span>"
+msgstr[0] "スパム <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of items.
+#: admin/includes/class-inbound-messages-list-table.php:116
+msgctxt "posts"
+msgid "Inbox <span class=\"count\">(%s)</span>"
+msgid_plural "Inbox <span class=\"count\">(%s)</span>"
+msgstr[0] "受信トレイ <span class=\"count\">(%s)</span>"
+
+#: admin/includes/class-inbound-messages-list-table.php:17
+msgid "Channel"
+msgstr "経路"
+
+#. translators: date format, see https://www.php.net/date
+#: admin/includes/class-contacts-list-table.php:349
+#: admin/includes/class-inbound-messages-list-table.php:448
+msgid "Y/m/d"
+msgstr "Y年n月j日"
+
+#. translators: 1: contact channel name, 2: contact count
+#: admin/includes/class-contacts-list-table.php:309
+msgctxt "contact history"
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#. translators: %d: Number of comments.
+#: admin/includes/class-contacts-list-table.php:275
+msgid "Comment (%d)"
+msgstr "コメント (%d)"
+
+#: admin/includes/class-contacts-list-table.php:255
+msgid "User"
+msgstr "ユーザー"
+
+#: admin/includes/class-contacts-list-table.php:214
+msgid "No tags"
+msgstr "タグなし"
+
+#: admin/includes/class-contacts-list-table.php:201
+msgid "Edit"
+msgstr "編集"
+
+#: admin/includes/class-contacts-list-table.php:139
+#: admin/includes/class-inbound-messages-list-table.php:262
+msgid "Export"
+msgstr "エクスポート"
+
+#: admin/includes/class-contacts-list-table.php:134
+#: admin/includes/class-inbound-messages-list-table.php:257
+msgid "Filter"
+msgstr "フィルター"
+
+#: admin/includes/class-contacts-list-table.php:126
+msgid "View all tags"
+msgstr "すべてのタグを表示する"
+
+#: admin/includes/class-contacts-list-table.php:98
+#: admin/includes/meta-boxes.php:25
+msgid "Delete"
+msgstr "削除"
+
+#: admin/includes/class-contacts-list-table.php:16
+msgid "Last contact"
+msgstr "最終接触"
+
+#: admin/includes/class-contacts-list-table.php:15
+msgid "History"
+msgstr "履歴"
+
+#: admin/edit-inbound-form.php:41
+#: admin/includes/class-inbound-messages-list-table.php:16
+msgid "From"
+msgstr "送信者"
+
+#: admin/edit-inbound-form.php:36
+#: admin/includes/class-inbound-messages-list-table.php:15
+msgid "Subject"
+msgstr "件名"
+
+#: admin/edit-inbound-form.php:17
+msgid "Inbound Message"
+msgstr "受信メッセージ"
+
+#: admin/edit-contact-form.php:37
+msgid "Enter email here"
+msgstr "メールアドレスを入力してください"
+
+#: admin/edit-contact-form.php:17
+msgid "Edit Contact"
+msgstr "連絡先を編集"
+
+#: admin/admin.php:773
+msgid "Search messages"
+msgstr "メッセージを検索"
+
+#: admin/admin.php:693
+msgid "Fields"
+msgstr "項目"
+
+#: admin/includes/class-inbound-messages-list-table.php:18 includes/csv.php:156
+msgid "Date"
+msgstr "日付"
+
+#: admin/admin.php:631
+msgid "You are not allowed to unspam this item."
+msgstr "この項目のスパム解除は許可されていません。"
+
+#: admin/admin.php:587
+msgid "You are not allowed to spam this item."
+msgstr "この項目のスパム登録は許可されていません。"
+
+#: admin/admin.php:488
+msgid "Error in restoring from Trash."
+msgstr "ゴミ箱からの復元中にエラーが発生しました。"
+
+#: admin/admin.php:482
+msgid "You are not allowed to restore this item from the Trash."
+msgstr "この項目をゴミ箱から元の状態に戻す権限がありません。 "
+
+#: admin/admin.php:440
+msgid "Error in moving to Trash."
+msgstr "ゴミ箱への移動中にエラーが発生しました。"
+
+#: admin/admin.php:434
+msgid "You are not allowed to move this item to the Trash."
+msgstr "この項目をゴミ箱へ移動する権限がありません。 "
+
+#: admin/admin.php:344
+msgid "Search contacts"
+msgstr "連絡先を検索"
+
+#: admin/admin.php:285 admin/includes/class-contacts-list-table.php:13
+msgid "Name"
+msgstr "名前"
+
+#: admin/admin.php:281 admin/includes/class-contacts-list-table.php:14
+msgid "Tags"
+msgstr "タグ"
+
+#: admin/admin.php:277
+msgid "Save"
+msgstr "保存"
+
+#: admin/includes/meta-boxes.php:249 includes/csv.php:40
+msgid "Last name"
+msgstr "姓"
+
+#: admin/includes/meta-boxes.php:244 includes/csv.php:39
+msgid "First name"
+msgstr "名"
+
+#: admin/includes/meta-boxes.php:239 includes/csv.php:38
+msgid "Full name"
+msgstr "フルネーム"
+
+#: admin/includes/class-contacts-list-table.php:12 includes/csv.php:37
+msgid "Email"
+msgstr "メールアドレス"
+
+#: admin/admin.php:227 admin/admin.php:545
+msgid "Error in deleting."
+msgstr "削除中にエラーが発生しました。"
+
+#: admin/admin.php:221 admin/admin.php:539
+msgid "You are not allowed to delete this item."
+msgstr "この項目を削除する権限がありません。"
+
+#: admin/admin.php:170 admin/admin.php:273 admin/admin.php:386
+#: admin/admin.php:682
+msgid "You are not allowed to edit this item."
+msgstr "この項目の編集は許可されていません。"
+
+#: admin/admin.php:136
+msgid "Messages updated."
+msgstr "メッセージを更新しました。"
+
+#: admin/admin.php:146
+msgid "Messages got marked as not spam."
+msgstr "メッセージをスパムではないと報告しました。"
+
+#: admin/admin.php:144
+msgid "Messages got marked as spam."
+msgstr "メッセージをスパムとして報告しました。"
+
+#: admin/admin.php:142
+msgid "Messages deleted."
+msgstr "メッセージを削除しました。"
+
+#: admin/admin.php:140
+msgid "Messages restored."
+msgstr "メッセージをゴミ箱から復元しました。"
+
+#: admin/admin.php:138
+msgid "Messages trashed."
+msgstr "メッセージをゴミ箱に移動しました。"
+
+#: admin/admin.php:134
+msgid "Contact deleted."
+msgstr "連絡先を削除しました。"
+
+#: admin/admin.php:132
+msgid "Contact updated."
+msgstr "連絡先を更新しました。"
+
+#: admin/admin.php:37 admin/admin.php:748
+msgid "Inbound Messages"
+msgstr "受信メッセージ"
+
+#: admin/admin.php:36 admin/includes/privacy.php:24
+#: includes/class-inbound-message.php:31
+msgid "Flamingo Inbound Messages"
+msgstr "Flamingo 受信メッセージ"
+
+#: admin/admin.php:22
+msgid "Address Book"
+msgstr "アドレス帳"
+
+#. Plugin Name of the plugin
+#: flamingo.php admin/admin.php:11
+msgid "Flamingo"
+msgstr "Flamingo"
+
+#: admin/admin.php:10 admin/admin.php:21 admin/admin.php:322
+#: admin/includes/privacy.php:20
+msgid "Flamingo Address Book"
+msgstr "Flamingo アドレス帳"

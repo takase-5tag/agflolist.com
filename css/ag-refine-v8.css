@@ -1,0 +1,187 @@
+@charset "UTF-8";
+/*
+ * AG FLOLIST V8 — 2026-11-07
+ * Scope: shared CTA (front/salon/service/contact), salon flow,
+ * and matching logo on partner-salon. Loaded after V5 and V7 CSS.
+ */
+
+/* CONTACT — same component and exact style for all relevant pages */
+.ag-platform .ag-unified-cta,
+.ag-lower .ag-unified-cta {
+  display:block; position:relative; isolation:isolate;
+  width:100%; margin:0; padding:76px 0 !important;
+  background:#ede1d9 !important; color:#493a32;
+}
+.ag-unified-cta *, .page-salon .salon-flow * {box-sizing:border-box;}
+.ag-unified-cta .ag-unified-cta__inner {
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,610px);
+  gap:38px; align-items:center;
+  width:min(1160px, calc(100% - 64px));
+  margin:0 auto !important; padding:0 !important;
+}
+.ag-unified-cta .ag-unified-cta__copy { min-width:0; }
+.ag-unified-cta .ag-unified-cta__copy h2 {
+  margin:0 0 12px !important; padding:0 !important;
+  color:#493a32 !important;
+  font-family:Georgia, "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif !important;
+  font-size:clamp(27px,2.8vw,35px) !important;
+  line-height:1.5 !important; letter-spacing:.05em;
+  font-weight:400 !important; text-align:left !important;
+}
+.ag-unified-cta .ag-unified-cta__copy p {
+  margin:0 !important; color:#78675d !important;
+  font-size:15px !important; line-height:1.9 !important;
+  letter-spacing:.035em; text-align:left !important;
+}
+.ag-unified-cta .ag-unified-cta__actions {
+  display:grid; grid-template-columns:minmax(0,240px) minmax(0,356px); gap:14px;
+  width:100%; min-width:0; align-items:stretch;
+}
+.ag-unified-cta .ag-unified-cta__button,
+.ag-unified-cta a.ag-unified-cta__button {
+  display:inline-flex !important; align-items:center !important; justify-content:center !important;
+  gap:9px; width:100% !important; min-width:0; min-height:64px;
+  padding:14px 17px !important; margin:0 !important;
+  border:1px solid #755a4b !important; border-radius:3px !important;
+  background:rgba(255,252,250,.88) !important; color:#755a4b !important;
+  font-family:"Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif !important;
+  font-size:16px !important; font-weight:500 !important;
+  letter-spacing:.015em !important; line-height:1.55 !important;
+  text-decoration:none !important; text-align:center !important;
+  white-space:normal !important; overflow-wrap:anywhere;
+  transition:background-color .2s ease,color .2s ease,transform .2s ease;
+}
+.ag-unified-cta .ag-unified-cta__button--primary,
+.ag-unified-cta a.ag-unified-cta__button--primary {
+  color:#fff !important; background:#755a4b !important;
+}
+.ag-unified-cta .ag-unified-cta__button--primary:hover,
+.ag-unified-cta a.ag-unified-cta__button--primary:hover {
+  color:#fff !important; background:#60493f !important;
+}
+.ag-unified-cta .ag-unified-cta__button--secondary:hover,
+.ag-unified-cta a.ag-unified-cta__button--secondary:hover {
+  color:#60493f !important; background:#f8eee7 !important;
+}
+.ag-unified-cta .ag-unified-cta__button-icon {font-size:18px;line-height:1; flex:0 0 auto;}
+.ag-unified-cta .ag-unified-cta__button-arrow {font-size:21px;line-height:1;flex:0 0 auto;}
+.ag-unified-cta .ag-unified-cta__button:focus-visible {outline:3px solid #b79480;outline-offset:3px;}
+@media (prefers-reduced-motion:reduce){.ag-unified-cta .ag-unified-cta__button {transition:none !important;}}
+
+/* SALON FLOW — numbered cards, clear forward-direction arrows */
+.page-salon .salon-flow {
+  position:relative; display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  gap:18px !important; margin:44px 0 0 !important;
+  align-items:stretch; overflow:visible;
+}
+.page-salon .salon-flow::before {display:none !important;content:none !important;}
+.page-salon .salon-flow__item {
+  position:relative; display:flex !important; flex-direction:column; align-items:flex-start;
+  min-width:0; min-height:248px; margin:0 !important;
+  padding:28px 18px 25px !important;
+  border:1px solid #e6d8ce !important; border-radius:10px !important;
+  background:#fffdfb !important; text-align:left !important;
+  box-shadow:0 8px 26px rgba(91,67,49,.055);
+}
+.page-salon .salon-flow__item::before {
+  content:""; position:absolute; top:0; left:20px; right:20px;
+  height:3px; background:#a78673; border-radius:0 0 4px 4px;
+}
+.page-salon .salon-flow__item:not(:last-child)::after {
+  content:"›"; position:absolute; z-index:3;
+  right:-24px; top:50%; transform:translateY(-50%);
+  display:grid; place-items:center;
+  width:30px; height:30px; border-radius:50%;
+  background:#e9d9cf; color:#745749;
+  border:3px solid #fcf8f5;
+  font:500 25px/1 Georgia, serif;
+  box-shadow:0 2px 8px rgba(90,65,50,.09);
+}
+.page-salon .salon-flow__num {
+  position:static !important; inset:auto !important; transform:none !important;
+  display:inline-flex !important; align-items:center; gap:5px;
+  width:auto !important; height:auto !important; min-width:0 !important;
+  margin:0 0 24px !important; padding:6px 12px !important;
+  border-radius:3px !important; background:#f3e7df !important;
+  color:#815f4c !important; font:600 13px/1.4 Georgia,serif !important;
+  letter-spacing:.13em !important;
+}
+.page-salon .salon-flow__num::before {content:"STEP";font-size:10px;letter-spacing:.12em;}
+.page-salon .salon-flow__item h3 {
+  width:100%; min-height:0; margin:0 0 12px !important;
+  color:#4d3c33 !important;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif !important;
+  font-size:19px !important; font-weight:500 !important;
+  line-height:1.5 !important; letter-spacing:.025em;
+}
+.page-salon .salon-flow__item p {
+  margin:0 !important; color:#74665e !important;
+  font-size:14px !important; line-height:1.9 !important;
+  text-align:left !important;
+}
+/* Keep desktop CTA headings readable and buttons generously sized. */
+@media(max-width:1199px){
+  .ag-unified-cta .ag-unified-cta__inner {grid-template-columns:1fr; gap:24px;}
+  .ag-unified-cta .ag-unified-cta__actions {max-width:610px;}
+}
+
+/* Tablet and mobile: vertical connected timeline with downward arrows */
+@media(max-width:1099px){
+  .page-salon .salon-flow {
+    grid-template-columns:1fr !important; gap:26px !important;
+    max-width:760px; margin:32px auto 0 !important;
+  }
+  .page-salon .salon-flow__item {
+    min-height:0; padding:22px 24px 24px 28px !important;
+  }
+  .page-salon .salon-flow__num {margin-bottom:12px !important;}
+  .page-salon .salon-flow__item:not(:last-child)::after {
+    content:"⌄"; top:auto; left:50%; right:auto; bottom:-21px;
+    transform:translateX(-50%); font-size:27px;
+  }
+}
+@media(max-width:699px){
+  .ag-platform .ag-unified-cta,
+  .ag-lower .ag-unified-cta {padding:55px 0 !important;}
+  .ag-unified-cta .ag-unified-cta__inner {
+    grid-template-columns:1fr; gap:24px;
+    width:calc(100% - 36px);
+  }
+  .ag-unified-cta .ag-unified-cta__copy h2 {font-size:27px !important;}
+  .ag-unified-cta .ag-unified-cta__copy p {font-size:14px !important;}
+  .ag-unified-cta .ag-unified-cta__actions {grid-template-columns:1fr;gap:10px;}
+  .ag-unified-cta a.ag-unified-cta__button {min-height:56px;font-size:16px !important;}
+  .page-salon .salon-flow__item {padding:20px 20px 22px !important;}
+  .page-salon .salon-flow__item h3 {font-size:18px !important;}
+  .page-salon .salon-flow__item p {font-size:14px !important;}
+}
+
+/* PARTNER SALON: use the exact same SVG logotype URL as the site-wide header/footer */
+body.agco-page .agco-header__logo,
+body.agco-page .agco-footer__logo {
+  display:inline-flex !important; align-items:center !important; justify-content:flex-start;
+  flex:0 0 auto; width:auto; min-width:0;
+  text-decoration:none !important;
+}
+body.agco-page .agco-header__logo img,
+body.agco-page .agco-footer__logo img {
+  display:block; width:168px !important; max-width:100% !important;
+  height:auto !important; max-height:46px !important; object-fit:contain;
+}
+body.agco-page .agco-footer__logo img {width:155px !important;max-height:42px !important;}
+@media(max-width:760px){
+  body.agco-page .agco-header__logo img {width:142px !important;}
+  body.agco-page .agco-footer__logo img {width:135px !important;}
+}
+@media(max-width:520px){
+  body.agco-page .agco-header__logo img {width:116px !important;}
+  body.agco-page .agco-footer__logo img {width:130px !important;}
+}
+
+/* Small phones: prevent single-character orphan wrapping in the CTA */
+@media(max-width:359px){
+  .ag-unified-cta .ag-unified-cta__copy h2 {font-size:22px !important; letter-spacing:0 !important;}
+  .ag-unified-cta a.ag-unified-cta__button--secondary {font-size:15px !important;}
+  .ag-unified-cta .ag-unified-cta__button-arrow {display:none;}
+}

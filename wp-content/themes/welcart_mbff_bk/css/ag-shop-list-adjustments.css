@@ -1,0 +1,7 @@
+/* anchor compatibility with older brand links */
+.ag-list-anchor-alias{display:block;position:relative;top:-110px;visibility:hidden;height:0;pointer-events:none;}
+
+.ag-list-trial-link{max-width:560px;margin:0 auto 26px;text-align:center;}
+.ag-list-trial-link a{display:block;padding:16px 18px;border:1px solid #e8d8cd;background:#fffbf8;border-radius:7px;color:#8e705f;font-weight:600;text-decoration:none;}
+.ag-list-trial-link a span{margin-left:10px;}
+.ag-list-trial-link a:hover{background:#fffbf8;}

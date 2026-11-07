@@ -1,0 +1,597 @@
+@charset "utf-8";
+/*+++++++++++++++
+共通
++++++++++++++++*/
+
+
+
+#guide h2,
+#sctl h2,
+  #contact h2{
+    font-size: 1.2em;
+    font-weight: 500;
+    /* padding: 25px 0 20px 0; */
+}
+article#other  {
+	/* padding: 200px 0 100px; */
+}
+
+article#other dl{
+	margin: 30px 0;
+}
+
+article#other dl:first-child {
+	margin:0 0 30px;
+}
+
+article#other dt{
+	padding: 30px 0 10px;
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+article#other dd {
+	font-size: 0.9em;
+	line-height: 2;
+	letter-spacing: 0;
+	color: #333;
+}
+
+article#other table {
+	width: 100%;
+	border-bottom:1px solid #e0dede;
+	font-size: 0.95em;
+	margin: 30px 0 0 0;
+}
+
+article#other table tr{
+	border-top: 1px solid #e0dede;
+	display: block;
+}
+
+article#other table th{
+	padding: 30px 15px;
+	width: 29%;
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: left;
+	font-weight: 500;
+	vertical-align: top;
+}
+
+article#other ul.returns_list{
+    margin: 0 0 0 2em;
+}
+
+article#other ul.returns_list li{
+    /* list-style: disc; */
+}
+
+article#other table td{
+	padding: 30px 15px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 70%;
+	box-sizing: border-box;
+	/* text-align: right; */
+}
+
+article#other table td a {
+	text-decoration: underline;
+	letter-spacing: 0;
+}
+
+article#other table td a:hover {
+	text-decoration: none;
+}
+
+article#other input {
+	padding: 12px;
+	border: 1px solid #DEDEDE;
+	width: 100%;
+	/* max-width: 350px; */
+	/* margin: 0 auto; */
+}
+
+article#other input:hover {
+	opacity:0.8;
+}
+article#other input.submit{
+    max-width: 350px;
+    margin: 60px auto 0;
+    display: block;
+    padding: 25px;
+    font-size: 1.2em;
+    background-color: #000;
+    color: #fff;
+}
+article#other input.submit:hover{
+	color:#000;
+	border:1px #000 solid;
+}
+article#other input#approval {
+	width: auto;
+}
+
+.space-y-2{
+    margin-bottom: 20px;
+}
+.py-2{
+	margin-left: 1.5em !important;!i;!;
+}
+
+/*ラジオボタン*/
+article#other .wpcf7-radio .wpcf7-list-item{
+	display: inline-block;
+}
+article#other .wpcf7-radio .wpcf7-list-item input {
+	width: auto;
+}
+
+article#other textarea {
+	padding: 12px;
+	width: 100%;
+	border: 1px solid #DEDEDE;
+}
+
+article#other input.wpcf7-confirm {
+	border-radius: 3px;
+	border: 1px solid #333;
+	background: #333;
+	color: #fff;
+	width: 40%;
+	margin: auto;
+	text-align: center;
+	display: block;
+	padding: 15px 50px;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+article#other input.wpcf7-confirm:hover {
+	opacity:0.8;
+}
+
+article#other .contact_button {
+	padding: 60px 0 0;
+}
+
+
+ol.credit_list{
+    padding: 10px 0 10px 5em;
+    margin: 0;
+}
+
+ol.credit_list li{
+    list-style-position: outside;
+    counter-increment: cnt;
+}
+
+ol.credit_list li::before{
+	content: "（" counter(cnt) "）";
+	display:inline-block;
+	margin-left: -2.5em; /* いい塩梅の幅を設定したまえ */
+	width: 2.5em; /* いい塩梅の幅を設定したまえ */
+}
+
+ul.default_list{
+    padding: 0 0 0 3em;
+}
+
+ul.default_list li{list-style-type: decimal;}
+
+ul.default_sub_list{
+    padding: 10px 0 10px 2em;
+}
+
+ul.default_sub_list li{}
+
+
+/*+++++++++++++++
+お問い合わせ
++++++++++++++++*/
+section#contact article#other table tr {
+	border: none;
+}
+
+section#contact article#other table tr:last-child {
+	margin: 0 0 30px; 
+}
+
+
+section#contact article#other p {
+	/* background: #f5f5f5; */
+	/* padding: 30px 20px; */
+	margin: 60px 0 10% 0;
+	height: auto;
+	text-align: center;
+}
+
+section#contact article#other p input {
+	box-shadow: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+	padding: 15px 50px;
+	border: none;
+	border-radius: 3px;
+	border: 1px solid #333;
+	box-sizing: border-box;
+	background: #333;
+	cursor: pointer;
+	color: #fff;
+	width: auto;
+	/* margin: 0 15px; */
+}
+
+section#contact article#other p input.confirm{
+	/* margin: 0 15px; */
+	/* padding: 0 15px; */
+}
+
+section#contact article#other p input.back{
+	margin: 0 15px;
+	/* padding: 0 15px; */
+}
+
+
+
+/*入力内容のご確認*/
+section#contact article#other button.confirm {
+border-radius: 3px;
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+	padding: 15px 50px;
+}
+
+section#confirm article#other input {
+    border-radius: 3px;
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+    padding: 15px 50px;
+    width: auto;
+}
+
+section#confirm article#other p {
+	text-align: center;
+	padding: 30px 0 0 0;
+}
+
+section#confirm article#other input:nth-of-type(1) {
+	width: auto;
+	box-shadow: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+	margin: 0 10px 0 0;
+	padding: 15px 50px;
+	border: none;
+	color: #333;
+	border-radius: 3px;
+	border: 1px solid #333;
+	box-sizing: border-box;
+	background: none;
+	cursor: pointer;
+}
+
+
+section#contact div.wpcf7 .ajax-loader {
+	display: none;
+}
+
+section#contact span.wpcf7-not-valid-tip {
+font-size: 0.8em;
+    position: relative;
+    width: 100%;
+    display: block;
+    top: 0;
+
+    letter-spacing: 0;
+
+    padding: 10px 0 0 0;	
+}
+
+section#contact div.wpcf7-validation-errors {
+    color: #8e705f;
+    font-size: 0.8em;
+    font-weight: 700;
+    border: 1px solid #8e705f;
+    padding: 20px;	
+}
+
+/*サンクス*/
+section#thanks article#other {
+	
+}
+
+section#thanks article#other .button {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	margin: 60px 0 10% 0;
+	text-align: center;
+	border-top: 1px solid #e0dede;
+	padding: 50px 0 0 0;
+}
+
+section#thanks article#other .button a{
+    box-shadow: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    background: #333;
+    cursor: pointer;
+    background: none;
+    display: block;
+    width: 250px;
+    text-align: center;
+    font-size: 0.9em;
+    margin: auto;
+}
+
+section#thanks article#other .button a:hover{
+	opacity: 0.8;
+}
+
+/*+++++++++++++++
+ご利用ガイド
++++++++++++++++*/
+
+section#guide article#other th {
+	width: 18%;
+	min-width: 205px;
+}
+
+section#guide article#other td {
+	width: 25%;
+}
+
+/*+++++++++++++++
+404
++++++++++++++++*/
+section#n404 {
+	padding: 60px 0;
+	position: relative;
+	height: 100%;
+}
+
+
+
+section#n404 button {
+	display: block;
+	position: relative;
+	margin: auto;
+	/* overflow: hidden; */
+	border-top: 1px solid #e0dede;
+	padding: 50px 0 20px;
+	width: 100%;
+}
+
+section#n404 button a{
+    box-shadow: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 15px 100px;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    background: #333;
+    cursor: pointer;
+    background: none;	
+}
+
+section#n404 button a:hover{
+	opacity: 0.8;
+}
+
+
+@media screen and (max-width: 767px) {
+#guide,
+#sctl,
+  #contact{
+  	margin: 8px 0 0;
+  }
+
+article#other dt{
+	padding: 30px 0 10px;
+	font-size: 0.95em;
+	font-weight: 500;
+}
+header{}
+article#other dt:first-child {
+	padding:0 0 10px;
+}
+
+article#other dd {
+	font-size: 0.85em;
+	line-height: 2;
+	letter-spacing: 0;
+	color: #333;
+}
+	
+
+article#other table {
+	font-size: inherit;
+	margin: 0;
+}
+
+article#other table tr{padding: 15px 0;}
+
+article#other table th{
+	padding: 0;
+	width: auto;
+	display: block;
+	font-size: 0.95em;
+	letter-spacing: 0;
+}
+
+article#other table td{
+	display: block;
+	width: 100% !important;
+	font-size: 0.85em;
+	padding: 0;
+	color: #666;
+	letter-spacing: 0px;
+}
+
+article#other table td a {
+	text-decoration: underline;
+	letter-spacing: 0;
+}
+
+article#other table td a:hover {
+	text-decoration: none;
+}
+
+article#other input {
+	box-sizing: border-box;
+}
+article#other input.submit{
+    padding: 15px;
+    max-width: 250px;
+}
+article#other textarea {
+	box-sizing: border-box;
+}
+
+article#other input.wpcf7-confirm {
+	border-radius: 3px;
+	border: 1px solid #333;
+	background: #333;
+	color: #fff;
+	width:auto;
+	margin: auto;
+	text-align: center;
+	display: block;
+	padding: 15px 50px;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+article#other input.wpcf7-confirm:hover {
+	opacity:0.8;
+}
+
+
+/*+++++++++++++++
+お問い合わせ
++++++++++++++++*/
+
+section#contact article#other p {
+	margin: 30px 0 10%;
+}
+	
+	section#contact article#other form {
+		padding: 0;
+	}
+	
+section#contact article#other p input {
+	width:100%;
+}
+
+section#contact article#other p input.back{
+	margin: 0 0px 15px;
+	/* padding: 0 15px; */
+}	
+	
+section#contact article#other table tr {
+	border: none;
+}
+
+section#contact article#other table tr:last-child {
+	margin: 0 0 30px; 
+}
+
+
+section#contact div.wpcf7 .ajax-loader {
+	display: none;
+}
+
+section#contact span.wpcf7-not-valid-tip {
+font-size: 0.8em;
+    position: relative;
+    width: 100%;
+    display: block;
+    top: 0;
+    letter-spacing: 0;
+    padding: 10px 0 0 0;	
+}
+
+
+section#contact div.wpcf7-validation-errors {
+    color: #8e705f;
+    font-size: 0.8em;
+    font-weight: 700;
+
+    border: 1px solid #8e705f;
+    padding: 20px;	
+}
+
+/*入力内容のご確認*/
+section#contact article#other button.confirm {
+border-radius: 3px;
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+	padding: 15px 50px;
+}
+	
+section#confirm article#other table {
+	margin: 30px 0 0 0;
+}
+
+section#confirm article#other input {
+    width: 100%;
+}
+
+section#confirm article#other p {
+	text-align: center;
+	padding: 30px 0 0 0;
+}
+
+section#confirm article#other input:nth-of-type(1) {
+	width: 100%;
+	margin: 0 0 20px;
+}
+	
+
+/*+++++++++++++++
+ご利用ガイド
++++++++++++++++*/
+
+section#guide article#other th {
+	display: inline-block;
+	width: 100%;
+	min-width: 200px;
+}
+
+section#guide article#other td.sp-th {
+	width: 42%;
+	min-width: inherit;
+}
+
+section#guide article#other td {
+	width: 19%;
+	display: inline-block;
+	padding: 0 0 0 5px;
+}	
+
+section#guide article#other td.pc{
+	display: none;
+}
+	
+/*+++++++++++++++
+404
++++++++++++++++*/
+section#n404 article {
+	padding: 0 10px;
+}
+
+	
+	
+}

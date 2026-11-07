@@ -1,0 +1,681 @@
+@charset "utf-8";
+/* ==========================================================
+   AG FLOLIST CONTACT | Mobile First
+   TOPページ index.css の文字サイズとレイアウト幅を基準に調整
+   このファイルは既存 /css/contact.css と差し替え
+   ========================================================== */
+
+.page-contact {
+  --ag-contact-pink: #c6ad9d;
+  --ag-contact-soft: #fffbf8;
+  --ag-contact-line: #f2e7df;
+  --ag-contact-text: #252525;
+  width: 100%;
+  color: var(--ag-contact-text);
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+.page-contact *, .page-contact *::before, .page-contact *::after { box-sizing: border-box; }
+.page-contact a { text-decoration: none; }
+.page-contact img { max-width: 100%; height: auto; }
+.page-contact .ag-lower__container {
+  width: min(calc(100% - 36px), 1120px);
+  max-width: 1120px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.page-contact .ag-lower__narrow {
+  width: min(calc(100% - 36px), 900px);
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.page-contact .ag-lower__section { padding: 52px 0; }
+.page-contact .ag-lower__title {
+  margin: 0 0 30px;
+  padding: 0;
+  border: 0;
+  color: #292326;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(24px, 5.8vw, 28px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .06em;
+  text-align: center;
+}
+/* HERO: 不在だった白ロゴ画像はPHPで外している */
+.page-contact .ag-subhero {
+  display: flex;
+  align-items: center;
+  min-height: 390px;
+  margin: 0;
+  padding: 100px 0 55px;
+  background-color: #8e705f;
+  background-image: linear-gradient(90deg, rgba(80,61,52,.57), rgba(80,61,52,.22)), url("../img/contact/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 65% center;
+  color: #fff;
+}
+.page-contact .ag-subhero__inner {
+  width: min(calc(100% - 36px), 1120px);
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0;
+}
+.page-contact .ag-subhero__copy { width: 100%; max-width: 720px; padding: 0; }
+.page-contact .ag-contact__eyebrow {
+  margin: 0 0 12px;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  letter-spacing: .24em;
+  line-height: 1.5;
+}
+.page-contact .ag-subhero h1 {
+  margin: 0 0 20px;
+  color: #fff;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(27px, 6vw, 36px);
+  font-weight: 400;
+  letter-spacing: .045em;
+  line-height: 1.55;
+}
+.page-contact .ag-subhero__copy p:not(.ag-contact__eyebrow) {
+  max-width: 670px;
+  margin: 0 0 17px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.95;
+  letter-spacing: .025em;
+}
+.page-contact .ag-subhero__copy p:last-child { margin-bottom: 0; }
+.page-contact .ag-contact__pc-break { display: none; }
+/* TYPE CARDS */
+.page-contact .contact-types {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.page-contact .contact-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  padding: 26px 22px;
+  border: 1px solid #f2e7df;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(80,61,52,.035);
+}
+.page-contact .contact-type__icon {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 14px;
+}
+.page-contact .contact-type__icon img { display: block; width: 74px; height: 74px; object-fit: contain; }
+.page-contact .contact-type h3 {
+  width: 100%;
+  min-height: 0;
+  margin: 0 0 12px;
+  color: #282328;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.55;
+  text-align: center;
+}
+.page-contact .contact-type p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+/* FORM */
+.page-contact .ag-contact-form-section { background: #fff; }
+.page-contact .contact-form-wrap { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: start; }
+.page-contact .contact-form-intro { min-width: 0; }
+.page-contact .contact-form-intro__en {
+  margin: 0 0 6px;
+  color: var(--ag-contact-pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  letter-spacing: .17em;
+}
+.page-contact .contact-form-intro h2 {
+  margin: 0 0 18px;
+  color: var(--ag-contact-pink);
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .045em;
+}
+.page-contact .contact-form-intro p:not(.contact-form-intro__en) { margin: 0 0 12px; color: #4d474a; font-size: 16px; line-height: 1.85; }
+.page-contact .contact-form-panel, .page-contact .contact-form-panel .wpcf7 { width: 100%; min-width: 0; }
+.page-contact .contact-form { width: 100%; }
+.page-contact .contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  align-items: start;
+  padding: 0 0 20px;
+  margin: 0 0 20px;
+  border-bottom: 1px solid #f2e7df;
+}
+.page-contact .contact-form__row--textarea { align-items: start; }
+.page-contact .contact-form__label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  min-width: 0;
+  padding-top: 10px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+}
+.page-contact .contact-required {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 1px 7px;
+  border: 1px solid var(--ag-contact-pink);
+  border-radius: 2px;
+  color: #8e705f;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+.page-contact .contact-form__control, .page-contact .wpcf7-form-control-wrap { display: block; width: 100%; min-width: 0; }
+.page-contact .contact-form input[type="text"],
+.page-contact .contact-form input[type="email"],
+.page-contact .contact-form input[type="tel"],
+.page-contact .contact-form select,
+.page-contact .contact-form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 12px 15px;
+  border: 1px solid #d6cbd0;
+  border-radius: 4px;
+  outline-offset: 2px;
+  background: #fff;
+  color: #292429;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow: none;
+}
+.page-contact .contact-form select { appearance: auto; -webkit-appearance: menulist; padding-right: 28px; background-image: none; }
+.page-contact .contact-form textarea { min-height: 210px; resize: vertical; }
+.page-contact .contact-form input:focus-visible,
+.page-contact .contact-form select:focus-visible,
+.page-contact .contact-form textarea:focus-visible { outline: 2px solid var(--ag-contact-pink); outline-offset: 1px; border-color: var(--ag-contact-pink); }
+.page-contact .contact-form__note { margin: 12px 0 8px; color: #777; font-size: 14px; line-height: 1.7; }
+.page-contact .contact-form__consent { margin: 22px 0; font-size: 15px; line-height: 1.8; }
+.page-contact .contact-form__consent a { color: #8e705f; text-decoration: underline; text-underline-offset: 3px; }
+.page-contact .contact-form__consent .wpcf7-list-item { margin: 0; }
+.page-contact .contact-form__consent label { display: inline-flex; align-items: flex-start; gap: 9px; cursor: pointer; }
+.page-contact .contact-form__consent input[type="checkbox"] {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin: 4px 0 0;
+  accent-color: var(--ag-contact-pink);
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+}
+.page-contact .contact-form__submit { margin: 26px 0 0; }
+.page-contact .contact-form__submit .wpcf7-submit,
+.page-contact .contact-form__submit-button {
+  display: block;
+  width: 100%;
+  min-height: 56px;
+  padding: 13px 25px;
+  border: 1px solid var(--ag-contact-pink);
+  border-radius: 5px;
+  background: var(--ag-contact-pink);
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .2s ease;
+}
+.page-contact .contact-form__submit .wpcf7-submit:hover { background: var(--ag-contact-pink) !important; opacity: .85; }
+.page-contact .wpcf7-spinner { vertical-align: middle; margin: 8px; }
+.page-contact .wpcf7-not-valid-tip { margin-top: 6px; font-size: 14px; }
+.page-contact .wpcf7 form .wpcf7-response-output { margin: 20px 0 0; padding: 14px; font-size: 14px; line-height: 1.7; }
+.page-contact .contact-form__setup-notice { padding: 24px; border: 1px solid var(--ag-contact-line); background: #fffbf8; color: #503d34; }
+/* FAQ: ネイティブdetails/summaryを使用。JSなしで開閉可能 */
+.page-contact .ag-contact-faq { padding-top: 45px; padding-bottom: 74px; }
+.page-contact .ag-faq { width: 100%; border-top: 1px solid #e8d8cd; }
+.page-contact .ag-faq__item { display: block; margin: 0; border-bottom: 1px solid #e8d8cd; }
+.page-contact .ag-faq__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  gap: 20px;
+  padding: 18px 14px;
+  background: transparent;
+  color: #333;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+  text-align: left;
+  list-style: none;
+  cursor: pointer;
+}
+.page-contact .ag-faq__q::-webkit-details-marker { display: none; }
+.page-contact .ag-faq__q::after { content: "+"; position: static; flex: 0 0 auto; color: var(--ag-contact-pink); font-size: 25px; font-weight: 300; line-height: 1; transform: none; }
+.page-contact .ag-faq__item[open] .ag-faq__q::after { content: "−"; }
+.page-contact .ag-faq__a { display: block; height: auto; padding: 0 14px 20px; overflow: visible; color: #555; font-size: 16px; line-height: 1.9; }
+.page-contact .ag-faq__a p { margin: 0; }
+/* CTA */
+.page-contact .ag-contact-cta { padding: 50px 0; margin: 0; background: #fffbf8; }
+.page-contact .ag-lower__cta-inner { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
+.page-contact .ag-contact-cta__copy h2 {
+  margin: 0 0 12px;
+  color: var(--ag-contact-pink);
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.page-contact .ag-contact-cta__copy p { margin: 0; font-size: 16px; line-height: 1.9; }
+.page-contact .ag-lower__cta-buttons { display: grid; grid-template-columns: 1fr; gap: 12px; width: 100%; }
+.page-contact .ag-lower__cta-buttons .ag-lower__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 16px;
+  border: 1px solid var(--ag-contact-pink);
+  border-radius: 5px;
+  background: #fff;
+  color: #8e705f;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+.page-contact .ag-lower__cta-buttons .ag-lower__btn--fill { background: var(--ag-contact-pink); color: #fff; }
+.page-contact .ag-lower__cta-buttons .ag-lower__btn:hover { opacity: .8; }
+@media (min-width: 600px) {
+  .page-contact .ag-lower__container { width: min(calc(100% - 48px), 1120px); }
+  .page-contact .ag-lower__narrow { width: min(calc(100% - 48px), 900px); }
+  .page-contact .ag-subhero__inner { width: min(calc(100% - 48px), 1120px); }
+  .page-contact .contact-types { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+  .page-contact .contact-type { min-height: 245px; }
+  .page-contact .ag-lower__section { padding: 65px 0; }
+  .page-contact .contact-form__row { grid-template-columns: 172px minmax(0,1fr); align-items: start; gap: 20px; }
+  .page-contact .contact-form__label { padding-top: 13px; }
+  .page-contact .contact-form__submit { margin-left: 192px; }
+  .page-contact .ag-lower__cta-buttons { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .page-contact .ag-subhero { min-height: 485px; padding: 110px 0 70px; background-position: center; }
+  .page-contact .ag-contact__pc-break { display: initial; }
+  .page-contact .ag-subhero h1 { font-size: 40px; }
+  .page-contact .ag-lower__title { margin-bottom: 40px; font-size: 32px; }
+  .page-contact .contact-types { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; }
+  .page-contact .contact-type { min-height: 270px; padding: 26px 22px; }
+  .page-contact .ag-contact-form-section { padding-top: 95px; padding-bottom: 85px; }
+  .page-contact .contact-form-wrap { grid-template-columns: 310px minmax(0,1fr); gap: 52px; }
+  .page-contact .contact-form-intro h2 { font-size: 27px; }
+  .page-contact .contact-form__row { grid-template-columns: 180px minmax(0,1fr); gap: 20px; }
+  .page-contact .contact-form__submit { margin-left: 200px; }
+  .page-contact .ag-contact-faq { padding: 62px 0 100px; }
+  .page-contact .ag-contact-cta { padding: 70px 0; }
+  .page-contact .ag-lower__cta-inner { grid-template-columns: minmax(0,1fr) minmax(0,1.1fr); gap: 40px; }
+}
+@media (min-width: 1140px) {
+  .page-contact .contact-types { grid-template-columns: repeat(5, minmax(0,1fr)); gap: 18px; }
+  .page-contact .contact-type { min-height: 310px; padding: 26px 17px; }
+  .page-contact .contact-type h3 { min-height: 50px; font-size: 16px; }
+  .page-contact .contact-type p { font-size: 15px; }
+}
+
+
+/* ============================================================
+   AG FLOLIST お問い合わせ / レイアウト微調整 2026-10-17
+   既存 contact.css の末尾へ追記 / mobile first
+   相談カテゴリカード・CF7フォームタグ・送信処理は変更しません
+   ============================================================ */
+
+/* (1) HERO : CONTACT・見出し・本文の左端を揃える */
+.page-contact .ag-subhero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: min(calc(100% - 36px), 1120px);
+  margin-inline: auto;
+  padding: 0;
+}
+.page-contact .ag-subhero__copy {
+  flex: 0 1 710px;
+  width: 100%;
+  max-width: 710px;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+.page-contact .ag-contact__eyebrow,
+.page-contact .ag-subhero__copy h1,
+.page-contact .ag-subhero__copy p {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+}
+.page-contact .ag-contact__eyebrow {
+  margin-bottom: 10px !important;
+  font-size: 13px;
+  letter-spacing: .19em;
+}
+.page-contact .ag-subhero__copy h1 {
+  margin-bottom: 22px;
+  letter-spacing: .04em;
+}
+.page-contact .ag-subhero__copy p:not(.ag-contact__eyebrow) {
+  max-width: 640px;
+  line-height: 1.95;
+}
+
+/* (3) FORM : 案内を上に置き、入力フォームを中央の一段組みに */
+.page-contact .ag-contact-form-section {
+  padding-top: 62px;
+  padding-bottom: 72px;
+}
+.page-contact .contact-form-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+  width: min(calc(100% - 36px), 960px);
+  max-width: 960px;
+  margin-inline: auto;
+}
+.page-contact .contact-form-intro {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+.page-contact .contact-form-intro__en {
+  margin-bottom: 6px;
+  text-align: center;
+}
+.page-contact .contact-form-intro h2 {
+  margin: 0 0 18px;
+  font-size: 26px;
+  line-height: 1.55;
+  text-align: center;
+}
+.page-contact .contact-form-intro p:not(.contact-form-intro__en) {
+  margin: 0 0 6px;
+  font-size: 16px;
+  line-height: 1.85;
+  text-align: center;
+}
+.page-contact .contact-form-panel {
+  width: 100%;
+  min-width: 0;
+  padding: 22px 18px 26px;
+  border: 1px solid #f2e7df;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 32px rgba(80,61,52, .045);
+}
+.page-contact .contact-form__row {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid #f2e7df;
+}
+.page-contact .contact-form__row:first-child { padding-top: 0; }
+.page-contact .contact-form__label {
+  padding-top: 0;
+  line-height: 1.65;
+}
+.page-contact .contact-form__submit {
+  width: 100%;
+  margin: 24px 0 0;
+}
+.page-contact .contact-form__consent { margin: 18px 0 2px; }
+.page-contact .contact-form__submit .wpcf7-submit { max-width: none; }
+
+/* (4) FAQ : 余白が広く見えないよう、相談カードに近い幅へ */
+.page-contact .ag-contact-faq {
+  padding-top: 52px;
+  padding-bottom: 88px;
+}
+.page-contact .ag-contact-faq .ag-lower__narrow {
+  width: min(calc(100% - 36px), 1080px);
+  max-width: 1080px;
+  margin-inline: auto;
+}
+.page-contact .ag-contact-faq .ag-lower__title { margin-bottom: 32px; }
+.page-contact .ag-contact-faq .ag-faq__q { padding-inline: 14px; }
+.page-contact .ag-contact-faq .ag-faq__a { padding-inline: 14px; }
+
+/* TABLET : 600px以上 */
+@media screen and (min-width: 600px) {
+  .page-contact .ag-subhero__inner { width: min(calc(100% - 48px), 1120px); }
+  .page-contact .contact-form-wrap { width: min(calc(100% - 48px), 960px); }
+  .page-contact .contact-form-panel { padding: 28px 32px 32px; }
+  .page-contact .contact-form__row {
+    grid-template-columns: minmax(150px, 200px) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    padding: 20px 0;
+  }
+  .page-contact .contact-form__label { padding-top: 10px; }
+  .page-contact .contact-form__submit { margin-left: 224px; width: calc(100% - 224px); }
+  .page-contact .ag-contact-faq .ag-lower__narrow { width: min(calc(100% - 48px), 1080px); }
+  .page-contact .ag-contact-faq .ag-faq__q { padding-inline: 24px; }
+  .page-contact .ag-contact-faq .ag-faq__a { padding-inline: 24px; }
+}
+
+/* PC : 900px以上 */
+@media screen and (min-width: 900px) {
+  .page-contact .ag-subhero__inner { width: min(calc(100% - 80px), 1120px); }
+  .page-contact .ag-subhero__copy h1 { font-size: 40px; }
+  .page-contact .ag-contact-form-section { padding-top: 90px; padding-bottom: 92px; }
+  .page-contact .contact-form-wrap { gap: 36px; }
+  .page-contact .contact-form-intro h2 { font-size: 30px; }
+  .page-contact .contact-form-panel { padding: 35px 52px 42px; }
+  .page-contact .contact-form__row {
+    grid-template-columns: minmax(0, 195px) minmax(0, 1fr);
+    gap: 26px;
+  }
+  .page-contact .contact-form__submit {
+    margin-left: 221px;
+    width: calc(100% - 221px);
+  }
+  .page-contact .ag-contact-faq { padding-top: 66px; padding-bottom: 105px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-contact .contact-form-panel { scroll-behavior: auto; }
+}
+/* ============================================================
+   AG FLOLIST お問い合わせ / レイアウト微調整 2026-10-17
+   既存 contact.css の末尾へ追記 / mobile first
+   相談カテゴリカード・CF7フォームタグ・送信処理は変更しません
+   ============================================================ */
+
+/* (1) HERO : CONTACT・見出し・本文の左端を揃える */
+.page-contact .ag-subhero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: min(calc(100% - 36px), 1120px);
+  margin-inline: auto;
+  padding: 0;
+}
+.page-contact .ag-subhero__copy {
+  flex: 0 1 710px;
+  width: 100%;
+  max-width: 710px;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+.page-contact .ag-contact__eyebrow,
+.page-contact .ag-subhero__copy h1,
+.page-contact .ag-subhero__copy p {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+}
+.page-contact .ag-contact__eyebrow {
+  margin-bottom: 10px !important;
+  font-size: 13px;
+  letter-spacing: .19em;
+}
+.page-contact .ag-subhero__copy h1 {
+  margin-bottom: 22px;
+  letter-spacing: .04em;
+}
+.page-contact .ag-subhero__copy p:not(.ag-contact__eyebrow) {
+  max-width: 640px;
+  line-height: 1.95;
+}
+
+/* (3) FORM : 案内を上に置き、入力フォームを中央の一段組みに */
+.page-contact .ag-contact-form-section {
+  padding-top: 62px;
+  padding-bottom: 72px;
+}
+.page-contact .contact-form-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+  width: min(calc(100% - 36px), 960px);
+  max-width: 960px;
+  margin-inline: auto;
+}
+.page-contact .contact-form-intro {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+.page-contact .contact-form-intro__en {
+  margin-bottom: 6px;
+  text-align: center;
+}
+.page-contact .contact-form-intro h2 {
+  margin: 0 0 18px;
+  font-size: 26px;
+  line-height: 1.55;
+  text-align: center;
+}
+.page-contact .contact-form-intro p:not(.contact-form-intro__en) {
+  margin: 0 0 6px;
+  font-size: 16px;
+  line-height: 1.85;
+  text-align: center;
+}
+.page-contact .contact-form-panel {
+  width: 100%;
+  min-width: 0;
+  padding: 22px 18px 26px;
+  border: 1px solid #f2e7df;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 32px rgba(80,61,52, .045);
+}
+.page-contact .contact-form__row {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid #f2e7df;
+}
+.page-contact .contact-form__row:first-child { padding-top: 0; }
+.page-contact .contact-form__label {
+  padding-top: 0;
+  line-height: 1.65;
+}
+.page-contact .contact-form__submit {
+  width: 100%;
+  margin: 24px 0 0;
+}
+.page-contact .contact-form__consent { margin: 18px 0 2px; }
+.page-contact .contact-form__submit .wpcf7-submit { max-width: none; }
+
+/* (4) FAQ : 余白が広く見えないよう、相談カードに近い幅へ */
+.page-contact .ag-contact-faq {
+  padding-top: 52px;
+  padding-bottom: 88px;
+}
+.page-contact .ag-contact-faq .ag-lower__narrow {
+  width: min(calc(100% - 36px), 1080px);
+  max-width: 1080px;
+  margin-inline: auto;
+}
+.page-contact .ag-contact-faq .ag-lower__title { margin-bottom: 32px; }
+.page-contact .ag-contact-faq .ag-faq__q { padding-inline: 14px; }
+.page-contact .ag-contact-faq .ag-faq__a { padding-inline: 14px; }
+
+/* TABLET : 600px以上 */
+@media screen and (min-width: 600px) {
+  .page-contact .ag-subhero__inner { width: min(calc(100% - 48px), 1120px); }
+  .page-contact .contact-form-wrap { width: min(calc(100% - 48px), 960px); }
+  .page-contact .contact-form-panel { padding: 28px 32px 32px; }
+  .page-contact .contact-form__row {
+    grid-template-columns: minmax(150px, 200px) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    padding: 20px 0;
+  }
+  .page-contact .contact-form__label { padding-top: 10px; }
+  .page-contact .contact-form__submit { margin-left: 224px; width: calc(100% - 224px); }
+  .page-contact .ag-contact-faq .ag-lower__narrow { width: min(calc(100% - 48px), 1080px); }
+  .page-contact .ag-contact-faq .ag-faq__q { padding-inline: 24px; }
+  .page-contact .ag-contact-faq .ag-faq__a { padding-inline: 24px; }
+}
+
+/* PC : 900px以上 */
+@media screen and (min-width: 900px) {
+  .page-contact .ag-subhero__inner { width: min(calc(100% - 80px), 1120px); }
+  .page-contact .ag-subhero__copy h1 { font-size: 40px; }
+  .page-contact .ag-contact-form-section { padding-top: 90px; padding-bottom: 92px; }
+  .page-contact .contact-form-wrap { gap: 36px; }
+  .page-contact .contact-form-intro h2 { font-size: 30px; }
+  .page-contact .contact-form-panel { padding: 35px 52px 42px; }
+  .page-contact .contact-form__row {
+    grid-template-columns: minmax(0, 195px) minmax(0, 1fr);
+    gap: 26px;
+  }
+  .page-contact .contact-form__submit {
+    margin-left: 221px;
+    width: calc(100% - 221px);
+  }
+  .page-contact .ag-contact-faq { padding-top: 66px; padding-bottom: 105px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-contact .contact-form-panel { scroll-behavior: auto; }
+}

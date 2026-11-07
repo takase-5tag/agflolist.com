@@ -1,0 +1,535 @@
+/* ==========================================================
+   AG FLOLIST - POLICY & GUIDE PAGES (MOBILE FIRST)
+   適用対象：利用規約 / ご利用ガイド / 特定商取引法 / プライバシーポリシー
+   スマホを基本とし、min-width: 360px / 481px / 768px で拡張。
+   他のページへの影響を防ぐため .ag-legal 内に限定しています。
+   ========================================================== */
+
+#guide.ag-legal,
+#sctl.ag-legal {
+  --legal-accent: var(--ag-pink, #8e705f);
+  --legal-accent-soft: var(--ag-pink-soft, #fffbf8);
+  --legal-text: #4b4549;
+  --legal-heading: #302c2f;
+  --legal-muted: #898187;
+  --legal-border: #f2e7df;
+  --legal-surface: #ffffff;
+  background: linear-gradient(180deg, #fffbf8 0, #ffffff 460px);
+  color: var(--legal-text);
+  padding: 68px 0 84px;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: .025em;
+  box-sizing: border-box;
+}
+
+.ag-legal *,
+.ag-legal *::before,
+.ag-legal *::after { box-sizing: border-box; }
+
+#guide:is(#guide,#sctl).ag-legal .ag-legal__container,
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__container {
+  display: block;
+  width: calc(100% - 24px);
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+/* ----- ページタイトル ----- */
+:is(#guide,#sctl).ag-legal .ag-legal__header {
+  text-align: center;
+  margin: 0 0 30px;
+  padding: 0;
+}
+:is(#guide,#sctl).ag-legal .ag-legal__eyebrow {
+  display: block;
+  margin: 0 0 13px;
+  color: var(--legal-accent);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .24em;
+}
+#guide:is(#guide,#sctl).ag-legal .ag-legal__header h2,
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__header h2 {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--legal-heading);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: .085em;
+  line-height: 1.55;
+  text-align: center;
+  box-shadow: none;
+}
+:is(#guide,#sctl).ag-legal .ag-legal__header::after {
+  display: block;
+  content: "";
+  width: 44px;
+  height: 2px;
+  margin: 17px auto 0;
+  background: var(--legal-accent);
+}
+
+/* 既存テーマの見出し装飾が重ならないようにします */
+#guide.ag-legal .ag-legal__header h2::before,
+#guide.ag-legal .ag-legal__header h2::after,
+#sctl.ag-legal .ag-legal__header h2::before,
+#sctl.ag-legal .ag-legal__header h2::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ----- 共通本文エリア ----- */
+#guide.ag-legal #other.ag-legal__content,
+#sctl.ag-legal #other.ag-legal__content {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 25px 16px;
+  background: var(--legal-surface);
+  border: 1px solid var(--legal-border);
+  border-radius: 6px;
+  box-shadow: 0 14px 48px rgba(80,61,52, .035);
+  color: var(--legal-text);
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 2;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+:is(#guide,#sctl).ag-legal .ag-legal__content p,
+:is(#guide,#sctl).ag-legal .ag-legal__content dd,
+:is(#guide,#sctl).ag-legal .ag-legal__content li {
+  color: var(--legal-text);
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: .015em;
+}
+:is(#guide,#sctl).ag-legal .ag-legal__content p { margin: 0 0 14px; }
+:is(#guide,#sctl).ag-legal .ag-legal__content p:last-child { margin-bottom: 0; }
+:is(#guide,#sctl).ag-legal .ag-legal__content a {
+  color: var(--legal-accent);
+  text-decoration: underline;
+  text-underline-offset: .22em;
+  transition: opacity .2s ease;
+}
+:is(#guide,#sctl).ag-legal .ag-legal__content a:hover { opacity: .65; }
+:is(#guide,#sctl).ag-legal .ag-legal__content a:focus-visible,
+:is(#guide,#sctl).ag-legal .ag-legal__nav a:focus-visible,
+:is(#guide,#sctl).ag-legal .ag-legal__table-scroll:focus-visible {
+  outline: 2px solid var(--legal-accent);
+  outline-offset: 3px;
+}
+
+/* ----- 利用規約・プライバシーポリシー：条文 ----- */
+:is(#guide,#sctl).ag-legal .agreement > p:first-child,
+:is(#guide,#sctl).ag-legal .privacy-policy > p:first-child {
+  color: #50484d;
+  margin: 0 0 27px;
+  line-height: 2.15;
+}
+:is(#guide,#sctl).ag-legal .agreement > .block,
+:is(#guide,#sctl).ag-legal .privacy-policy > .block {
+  margin: 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--legal-border);
+}
+:is(#guide,#sctl).ag-legal .agreement > .block + .block,
+:is(#guide,#sctl).ag-legal .privacy-policy > .block + .block {
+  margin-top: 22px;
+}
+:is(#guide,#sctl).ag-legal .agreement > .block h6,
+:is(#guide,#sctl).ag-legal .privacy-policy > .block h6 {
+  position: relative;
+  margin: 0 0 13px;
+  padding: 0 0 0 18px;
+  border: 0;
+  background: none;
+  color: var(--legal-heading);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: .015em;
+}
+:is(#guide,#sctl).ag-legal .agreement > .block h6::before,
+:is(#guide,#sctl).ag-legal .privacy-policy > .block h6::before {
+  position: absolute;
+  top: .38em;
+  left: 0;
+  width: 4px;
+  height: 1.2em;
+  max-height: 22px;
+  content: "";
+  border-radius: 4px;
+  background: var(--legal-accent);
+}
+:is(#guide,#sctl).ag-legal .agreement ul,
+:is(#guide,#sctl).ag-legal .privacy-policy ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+:is(#guide,#sctl).ag-legal .agreement li,
+:is(#guide,#sctl).ag-legal .privacy-policy li { margin: 0 0 10px; padding: 0; }
+:is(#guide,#sctl).ag-legal .agreement li:last-child,
+:is(#guide,#sctl).ag-legal .privacy-policy li:last-child { margin-bottom: 0; }
+:is(#guide,#sctl).ag-legal .agreement li ul,
+:is(#guide,#sctl).ag-legal .privacy-policy li ul {
+  margin: 10px 0 14px 7px;
+  padding: 5px 0 5px 18px;
+  border-left: 2px solid var(--legal-border);
+}
+
+/* ----- ご利用ガイド：項目名 + 説明 ----- */
+#guide.ag-legal--guide .ag-legal__content > dl {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 24px 0;
+  border: 0;
+  border-bottom: 1px solid var(--legal-border);
+  background: none;
+}
+#guide.ag-legal--guide .ag-legal__content > dl:first-child { padding-top: 0; }
+#guide.ag-legal--guide .ag-legal__content > dl:last-child { padding-bottom: 0; border-bottom: 0; }
+#guide.ag-legal--guide .ag-legal__content > dl > dt {
+  position: relative;
+  display: block;
+  align-self: start;
+  margin: 0;
+  padding: 0 0 0 16px;
+  margin-bottom: 12px;
+  border: 0;
+  background: none;
+  color: var(--legal-heading);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: .02em;
+}
+#guide.ag-legal--guide .ag-legal__content > dl > dt::before {
+  position: absolute;
+  top: .5em;
+  left: 0;
+  width: 4px;
+  height: 1.1em;
+  content: "";
+  border-radius: 3px;
+  background: var(--legal-accent);
+}
+#guide.ag-legal--guide .ag-legal__content > dl > dd {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+#guide.ag-legal--guide .ag-legal__content > dl > dd > p { margin: 0 0 12px; }
+#guide.ag-legal--guide .ag-legal__content > dl > dd > p:last-child { margin-bottom: 0; }
+#guide.ag-legal--guide .ag-legal__content > dl > dd > b,
+#guide.ag-legal--guide .ag-legal__content > dl > dd > strong {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--legal-heading);
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 600;
+}
+#guide.ag-legal--guide .ag-legal__content > dl > dd > p + b { margin-top: 22px; }
+#guide.ag-legal--guide .ag-legal__content .ag-legal__list-wrap ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#guide.ag-legal--guide .ag-legal__content .ag-legal__list-wrap li {
+  position: relative;
+  margin: 0 0 12px;
+  padding: 0 0 0 17px;
+}
+#guide.ag-legal--guide .ag-legal__content .ag-legal__list-wrap li:last-child { margin-bottom: 0; }
+#guide.ag-legal--guide .ag-legal__content .ag-legal__list-wrap li::before {
+  position: absolute;
+  left: 1px;
+  top: .85em;
+  width: 5px;
+  height: 5px;
+  content: "";
+  border-radius: 50%;
+  background: var(--legal-accent);
+}
+
+/* ----- 表：送料・特定商取引法 ----- */
+:is(#guide,#sctl).ag-legal .ag-legal__table-scroll {
+  max-width: 100%;
+  margin: 22px 0 0;
+  overflow-x: auto;
+  border: 1px solid var(--legal-border);
+  border-radius: 3px;
+  scrollbar-color: #e8d8cd #fffbf8;
+}
+#guide.ag-legal--guide .ag-legal__table-scroll::after { content: none; }
+#guide.ag-legal--guide .ag-legal__table-scroll table {
+  width: 100%;
+  min-width: 590px;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  table-layout: auto;
+  background: #fff;
+}
+#guide.ag-legal--guide .ag-legal__table-scroll th,
+#guide.ag-legal--guide .ag-legal__table-scroll td {
+  margin: 0;
+  padding: 12px 13px;
+  border: 0;
+  border-right: 1px solid #f9f2ed;
+  border-bottom: 1px solid #f9f2ed;
+  background: #fff;
+  color: var(--legal-text);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  vertical-align: middle;
+  white-space: normal;
+}
+#guide.ag-legal--guide .ag-legal__table-scroll thead th {
+  background: var(--legal-accent-soft);
+  color: var(--legal-heading);
+  font-weight: 600;
+}
+#guide.ag-legal--guide .ag-legal__table-scroll tbody th {
+  color: var(--legal-heading);
+  font-weight: 600;
+  white-space: nowrap;
+}
+#guide.ag-legal--guide .ag-legal__table-scroll tr > :last-child { border-right: 0; }
+#guide.ag-legal--guide .ag-legal__table-scroll tr:last-child > * { border-bottom: 0; }
+#guide.ag-legal--guide .ag-legal__table-scroll tr > :nth-child(n+3) { text-align: right; white-space: nowrap; }
+#guide.ag-legal--guide .ag-legal__table-scroll tbody tr:nth-child(even) > * { background: #fffbf8; }
+
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__spec-table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__spec-table tr { border-bottom: 1px solid var(--legal-border); }
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__spec-table tr:first-child { border-top: 1px solid var(--legal-border); }
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__spec-table th,
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__spec-table td {
+  border: 0;
+  background: none;
+  margin: 0;
+  padding: 12px 15px;
+  font-size: 13px;
+  line-height: 1.9;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__spec-table th {
+  width: 100%;
+  background: #fffbf8;
+  color: var(--legal-heading);
+  font-weight: 600;
+}
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__spec-table td { width: 100%; color: var(--legal-text); }
+#sctl:is(#guide,#sctl).ag-legal .ag-legal__spec-table p { margin: 0; }
+
+/* ----- 4ページへの回遊リンク ----- */
+:is(#guide,#sctl).ag-legal .ag-legal__nav { margin: 36px 0 0; }
+:is(#guide,#sctl).ag-legal .ag-legal__nav-title {
+  display: block;
+  margin: 0 0 18px;
+  color: var(--legal-muted);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-align: center;
+}
+:is(#guide,#sctl).ag-legal .ag-legal__nav-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  width: 100%;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+:is(#guide,#sctl).ag-legal .ag-legal__nav-list li { margin: 0; padding: 0; min-width: 0; width: 100%; list-style: none; }
+:is(#guide,#sctl).ag-legal .ag-legal__nav-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 50px;
+  padding: 11px 12px;
+  border: 1px solid var(--legal-border);
+  border-radius: 3px;
+  background: #fff;
+  color: var(--legal-heading);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+:is(#guide,#sctl).ag-legal .ag-legal__nav-list a::after {
+  display: inline-block;
+  flex: none;
+  margin-left: 10px;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: rotate(45deg);
+}
+:is(#guide,#sctl).ag-legal .ag-legal__nav-list a:hover {
+  border-color: var(--legal-accent);
+  color: var(--legal-accent);
+}
+:is(#guide,#sctl).ag-legal .ag-legal__nav-list a[aria-current="page"] {
+  background: var(--legal-accent-soft);
+  border-color: #f2e7df;
+  color: #8e705f;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+/* 既存テーマの li / a の幅指定にも左右されないよう4件を均等配置 */
+#guide.ag-legal .ag-legal__nav-list > li,
+#sctl.ag-legal .ag-legal__nav-list > li {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+#guide.ag-legal .ag-legal__nav-list > li > a,
+#sctl.ag-legal .ag-legal__nav-list > li > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  text-align: left;
+  white-space: normal;
+}
+
+/* ----- モバイル基本：特定商取引法の項目を縦積み ----- */
+#sctl.ag-legal .ag-legal__spec-table,
+#sctl.ag-legal .ag-legal__spec-table tbody,
+#sctl.ag-legal .ag-legal__spec-table tr,
+#sctl.ag-legal .ag-legal__spec-table th,
+#sctl.ag-legal .ag-legal__spec-table td {
+  display: block;
+  width: 100%;
+}
+#sctl.ag-legal .ag-legal__spec-table tr {
+  border: 1px solid var(--legal-border);
+  border-bottom: 0;
+}
+#sctl.ag-legal .ag-legal__spec-table tr:last-child { border-bottom: 1px solid var(--legal-border); }
+#sctl.ag-legal .ag-legal__spec-table td { padding-top: 13px; padding-bottom: 16px; }
+
+/* ----- 画面が広くなる順番に拡張するモバイルファースト設計 ----- */
+@media (min-width: 360px) {
+  :is(#guide,#sctl).ag-legal .ag-legal__nav-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  :is(#guide,#sctl).ag-legal .ag-legal__nav-list a { min-height: 58px; }
+}
+
+@media (min-width: 481px) {
+  #guide:is(#guide,#sctl).ag-legal .ag-legal__container,
+  #sctl:is(#guide,#sctl).ag-legal .ag-legal__container { width: calc(100% - 30px); }
+  #guide.ag-legal #other.ag-legal__content,
+  #sctl.ag-legal #other.ag-legal__content { padding: 28px 19px; }
+  :is(#guide,#sctl).ag-legal .ag-legal__nav-list a { padding: 12px 13px; }
+}
+
+/* PC：横4列・ご利用ガイドの左右配置・特商法の横組テーブルへ */
+@media (min-width: 768px) {
+  #guide.ag-legal,
+  #sctl.ag-legal {
+    padding: clamp(72px, 8vw, 112px) 0 clamp(80px, 9vw, 128px);
+    font-size: 15px;
+    line-height: 2;
+  }
+  #guide:is(#guide,#sctl).ag-legal .ag-legal__container,
+  #sctl:is(#guide,#sctl).ag-legal .ag-legal__container { width: min(100% - 44px, 980px); }
+  :is(#guide,#sctl).ag-legal .ag-legal__eyebrow { font-size: 11px; }
+  :is(#guide,#sctl).ag-legal .ag-legal__header { margin-bottom: clamp(32px, 5vw, 54px); }
+  #guide:is(#guide,#sctl).ag-legal .ag-legal__header h2,
+  #sctl:is(#guide,#sctl).ag-legal .ag-legal__header h2 { font-size: clamp(26px, 3.5vw, 37px); }
+  :is(#guide,#sctl).ag-legal .ag-legal__header::after { margin-top: 24px; }
+  #guide.ag-legal #other.ag-legal__content,
+  #sctl.ag-legal #other.ag-legal__content {
+    padding: clamp(26px, 5vw, 60px) clamp(22px, 5.5vw, 64px);
+  }
+  :is(#guide,#sctl).ag-legal .agreement > p:first-child,
+  :is(#guide,#sctl).ag-legal .privacy-policy > p:first-child { margin-bottom: 34px; }
+  :is(#guide,#sctl).ag-legal .agreement > .block,
+  :is(#guide,#sctl).ag-legal .privacy-policy > .block { padding-top: 24px; }
+  :is(#guide,#sctl).ag-legal .agreement > .block + .block,
+  :is(#guide,#sctl).ag-legal .privacy-policy > .block + .block { margin-top: 25px; }
+  :is(#guide,#sctl).ag-legal .agreement > .block h6,
+  :is(#guide,#sctl).ag-legal .privacy-policy > .block h6 { font-size: clamp(16px, 1.8vw, 18px); }
+
+  #guide.ag-legal--guide .ag-legal__content > dl {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    padding: 30px 0;
+  }
+  #guide.ag-legal--guide .ag-legal__content > dl > dt {
+    margin-bottom: 0;
+    padding-right: 20px;
+    font-size: 16px;
+  }
+  #guide.ag-legal--guide .ag-legal__content > dl > dd > b,
+  #guide.ag-legal--guide .ag-legal__content > dl > dd > strong { font-size: 15px; }
+
+  #sctl.ag-legal .ag-legal__spec-table { display: table; }
+  #sctl.ag-legal .ag-legal__spec-table tbody { display: table-row-group; }
+  #sctl.ag-legal .ag-legal__spec-table tr {
+    display: table-row;
+    border: 0;
+    border-bottom: 1px solid var(--legal-border);
+  }
+  #sctl.ag-legal .ag-legal__spec-table tr:last-child { border-bottom: 1px solid var(--legal-border); }
+  #sctl.ag-legal .ag-legal__spec-table th,
+  #sctl.ag-legal .ag-legal__spec-table td {
+    display: table-cell;
+    padding: 21px 20px;
+    font-size: 14px;
+  }
+  #sctl.ag-legal .ag-legal__spec-table th { width: 31%; }
+  #sctl.ag-legal .ag-legal__spec-table td { width: 69%; }
+
+  :is(#guide,#sctl).ag-legal .ag-legal__nav { margin-top: 50px; }
+  :is(#guide,#sctl).ag-legal .ag-legal__nav-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+  :is(#guide,#sctl).ag-legal .ag-legal__nav-list a {
+    min-height: 61px;
+    padding: 13px 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(#guide,#sctl).ag-legal .ag-legal__content a,
+  :is(#guide,#sctl).ag-legal .ag-legal__nav-list a { transition: none; }
+}

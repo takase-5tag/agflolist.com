@@ -1,0 +1,195 @@
+/* ==========================================================
+   AG FLOLIST | Welcart 会員ログイン（モバイルファースト）
+   /css/ag-member-login.css
+   既存：#wc_login / .loginbox / .member-box / #loginform
+   ========================================================== */
+
+/* このページ以外への影響を防ぐ */
+#wc_login {
+  --ag-member-accent: var(--ag-pink, #8e705f);
+  --ag-member-accent-hover: #8e705f;
+  --ag-member-accent-light: #fffbf8;
+  --ag-member-text: #4b4549;
+  --ag-member-line: #f2e7df;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto !important;
+  padding: 20px 0 65px;
+  color: var(--ag-member-text);
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+  letter-spacing: .025em;
+}
+
+#wc_login *,
+#wc_login *::before,
+#wc_login *::after {
+  box-sizing: border-box;
+}
+
+/* 既存のPC 2列指定を解除し、ログイン用カードを中央に */
+#wc_login .loginbox {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100% !important;
+  gap: 0;
+  margin: 0 auto !important;
+}
+
+#wc_login .member-box {
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto !important;
+  overflow: hidden;
+  border: 1px solid var(--ag-member-line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 42px rgba(80,61,52, .055);
+}
+
+/* 通常の新規入会案内カードを非表示。登録URL自体はPHPでもブロック */
+#wc_login .loginbox .member-box:has(.new-entry__box),
+#wc_login .loginbox .new-entry__box {
+  display: none !important;
+}
+
+/* 見出し */
+#wc_login .member-box h2,
+#wc_login .loginbox h2,
+#wc_login .loginbox h2.gray {
+  margin: 0 !important;
+  padding: 22px 16px;
+  border: 0;
+  border-bottom: 1px solid var(--ag-member-line);
+  background: var(--ag-member-accent-light);
+  color: var(--ag-member-text);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: .04em;
+}
+
+/* 入力エリア */
+#wc_login #loginform {
+  margin: 0 !important;
+  padding: 25px 18px 30px;
+}
+
+#wc_login #loginform label,
+#wc_login #loginform dt,
+#wc_login #loginform th {
+  color: #5a5257;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+#wc_login #loginform input[type="text"],
+#wc_login #loginform input[type="email"],
+#wc_login #loginform input[type="password"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 48px;
+  margin: 8px 0 19px !important;
+  padding: 11px 14px;
+  border: 1px solid #f2e7df;
+  border-radius: 4px;
+  background: #fff;
+  color: #343035;
+  font-size: 16px;
+  line-height: 1.4;
+  box-shadow: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+#wc_login #loginform input[type="text"]:focus,
+#wc_login #loginform input[type="email"]:focus,
+#wc_login #loginform input[type="password"]:focus {
+  outline: 2px solid transparent;
+  border-color: var(--ag-member-accent);
+  box-shadow: 0 0 0 3px rgba(142,112,95, .15);
+}
+
+#wc_login #loginform input[type="checkbox"] {
+  margin-right: 7px !important;
+  accent-color: var(--ag-member-accent);
+  vertical-align: middle;
+}
+
+#wc_login #loginform .submit,
+#wc_login #loginform .send {
+  margin-top: 22px;
+  text-align: center;
+}
+
+#wc_login #loginform input[type="submit"],
+#wc_login #loginform input[type="button"],
+#wc_login #loginform button[type="submit"] {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  min-height: 50px;
+  margin: 18px auto 0 !important;
+  padding: 12px 24px;
+  border: 1px solid var(--ag-member-accent);
+  border-radius: 4px;
+  background: var(--ag-member-accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color .2s, border-color .2s;
+}
+
+#wc_login #loginform input[type="submit"]:hover,
+#wc_login #loginform input[type="button"]:hover,
+#wc_login #loginform button[type="submit"]:hover {
+  background: var(--ag-member-accent-hover) !important;
+  border-color: var(--ag-member-accent-hover);
+}
+
+#wc_login #loginform a {
+  color: var(--ag-member-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#wc_login #loginform a:hover {
+  text-decoration: none;
+}
+
+#wc_login #loginform #nav,
+#wc_login #nav {
+  margin: 16px 0 0 !important;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* 481px以上：フォームに余裕を */
+@media (min-width: 481px) {
+  #wc_login {
+    padding: 36px 0 88px;
+  }
+
+  #wc_login .member-box h2,
+  #wc_login .loginbox h2,
+  #wc_login .loginbox h2.gray {
+    padding: 26px 30px;
+    font-size: 19px;
+  }
+
+  #wc_login #loginform {
+    padding: 36px 54px 42px;
+  }
+}
+
+/* 768px以上：大きさのみ拡張。ログインは1カラムのまま */
+@media (min-width: 768px) {
+  #wc_login {
+    padding: 48px 0 105px;
+  }
+}

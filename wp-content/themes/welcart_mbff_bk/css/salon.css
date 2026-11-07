@@ -1,0 +1,586 @@
+@charset "utf-8";
+/* ==========================================================
+   AG FLOLIST | SALON PAGE
+   Mobile First / 2026-10-17
+   TOP(index.css) の基本本文16px・コンテンツ幅に統一
+   ※ /css/salon.css の完全差し替え用
+   ========================================================== */
+
+.page-salon {
+  --salon-pink: #c6ad9d;
+  --salon-soft: #fffbf8;
+  --salon-border: #f2e7df;
+  --salon-text: #252525;
+  width: 100%;
+  color: var(--salon-text);
+  background: #fff;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+.page-salon *,
+.page-salon *::before,
+.page-salon *::after { box-sizing: border-box; }
+.page-salon img { display: block; max-width: 100%; height: auto; }
+
+/* ページ全体の基本幅：TOPに合わせる */
+.page-salon .ag-lower__container,
+.page-salon .ag-subhero__inner {
+  width: min(calc(100% - 36px), 1120px);
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.page-salon .ag-lower__section { padding: 52px 0; }
+.page-salon .ag-lower__title {
+  margin: 0 0 30px;
+  padding: 0;
+  border: 0;
+  color: #292329;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(24px, 5.8vw, 28px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .055em;
+  text-align: center;
+}
+
+/* 01 HERO */
+.page-salon .ag-subhero {
+  display: flex;
+  align-items: center;
+  min-height: 455px;
+  margin: 0;
+  padding: 108px 0 54px;
+  background-color: #e8d8cd;
+  background-image: linear-gradient(90deg, rgba(242,231,223,.64), rgba(242,231,223,.1)), url("../img/salon/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 67% center;
+}
+.page-salon .ag-subhero .ag-subhero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+.page-salon .ag-subhero .ag-subhero__copy {
+  display: block;
+  flex: 0 1 680px;
+  width: 100%;
+  max-width: 680px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.page-salon .ag-subhero .ag-subhero__copy h1 {
+  margin: 0 0 22px;
+  color: #272127;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(28px, 6vw, 36px);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: .06em;
+  text-align: left;
+}
+.page-salon .ag-subhero .ag-subhero__copy p {
+  max-width: 640px;
+  margin: 0;
+  color: #302730;
+  font-size: 16px;
+  line-height: 1.95;
+  letter-spacing: .025em;
+  text-align: left;
+}
+
+/* 02 こんなお悩みはありませんか？ */
+.page-salon .salon-trouble {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.page-salon .salon-trouble__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  padding: 28px 22px;
+  border: 1px solid #e2dce0;
+  border-radius: 18px;
+  background: #fff;
+  text-align: center;
+}
+.page-salon .salon-trouble__card img {
+  flex: 0 0 auto;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 18px;
+  object-fit: contain;
+}
+.page-salon .salon-trouble__card h3 {
+  width: 100%;
+  margin: 0 0 12px;
+  color: #252525;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+}
+.page-salon .salon-trouble__card p {
+  width: 100%;
+  margin: 0;
+  color: #494449;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* 03 AG FLOLISTが一緒に考えます */
+.page-salon .salon-support {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 4px;
+}
+.page-salon .salon-support__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  padding: 26px 18px;
+  border-bottom: 1px solid var(--salon-border);
+  text-align: center;
+}
+.page-salon .salon-support__item + .salon-support__item { border-left: 0; }
+.page-salon .salon-support__item img {
+  flex: 0 0 auto;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 16px;
+  object-fit: contain;
+}
+.page-salon .salon-support__item h3 {
+  width: 100%;
+  margin: 0 0 12px;
+  color: #292529;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.page-salon .salon-support__item p {
+  width: 100%;
+  margin: 0;
+  color: #514c50;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* 04 BRANDS：TOPの.ag-heading / .ag-brandsと同じ構造 */
+.page-salon .ag-brands {
+  padding: 52px 0;
+  background: #fff;
+}
+.page-salon .ag-brands .ag-container {
+  width: min(calc(100% - 36px), 1120px);
+  max-width: 1120px;
+  margin-inline: auto;
+}
+/* 英字と日本語を隣り合わせに。親テーマの見出し指定に優先させる */
+.page-salon .ag-brands h2.ag-heading {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+.page-salon .ag-brands h2.ag-heading > .ag-heading__en {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: auto;
+  margin: 0 12px 0 0;
+  padding: 0 12px 0 0;
+  border-right: 1px solid var(--salon-pink);
+  color: var(--salon-pink);
+  font-family: "Times New Roman", "Yu Mincho", serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.page-salon .ag-brands h2.ag-heading > .ag-heading__ja {
+  display: inline-block;
+  flex: 0 1 auto;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .02em;
+  text-align: left;
+}
+.page-salon .ag-brands h2.ag-heading > span::before,
+.page-salon .ag-brands h2.ag-heading > span::after {
+  content: none;
+}
+.page-salon .ag-brands .ag-brands__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.page-salon .ag-brands .ag-brand {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: #f9f2ed;
+  text-decoration: none;
+}
+.page-salon .ag-brands .ag-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.8 / 1;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+@media (hover: hover) {
+  .page-salon .ag-brands .ag-brand:hover img { transform: scale(1.025); }
+}
+
+/* 05 導入までの流れ */
+.page-salon .salon-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 12px;
+}
+.page-salon .salon-flow::before { display: none; }
+.page-salon .salon-flow__item {
+  position: relative;
+  min-width: 0;
+  padding: 18px 0 22px 52px;
+  border-bottom: 1px dashed var(--salon-border);
+  text-align: left;
+}
+.page-salon .salon-flow__num {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--salon-pink);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+}
+.page-salon .salon-flow__item h3 {
+  margin: 0 0 7px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.page-salon .salon-flow__item p {
+  margin: 0;
+  color: #4d494d;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* おすすめチェック項目 */
+.page-salon .salon-check {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 44px;
+  padding-top: 34px;
+  border-top: 1px solid #e7c4ab;
+}
+.page-salon .salon-check h2 {
+  margin: 0;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: .035em;
+}
+.page-salon .salon-check ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px 24px;
+  justify-items: stretch;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.page-salon .salon-check ul > li {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  align-items: start;
+  justify-items: start;
+  column-gap: 10px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 10px 0 12px;
+  border-bottom: 1px solid #e8d8cd;
+  font-size: 16px;
+  line-height: 1.7;
+  list-style: none;
+  text-align: left;
+}
+.page-salon .salon-check ul > li::before {
+  content: "✓";
+  display: inline-flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 1px 0 0;
+  border-radius: 50%;
+  background: var(--salon-pink);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* 共通問い合わせCTA（トップページと揃える） */
+.page-salon .ag-lower__cta {
+  margin: 0;
+  padding: 52px 0;
+  background: var(--salon-soft);
+}
+.page-salon .ag-lower__cta-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 24px;
+}
+.page-salon .ag-lower__cta h2 {
+  margin: 0 0 12px;
+  color: var(--salon-pink);
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.page-salon .ag-lower__cta p { margin: 0; font-size: 16px; line-height: 1.9; }
+.page-salon .ag-lower__cta-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  width: 100%;
+}
+.page-salon .ag-lower__cta-buttons .ag-lower__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 16px;
+  border: 1px solid var(--salon-pink);
+  border-radius: 5px;
+  background: #fff;
+  color: #8e705f;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+}
+.page-salon .ag-lower__cta-buttons .ag-lower__btn--fill {
+  background: var(--salon-pink);
+  color: #fff;
+}
+.page-salon .ag-lower__cta-buttons .ag-lower__btn:hover { opacity: .8; }
+
+/* ==========================================================
+   TABLET: 600px以上
+   ========================================================== */
+@media (min-width: 600px) {
+  .page-salon .ag-lower__container,
+  .page-salon .ag-subhero__inner { width: min(calc(100% - 48px), 1120px); }
+  .page-salon .ag-lower__section { padding: 66px 0; }
+  .page-salon .salon-trouble { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .page-salon .salon-support { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; }
+  .page-salon .salon-support__item { padding: 28px 20px; }
+  .page-salon .ag-brands .ag-container { width: min(calc(100% - 48px), 1120px); }
+  .page-salon .ag-brands .ag-brands__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .page-salon .salon-check ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 22px; }
+  .page-salon .ag-lower__cta-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ==========================================================
+   PC: 900px以上
+   ========================================================== */
+@media (min-width: 900px) {
+  .page-salon .ag-subhero {
+    min-height: 545px;
+    padding: 118px 0 72px;
+    background-image: linear-gradient(90deg, rgba(242,231,223,.54) 0%, rgba(242,231,223,.24) 55%, rgba(242,231,223,0) 80%), url("../img/salon/hero.jpg");
+    background-position: center center;
+  }
+  .page-salon .ag-subhero .ag-subhero__copy h1 { margin-bottom: 26px; font-size: 40px; line-height: 1.55; }
+  .page-salon .ag-subhero .ag-subhero__copy p { line-height: 1.95; }
+  .page-salon .ag-lower__section { padding: 82px 0; }
+  .page-salon .ag-lower__title { margin-bottom: 40px; font-size: 32px; }
+  .page-salon .salon-trouble__card h3 { white-space: normal; }
+  /* 900〜1139pxはカード見出しの改行を防ぐため2列のまま */
+  .page-salon .salon-trouble { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .page-salon .salon-trouble__card { min-height: 288px; padding: 30px 22px 28px; }
+  .page-salon .salon-support { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 0; }
+  .page-salon .salon-support__item { padding: 20px 24px; border-bottom: none; }
+  .page-salon .salon-support__item + .salon-support__item { border-left: 1px solid #e7c4ab; }
+  .page-salon .salon-support__item:nth-child(4) { border-left: 0; }
+    .page-salon .ag-brands { padding: 82px 0; }
+  .page-salon .ag-brands h2.ag-heading { margin-bottom: 38px; }
+  .page-salon .ag-brands h2.ag-heading > .ag-heading__en { margin-right: 15px; padding-right: 15px; font-size: 36px; }
+  .page-salon .ag-brands h2.ag-heading > .ag-heading__ja { font-size: 25px; white-space: nowrap; }
+  .page-salon .ag-brands .ag-brands__grid { gap: 32px; }
+  .page-salon .salon-flow {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 50px;
+  }
+  .page-salon .salon-flow::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 10%;
+    right: 10%;
+    border-top: 2px dashed var(--salon-pink);
+  }
+  .page-salon .salon-flow__item { padding: 0 14px; border: none; text-align: left; }
+  .page-salon .salon-flow__num { position: relative; top: auto; left: auto; width: 38px; height: 38px; margin: 0 auto 24px; }
+  .page-salon .salon-flow__item h3 { font-size: 17px; }
+  .page-salon .salon-check { grid-template-columns: 270px minmax(0, 1fr); gap: 36px; margin-top: 60px; padding-top: 34px; }
+  .page-salon .salon-check h2 { font-size: 27px; }
+  .page-salon .ag-lower__cta { padding: 70px 0; }
+  .page-salon .ag-lower__cta-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: 44px; }
+}
+
+/* 大きなPCではサポートを5項目横並び */
+@media (min-width: 1140px) {
+  .page-salon .salon-trouble { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .page-salon .salon-trouble__card { padding-left: 16px; padding-right: 16px; }
+  .page-salon .salon-trouble__card h3 {font-size: 18px;letter-spacing: -.025em;white-space: nowrap;}
+  .page-salon .salon-support { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
+  .page-salon .salon-support__item { min-height: 296px; padding: 12px 20px 20px; }
+  .page-salon .salon-support__item:nth-child(4) { border-left: 1px solid #e7c4ab; }
+  .page-salon .salon-support__item img { width: 76px; height: 76px; margin-bottom: 18px; }
+}
+@media (min-width: 1300px) {
+  .page-salon .ag-lower__container,
+  .page-salon .ag-subhero__inner,
+  .page-salon .ag-brands .ag-container { width: min(calc(100% - 80px), 1200px); max-width: 1200px; }
+  .page-salon .salon-trouble { gap: 28px; }
+}
+
+
+/* ===============================================================
+   HERO V4 - CONTACTと同じレイアウト幅・見出し・本文左端
+   Mobile First. ヒーロー以外のセクションは変更しない
+   =============================================================== */
+.page-salon.ag-lower > .ag-subhero > .ag-subhero__inner {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  width: min(calc(100% - 36px), 1120px) !important;
+  max-width: 1120px !important;
+  min-width: 0;
+  margin-inline: auto !important;
+  padding: 0 !important;
+  text-align: left !important;
+  transform: none !important;
+}
+.page-salon.ag-lower > .ag-subhero > .ag-subhero__inner > .ag-subhero__copy {
+  position: static !important;
+  display: block !important;
+  flex: 0 1 710px !important;
+  width: 100% !important;
+  max-width: 710px !important;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  inset: auto !important;
+  float: none !important;
+  transform: none !important;
+  text-align: left !important;
+}
+.page-salon.ag-lower .ag-subhero__copy > .ag-subhero__eyebrow,
+.page-salon.ag-lower .ag-subhero__copy > h1,
+.page-salon.ag-lower .ag-subhero__copy > p {
+  display: block;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  text-indent: 0 !important;
+  text-align: left !important;
+  transform: none !important;
+}
+.page-salon.ag-lower .ag-subhero__copy > .ag-subhero__eyebrow {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+  color: #272127;
+  font: 400 13px/1.5 Georgia, 'Times New Roman', serif;
+  letter-spacing: .19em;
+}
+.page-salon.ag-lower .ag-subhero__copy > h1 {
+  max-width: 710px;
+  margin: 0 0 22px !important;
+  font-size: clamp(27px, 6vw, 36px) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  letter-spacing: .04em;
+}
+.page-salon.ag-lower .ag-subhero__copy > p:not(.ag-subhero__eyebrow) {
+  max-width: 640px;
+  margin: 0 0 17px !important;
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 1.95 !important;
+  letter-spacing: .025em;
+}
+.page-salon.ag-lower .ag-subhero__copy > p:last-child {
+  margin-bottom: 0 !important;
+}
+@media (min-width: 600px) {
+  .page-salon.ag-lower > .ag-subhero > .ag-subhero__inner {
+    width: min(calc(100% - 48px), 1120px) !important;
+  }
+}
+@media (min-width: 900px) {
+  .page-salon.ag-lower > .ag-subhero > .ag-subhero__inner {
+    width: min(calc(100% - 80px), 1120px) !important;
+  }
+  .page-salon.ag-lower .ag-subhero__copy > h1 {
+    font-size: 40px !important;
+  }
+}

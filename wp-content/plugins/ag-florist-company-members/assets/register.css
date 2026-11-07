@@ -1,0 +1,5 @@
+/* AG FLOLIST company invitation notice: mobile first */
+.agcm-invite-notice{max-width:850px;margin:28px auto 20px;padding:18px 20px;border:1px solid #efd4de;border-left:4px solid #bd547b;background:#fff8fa;color:#593d4a;font-size:14px;line-height:1.8}
+.agcm-invite-notice strong,.agcm-invite-notice span{display:block}
+.agcm-invite-notice strong{font-size:16px;margin-bottom:3px}
+@media (min-width:768px){.agcm-invite-notice{padding:24px 30px;margin:36px auto 28px}}

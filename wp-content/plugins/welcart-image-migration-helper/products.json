@@ -1,0 +1,338 @@
+[
+  {
+    "code": "123_MBFF_SETprogram",
+    "name": "MBFF_秋のセット企画！",
+    "desc_paths": [
+      "2026/10/スクリーンショット-2026-10-03-184122-300x286.png"
+    ]
+  },
+  {
+    "code": "122_MBFF_Soyflora_soap_10g",
+    "name": "MBFFソイフローラミニソープPRO",
+    "desc_paths": [
+      "2026/08/soap_mini-300x202.jpg"
+    ]
+  },
+  {
+    "code": "121_MBFF_Cleansing_forsalon_500g",
+    "name": "MBFFクレンジング　業務用５００g",
+    "desc_paths": [
+      "2026/08/クレンジング業務用-300x298.jpg"
+    ]
+  },
+  {
+    "code": "120_MBFF_Lotion_forsalon_500ml",
+    "name": "MBFFミストローション　業務用　５００ml",
+    "desc_paths": [
+      "2026/08/業務用ミストローション-300x295.jpg"
+    ]
+  },
+  {
+    "code": "119_MBFF_Special Prices for Men",
+    "name": "MBFFメンズセットお試し価格",
+    "desc_paths": [
+      "2026/08/スクリーンショット-2026-08-11-162714-300x298.jpg"
+    ]
+  },
+  {
+    "code": "116_MBFF_Special Price on Foundation",
+    "name": "MBFFファンデーション特別価格",
+    "desc_paths": [
+      "2026/08/スクリーンショット-2026-08-11-154902-300x300.jpg"
+    ]
+  },
+  {
+    "code": "119_MBFF_cleansing",
+    "name": "MBFFクレンジング200g",
+    "desc_paths": [
+      "2026/07/クレンジング商品-1-300x298.jpg"
+    ]
+  },
+  {
+    "code": "118_MBFF_foundation",
+    "name": "MBFF_ファンデーション",
+    "desc_paths": [
+      "2026/07/mesh-300x167.jpg",
+      "2026/07/notice01-300x127.jpg",
+      "2026/07/notice02-300x222.jpg"
+    ]
+  },
+  {
+    "code": "117_MBFF_foundation_お試し特別価格",
+    "name": "MBFF_クレンジング_お試し特別価格",
+    "desc_paths": [
+      "2026/07/クレンジング-300x233.jpg"
+    ]
+  },
+  {
+    "code": "115_MBFF_mens_導入セットC＿特典付き！",
+    "name": "MBFFメンズ導入セットC＿特典付き！",
+    "desc_paths": [
+      "2026/06/スクリーンショット-2026-06-26-161419-300x234.jpg"
+    ]
+  },
+  {
+    "code": "114_MBFF_mens_導入セットB＿特典付き！",
+    "name": "MBFFメンズ導入セットB＿特典付き！",
+    "desc_paths": [
+      "2026/06/スクリーンショット-2026-06-26-161310-300x235.jpg"
+    ]
+  },
+  {
+    "code": "113_MBFF_mens_導入セットA＿特典付き！",
+    "name": "MBFF_メンズ_導入セットA＿特典付き！",
+    "desc_paths": [
+      "2026/06/スクリーンショット-2026-06-26-161157-300x238.jpg"
+    ]
+  },
+  {
+    "code": "112_MBFF_mens_soap_10g",
+    "name": "MBFFメンズソイフローラソープ１０ｇ",
+    "desc_paths": [
+      "2026/06/スクリーンショット-2026-06-26-154724-300x294.jpg"
+    ]
+  },
+  {
+    "code": "111_MBFF_mens_soap_60g",
+    "name": "MBFFメンズソイフローラソープPRO",
+    "desc_paths": [
+      "2026/06/スクリーンショット-2026-06-26-151348.jpg"
+    ]
+  },
+  {
+    "code": "110_MBFF_mens_mist_lotion_100ml",
+    "name": "mbメンズミストローションPRO",
+    "desc_paths": [
+      "2026/06/スクリーンショット-2026-06-26-151309-300x293.jpg"
+    ]
+  },
+  {
+    "code": "501_OLTRE BOOST",
+    "name": "業務用脱毛機のノウハウと経験が詰まった家庭用脱毛器 オルトレブースト",
+    "desc_paths": [
+      "2026/06/413443_1717402198_pNYbU2VY4ilcf1OP-300x212.webp",
+      "2026/06/413443_1717401099_GjLj0XLQN9rjWIkf-300x300.webp",
+      "2026/06/413443_1717401103_VPZ5BeY0WHHHadAL-1-300x300.webp",
+      "2026/06/413443_1717401125_rA455T33MVVgLvms-300x300.webp",
+      "2026/06/413443_1717401366_yF4MQGUYmsRzaaKd-300x266.webp",
+      "2026/06/413443_1717401453_0bkJozIURVJMcBRl-300x298.webp",
+      "2026/06/413443_1717401688_1nzGM4eflYr5ahnq-168x300.webp"
+    ]
+  },
+  {
+    "code": "500_OLTRE BOOST",
+    "name": "業務用脱毛機のノウハウと経験が詰まった家庭用脱毛器 オルトレブースト",
+    "desc_paths": [
+      "2026/06/413443_1717402198_pNYbU2VY4ilcf1OP-300x212.webp",
+      "2026/06/413443_1717401099_GjLj0XLQN9rjWIkf-300x300.webp",
+      "2026/06/413443_1717401103_VPZ5BeY0WHHHadAL-1-300x300.webp",
+      "2026/06/413443_1717401125_rA455T33MVVgLvms-300x300.webp",
+      "2026/06/413443_1717401366_yF4MQGUYmsRzaaKd-300x266.webp",
+      "2026/06/413443_1717401453_0bkJozIURVJMcBRl-300x298.webp",
+      "2026/06/413443_1717401688_1nzGM4eflYr5ahnq-168x300.webp"
+    ]
+  },
+  {
+    "code": "102_MBFF_Serum_forsalon_100ml",
+    "name": "MBFFマムフローラセラムＰｒｏ業務用　100ｍL",
+    "desc_paths": [
+      "2026/06/seramu-300x278.jpg"
+    ]
+  },
+  {
+    "code": "188_MBFF_mist_lotion_200ml",
+    "name": "MBFFミストローション200ml",
+    "desc_paths": []
+  },
+  {
+    "code": "013_TANSA_FREUV１ケース６個入り",
+    "name": "魔法のTANSAフリーブ",
+    "desc_paths": [
+      "2026/05/スクリーンショット-2026-07-24-121317-300x300.jpg"
+    ]
+  },
+  {
+    "code": "105_MBFF_liquid_supplement_50ml*2",
+    "name": "MBFFリキッドサプリメント50ml×2本",
+    "desc_paths": []
+  },
+  {
+    "code": "109_MBFF_Chrismascoffret",
+    "name": "109_MBFF_Chrismascoffret",
+    "desc_paths": [
+      "2025/07/スクリーンショット-2025-11-18-182046-300x300.jpg",
+      "2025/10/S__131629063_0-225x300.jpg"
+    ]
+  },
+  {
+    "code": "006_TANSA517_tablet_trial",
+    "name": "お試し【魔法のTANSA517】",
+    "desc_paths": [
+      "2025/06/d8540bf602e131c562733cb6ed49396ec7afcce2-original_-224x300.png"
+    ]
+  },
+  {
+    "code": "007_TANSA517_tablet",
+    "name": "魔法のTANSA517",
+    "desc_paths": [
+      "2025/06/d8540bf602e131c562733cb6ed49396ec7afcce2-original_-224x300.png"
+    ]
+  },
+  {
+    "code": "008_TANSA409_muscat _kami_Berry Campaign",
+    "name": "魔法のTANSAベリーキャンペーン１１＋１セット",
+    "desc_paths": [
+      "2025/07/スクリーンショット-2025-11-18-181844-298x300.jpg"
+    ]
+  },
+  {
+    "code": "006_TANSA409_muscat _kami",
+    "name": "【魔法のTANSA409マスカット1000ml】",
+    "desc_paths": [
+      "2025/07/スクリーンショット-2025-11-18-181536-300x300.jpg"
+    ]
+  },
+  {
+    "code": "007_TANSA409_peach_kami",
+    "name": "【魔法のTANSA409ピーチ1000ml】数量限定",
+    "desc_paths": [
+      "2026/06/スクリーンショット-2025-11-18-181656-300x300.jpg"
+    ]
+  },
+  {
+    "code": "104_MBFF_skin_care_2Weeks_set",
+    "name": "MBFFスキンケア２Ｗｅｅｋｓセット",
+    "desc_paths": []
+  },
+  {
+    "code": "103_MBFF_ Soyflora_Soap_pro_10g",
+    "name": "MBFFソイフローラソープＰｒｏ10ｇ",
+    "desc_paths": []
+  },
+  {
+    "code": "102_MBFF_Mum_Flora_Serum_30ml",
+    "name": "MBFFマムフローラセラムＰｒｏ30ml",
+    "desc_paths": []
+  },
+  {
+    "code": "101_MBFF_Soyflora_Soap_pro_60g",
+    "name": "MBFFソイフローラソープＰｒｏ60ｇ",
+    "desc_paths": []
+  },
+  {
+    "code": "010?エッセンス用  商品袋　12枚入り",
+    "name": "エッセンス用  商品袋　12枚入り",
+    "desc_paths": []
+  },
+  {
+    "code": "009?プレミアム用 商品袋12枚入り",
+    "name": "プレミアム用 商品袋12枚入り",
+    "desc_paths": []
+  },
+  {
+    "code": "008?魔法のTANSA　三つ折りパンフレット 48枚入り",
+    "name": "魔法のTANSA　三つ折りパンフレット",
+    "desc_paths": []
+  },
+  {
+    "code": "007?販売促進 Bセット",
+    "name": "販売促進 Bセット",
+    "desc_paths": []
+  },
+  {
+    "code": "006?販売促進 Aセット",
+    "name": "販売促進 Aセット",
+    "desc_paths": []
+  },
+  {
+    "code": "first_press_limited_c",
+    "name": "初回導入セットC",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "first_press_limited_B",
+    "name": "初回導入セットB",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "001_TANSA409_mango_kami_trial",
+    "name": "お試し【魔法のTANSA409 マンゴー1000ml】",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "002_TANSA409_berry_kami_trial",
+    "name": "お試し【魔法のTANSA409ベリー1000ml】",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "003_TANSA409_mango_trial",
+    "name": "お試し【魔法のTANSA409 マンゴー720ml】プレミアム",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "004_TANSA409_berry_trial",
+    "name": "お試し【魔法のTANSA409 ベリー720ml】プレミアム",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "005_ps-b1_001_trial",
+    "name": "お試し【MAGICAL TANSA 850 エッセンス】",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "first_press_limited_A",
+    "name": "初回導入セットA",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "001_TANSA409_mango_kami",
+    "name": "【魔法のTANSA409 マンゴー1000ml】",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "002_TANSA409_berry_kami",
+    "name": "【魔法のTANSA409ベリー1000ml】",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "003_TANSA409_mango",
+    "name": "【魔法のTANSA409 マンゴー720ml】プレミアム",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "004_TANSA409_berry",
+    "name": "【魔法のTANSA409 ベリー720ml】プレミアム",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  },
+  {
+    "code": "005_ps-b1_001",
+    "name": "【MAGICAL TANSA 850 エッセンス】",
+    "desc_paths": [
+      "2024/03/433923804_445665427819198_2441886781561608760_n-148x300.png"
+    ]
+  }
+]

@@ -1,0 +1,478 @@
+@charset "utf-8";
+/* AG FLOLIST | Illustrator 2026-11-06 design refresh
+   使用画像は /img/index/ag2026-*.webp
+   共通CSSと既存Welcartの処理を変更しない追加スタイルです。 */
+
+:root {
+  --ag26-ink: #493b36;
+  --ag26-text: #61554f;
+  --ag26-brown: #755b4d;
+  --ag26-brown-dark: #503c33;
+  --ag26-beige: #f6eee9;
+  --ag26-cream: #fffcf9;
+  --ag26-border: #eadbd2;
+  --ag26-serif: Georgia, "Times New Roman", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+}
+
+/* 共通：既存のナビ・フッターの構造は維持 */
+.site-header { background: linear-gradient(180deg,rgba(249,243,239,.94),rgba(249,243,239,.2)); }
+.site-header__inner { position: relative; }
+.site-header__nav-list a { color: var(--ag26-ink); transition:opacity .25s ease; }
+.site-header__nav-list a:hover { color: var(--ag26-brown); opacity:.72; }
+.site-header__nav-list span { color: var(--ag26-ink); }
+.site-header__nav-list small { color: var(--ag26-text); }
+.site-header__contact a { background: var(--ag26-brown) !important; color:#fff !important; border-radius:3px !important; }
+.site-header__contact span,.site-header__contact small { color:#fff !important; }
+.menu-toggle span { background:var(--ag26-ink); }
+.sp-menu { background:#695248; }
+.sp-menu__list a,.sp-menu__sub a { color:#fff; }
+footer.site-footer { background:#f1e9e3 !important; color:var(--ag26-ink) !important; }
+footer.site-footer .site-footer__bottom { border-color:#d8c8bd !important; }
+footer.site-footer .site-footer__nav a,
+footer.site-footer .site-footer__policy a,
+footer.site-footer .site-footer__copy { color:var(--ag26-text) !important; }
+
+/* 背景と基本書体 */
+.ag-platform, .ag-order { color:var(--ag26-ink); background:var(--ag26-cream); }
+.ag-platform { --ag-pink:var(--ag26-brown); --ag-pink-light:var(--ag26-beige); --ag-border:var(--ag26-border); }
+.ag-platform .ag-container,.ag-order .ag-container { width:min(calc(100% - 44px),1160px); margin-inline:auto; }
+.ag-platform .ag-btn,.ag-order .ag-btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:24px;
+  min-height:46px; padding:12px 23px; color:var(--ag26-brown) !important;
+  background:transparent; border:1px solid var(--ag26-brown); border-radius:3px;
+  font-size:14px; font-weight:400; line-height:1.45; letter-spacing:.03em;
+  text-align:center; text-decoration:none; transition:background .2s ease,color .2s ease,transform .2s ease;
+}
+.ag-platform .ag-btn--fill,.ag-order .ag-btn--fill {
+  background:var(--ag26-brown); color:#fff !important;
+}
+.ag-platform .ag-btn--line,.ag-order .ag-btn--line { background:rgba(255,255,255,.62); color:var(--ag26-brown) !important; }
+.ag-platform .ag-btn:hover,.ag-order .ag-btn:hover { opacity:1; transform:translateY(-2px); }
+.ag-platform .ag-btn--fill:hover,.ag-order .ag-btn--fill:hover { background:var(--ag26-brown-dark); color:#fff !important; }
+.ag-platform .ag-btn--line:hover,.ag-order .ag-btn--line:hover { background:var(--ag26-beige); }
+.ag-kicker,.ag-platform .ag-kicker,.ag-order .ag-kicker {
+  margin:0 0 10px; color:var(--ag26-brown); font-family:var(--ag26-serif);
+  font-size:15px; letter-spacing:.1em; line-height:1.4; font-style:italic;
+}
+.ag-section-intro { display:flex; align-items:end; justify-content:space-between; gap:40px; margin:0 0 36px; }
+.ag-section-intro h2 { margin:0; font-family:var(--ag26-serif); font-weight:400; font-size:32px; letter-spacing:.05em; line-height:1.45; }
+.ag-section-intro > p { max-width:505px; margin:0; font-size:14px; color:var(--ag26-text); line-height:1.9; }
+.ag-section-intro--center { display:flex; flex-direction:column; align-items:center; gap:6px; text-align:center; }
+.ag-section-intro--center > p { margin:0; }
+
+/* HERO: 右側はIllustratorで指定された物撮り画像、左側はHTMLで記述 */
+.ag-platform .ag-hero { position:relative; overflow:hidden; padding:0 !important; background:#f6ebe7; }
+.ag-platform .ag-hero__inner { position:relative; display:block; width:100%; max-width:none; min-height:690px; margin:0; }
+.ag-platform .ag-hero__visual { position:absolute; inset:0; width:100%; height:100% !important; margin:0; overflow:hidden; }
+.ag-platform .ag-hero__visual img {
+  display:block; width:100%; height:100% !important; max-width:none; aspect-ratio:auto;
+  object-fit:cover; object-position:center center;
+}
+.ag-platform .ag-hero__copy {
+  position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+  width:min(calc(100% - 80px),1160px); max-width:none; min-height:690px;
+  margin:0 auto; padding:126px 0 80px !important;
+}
+.ag-platform .ag-hero__eyebrow { margin:0 0 21px; font-family:var(--ag26-serif); font-size:14px; letter-spacing:.12em; color:var(--ag26-brown); }
+.ag-platform .ag-hero__copy h1 {
+  width:52%; max-width:600px; margin:0 0 25px; color:var(--ag26-ink);
+  font-family:var(--ag26-serif); font-size:clamp(36px,3.5vw,55px); font-weight:400; letter-spacing:.065em; line-height:1.55;
+}
+.ag-platform .ag-hero__lead { max-width:540px; width:51%; margin:0 0 13px; color:var(--ag26-ink); line-height:1.95; }
+.ag-platform .ag-hero__text { max-width:490px; width:48%; margin:0; color:var(--ag26-text); line-height:1.9; }
+.ag-platform .ag-buttons { display:flex; align-items:center; gap:12px; margin-top:24px; }
+.ag-platform .ag-buttons .ag-btn { width:auto; min-width:165px; font-size:14px; }
+.ag-platform .ag-hero__scroll { position:absolute; z-index:2; bottom:20px; left:50%; color:#8e7161; transform:translateX(-50%); font-family:Georgia,serif; font-size:10px; letter-spacing:.22em; }
+.ag-platform .ag-hero__scroll::after { content:""; display:block; width:1px; height:28px; margin:8px auto 0; background:#8e7161; }
+
+/* 3つの入口カード：画像内の文字が読めるよう、切り抜きなしの縦長画像を使用 */
+.ag-platform .ag-entrance { padding:90px 0 100px; background:#fffaf7; }
+.ag-platform .ag-entrance__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.ag-platform .ag-entrance__visual-card { position:relative; display:block; min-width:0; overflow:hidden; border-radius:8px; background:#f5ebe5; box-shadow:0 12px 35px rgba(68,46,33,.065); }
+.ag-platform .ag-entrance__visual-card > img { display:block; width:100%; height:auto; aspect-ratio:1 / 2; object-fit:contain; transition:transform .5s ease; }
+.ag-platform .ag-entrance__visual-card:hover > img { transform:scale(1.025); }
+.ag-platform .ag-entrance__visual-card:focus-visible { outline:3px solid #8a6957; outline-offset:4px; }
+.ag-platform .ag-entrance__go { position:absolute; right:18px; bottom:18px; display:grid; place-items:center; width:37px; height:37px; border-radius:50%; background:rgba(255,255,255,.89); color:#755847; font-size:20px; box-shadow:0 3px 15px rgba(0,0,0,.1); }
+
+/* 既存のサービス導線は動作を変えず、色調だけ調整 */
+.ag-platform .ag-flow { padding:80px 0 90px; background:#fff; }
+.ag-platform .ag-section-title { margin-bottom:38px; font-family:var(--ag26-serif); color:var(--ag26-ink); }
+.ag-platform .ag-section-title span { display:block; margin-bottom:7px; color:var(--ag26-brown); font-family:var(--ag26-serif); font-size:15px; font-style:italic; letter-spacing:.1em; }
+.ag-platform .ag-section-title p { font-family:var(--ag26-serif); font-size:30px; line-height:1.5; }
+.ag-platform .ag-flow__icon { background:#f0e2d9; }
+.ag-platform .ag-flow__item h3 { color:var(--ag26-ink); }
+.ag-platform .ag-flow__item p { color:var(--ag26-text); }
+.ag-platform .ag-flow__more .ag-btn { width:auto; min-width:250px; border:1px solid var(--ag26-brown); background:#fff; color:var(--ag26-brown) !important; }
+.ag-platform .ag-flow__more .ag-btn:hover { background:var(--ag26-brown); color:#fff !important; }
+
+/* ノリコさんのストーリー。左コピー、右写真に変更 */
+.ag-platform .ag-story { background:#f5ece7; }
+.ag-platform .ag-story__inner { display:grid; grid-template-columns:53% 47%; width:min(100%,1440px); min-height:530px; margin-inline:auto; }
+.ag-platform .ag-story__body { grid-column:1; grid-row:1; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:58px 7% 58px max(40px,calc((100vw - 1160px)/2)); }
+.ag-platform .ag-story__en { margin:0 0 18px; color:var(--ag26-brown); font-family:var(--ag26-serif); font-size:17px; letter-spacing:.04em; }
+.ag-platform .ag-story__body h2 { max-width:550px; margin:0 0 22px; color:var(--ag26-ink); font-family:var(--ag26-serif); font-size:clamp(25px,2.45vw,37px); font-weight:400; line-height:1.62; letter-spacing:.06em; }
+.ag-platform .ag-story__body > p:not(.ag-story__en) { max-width:530px; margin:0 0 14px; color:var(--ag26-text); line-height:1.9; }
+.ag-platform .ag-story__body > .ag-story__signature { margin:4px 0 24px !important; color:var(--ag26-ink) !important; letter-spacing:.09em; }
+.ag-platform .ag-story__signature strong { padding-left:10px; font-family:var(--ag26-serif); font-size:17px; font-weight:400; }
+.ag-platform .ag-story__body .ag-btn { margin-top:4px; border-radius:3px; }
+.ag-platform .ag-story__photo { grid-column:2; grid-row:1; width:100%; height:100% !important; min-height:530px; overflow:hidden; }
+.ag-platform .ag-story__photo img { width:100%; height:100% !important; object-fit:cover; object-position:50% center; }
+
+/* 継続するサロンサポート */
+.ag-platform .ag-salon { padding:96px 0 100px; background:#fff; }
+.ag-platform .ag-salon h2.ag-heading { margin:0 auto 42px !important; }
+.ag-platform .ag-salon h2.ag-heading .ag-heading__en { color:var(--ag26-brown) !important; }
+.ag-platform .ag-salon h2.ag-heading .ag-heading__ja { color:var(--ag26-ink) !important; }
+.ag-platform .ag-salon__grid { gap:17px; }
+.ag-platform .ag-salon__card { border:1px solid #dfcfc4; border-radius:7px; background:#fffbf8; padding:20px 15px; }
+.ag-platform .ag-salon__card h3 { color:var(--ag26-ink); }
+.ag-platform .ag-salon__card p { color:var(--ag26-text); }
+.ag-platform .ag-salon__more .ag-btn { min-width:300px; }
+
+/* ブランド：商品の新しい横長写真に差替 */
+.ag-platform .ag-brands { padding:90px 0 100px; background:#faf2ec; }
+.ag-platform .ag-brands__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+.ag-platform .ag-brand { display:block; color:var(--ag26-ink); background:#fff; border-radius:4px; overflow:hidden; box-shadow:0 10px 35px rgba(58,37,24,.04); }
+.ag-platform .ag-brand__image { width:100%; overflow:hidden; background:#efe6df; }
+.ag-platform .ag-brand__image img { display:block; width:100%; height:auto; aspect-ratio:1.79; object-fit:cover; transition:transform .5s ease; }
+.ag-platform .ag-brand:hover .ag-brand__image img { transform:scale(1.03); }
+.ag-platform .ag-brand__details { padding:28px 32px 32px; }
+.ag-platform .ag-brand__details > span:first-child { font-family:Georgia,serif; font-size:13px; color:#8b7466; }
+.ag-platform .ag-brand__details h3 { margin:4px 0 8px; font-family:var(--ag26-serif); font-size:25px; font-weight:400; letter-spacing:.03em; }
+.ag-platform .ag-brand__details p { margin:0 0 20px; color:var(--ag26-text); font-size:14px; }
+.ag-platform .ag-brand__link { display:inline-block; padding-bottom:3px; border-bottom:1px solid #987b69; color:var(--ag26-brown); font-size:13px; }
+
+.ag-platform .ag-contact { padding:76px 0; background:#ede1d8; }
+.ag-platform .ag-contact__inner { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+.ag-platform .ag-contact__copy h2 { color:var(--ag26-ink); font-family:var(--ag26-serif); font-size:33px; }
+.ag-platform .ag-contact__copy p { color:var(--ag26-text); }
+.ag-platform .ag-contact__buttons { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.ag-platform .ag-contact__buttons .ag-btn { border-radius:3px; min-height:60px; padding:10px; font-size:14px; }
+
+/* ページ：既存お取引サロン様専用ページ */
+.ag-order { padding-top:0; }
+.ag-order__hero { padding:170px 20px 85px; background:radial-gradient(ellipse at 80% 20%,rgba(225,205,193,.7),transparent 38%),linear-gradient(135deg,#f7eee8,#f1e3dc 62%,#f7f1ed); text-align:center; }
+.ag-order__hero-inner { max-width:830px; margin:0 auto; }
+.ag-order__hero .ag-kicker { margin-bottom:17px; font-style:normal; font-size:15px; letter-spacing:.24em; }
+.ag-order__hero h1 { margin:0 0 22px; font-family:var(--ag26-serif); font-size:clamp(29px,3.4vw,48px); font-weight:400; letter-spacing:.09em; line-height:1.48; }
+.ag-order__hero p:not(.ag-kicker) { margin:0; font-size:15px; line-height:2; color:var(--ag26-text); }
+.ag-order__catalog { padding:92px 0 110px; }
+.ag-order__catalog .ag-section-intro { margin-bottom:48px; }
+.ag-order__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+.ag-order__card { min-width:0; border-radius:4px; overflow:hidden; background:#fff; box-shadow:0 8px 40px rgba(69,51,39,.08); }
+.ag-order__card-image { margin:0; padding:24px 24px 0; background:#faf0e9; }
+.ag-order__card-image img { width:100%; height:auto; aspect-ratio:1.79; object-fit:cover; }
+.ag-order__card-copy { padding:30px 34px 38px; }
+.ag-order__card-kicker { margin:0 0 6px; color:#92776a; font-family:Georgia,serif; font-size:13px; }
+.ag-order__card-copy h3 { margin:0 0 8px; font-family:var(--ag26-serif); font-weight:400; font-size:30px; line-height:1.5; }
+.ag-order__card-copy > p:not(.ag-order__card-kicker) { margin:0 0 24px; color:var(--ag26-text); font-size:15px; line-height:1.8; }
+.ag-order__card-copy .ag-btn { width:100%; }
+.ag-order__support { padding:56px 0; background:#f3e7df; }
+.ag-order__support-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:50px; }
+.ag-order__support h2 { margin:0 0 12px; font-family:var(--ag26-serif); font-size:29px; font-weight:400; line-height:1.65; }
+.ag-order__support p:not(.ag-kicker) { color:var(--ag26-text); font-size:14px; }
+.ag-order__support-actions { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+
+@media (max-width:1199px) {
+  .ag-platform .ag-hero__copy { width:min(calc(100% - 65px),1160px); }
+  .ag-platform .ag-hero__inner,.ag-platform .ag-hero__copy { min-height:610px; }
+  .ag-platform .ag-hero__copy h1 { font-size:clamp(31px,3.8vw,50px); }
+  .ag-platform .ag-story__body { padding-left:45px; padding-right:35px; }
+}
+@media (max-width:999px) {
+  .site-header__inner { height:74px; }
+  .ag-platform .ag-hero { padding-top:0 !important; }
+  .ag-platform .ag-hero__inner { min-height:0; }
+  .ag-platform .ag-hero__visual { position:relative; inset:auto; height:auto !important; }
+  .ag-platform .ag-hero__visual img { width:100%; height:auto !important; aspect-ratio:1.95 / 1; object-fit:cover; }
+  .ag-platform .ag-hero__copy { width:100%; min-height:0; padding:116px 24px 46px !important; }
+  .ag-platform .ag-hero__copy { display:flex; flex-direction:column; }
+  .ag-platform .ag-hero__visual { order:2; }
+  .ag-platform .ag-hero__copy { position:relative; }
+  .ag-platform .ag-hero__eyebrow { margin-bottom:12px; }
+  .ag-platform .ag-hero__copy h1,.ag-platform .ag-hero__lead,.ag-platform .ag-hero__text { width:100%; max-width:650px; }
+  .ag-platform .ag-hero__copy h1 { font-size:40px; line-height:1.45; margin-bottom:19px; }
+  .ag-platform .ag-hero__scroll { display:none; }
+  .ag-platform .ag-story__inner { min-height:0; }
+  .ag-platform .ag-story__body { padding:47px 35px; }
+  .ag-platform .ag-story__photo { min-height:420px; }
+  .ag-platform .ag-story__body h2 { font-size:26px; }
+  .ag-platform .ag-salon__grid { gap:14px; }
+  .ag-order__hero { padding-top:132px; }
+}
+@media (min-width:600px) and (max-width:999px) {
+  .ag-platform .ag-hero__inner { display:flex; flex-direction:column; }
+  .ag-platform .ag-hero__copy { order:1; }
+  .ag-platform .ag-hero__visual { order:2; }
+  .ag-platform .ag-entrance__grid { gap:10px; }
+}
+@media (max-width:699px) {
+  .ag-platform .ag-container,.ag-order .ag-container { width:min(calc(100% - 36px),1160px); }
+  .ag-section-intro { display:block; margin-bottom:24px; }
+  .ag-section-intro h2 { font-size:27px; }
+  .ag-section-intro > p { margin:16px 0 0; }
+  .ag-section-intro--center { display:flex; }
+  .ag-platform .ag-hero__inner { display:flex; flex-direction:column; }
+  .ag-platform .ag-hero__visual { order:2; }
+  .ag-platform .ag-hero__copy { order:1; padding:112px 24px 33px !important; }
+  .ag-platform .ag-hero__copy h1 { font-size:clamp(29px,7.1vw,39px); }
+  .ag-platform .ag-hero__text { font-size:14px !important; }
+  .ag-platform .ag-hero__lead { font-size:15px !important; }
+  .ag-platform .ag-hero__visual img { aspect-ratio:1.6; object-fit:cover; object-position:74% center; }
+  .ag-platform .ag-buttons { display:grid; grid-template-columns:1fr 1fr; gap:9px; width:100%; }
+  .ag-platform .ag-buttons .ag-btn { min-width:0; padding:10px 8px; font-size:12px; }
+  .ag-platform .ag-entrance { padding:62px 0 70px; }
+  .ag-platform .ag-entrance__grid { grid-template-columns:1fr; gap:16px; max-width:440px; margin-inline:auto; }
+  .ag-platform .ag-entrance__visual-card > img { aspect-ratio:1 / 1.25; object-fit:cover; object-position:center 15%; }
+  .ag-platform .ag-flow { padding:60px 0 66px; }
+  .ag-platform .ag-section-title p { font-size:26px; }
+  .ag-platform .ag-story__inner { display:flex; flex-direction:column; }
+  .ag-platform .ag-story__body { order:1; padding:58px 24px 38px; }
+  .ag-platform .ag-story__body h2 { font-size:27px; }
+  .ag-platform .ag-story__photo { order:2; min-height:0; height:310px !important; }
+  .ag-platform .ag-story__photo img { width:100%; height:100% !important; object-fit:cover; object-position:center 38%; }
+  .ag-platform .ag-salon { padding:65px 0 75px; }
+  .ag-platform .ag-salon h2.ag-heading { white-space:normal !important; flex-wrap:wrap !important; }
+  .ag-platform .ag-salon h2.ag-heading .ag-heading__ja { white-space:normal !important; }
+  .ag-platform .ag-salon__card { padding:15px 9px; }
+  .ag-platform .ag-brands { padding:62px 0 70px; }
+  .ag-platform .ag-brands__grid { grid-template-columns:1fr; gap:20px; }
+  .ag-platform .ag-brand__details { padding:21px 23px 26px; }
+  .ag-platform .ag-contact { padding:58px 0; }
+  .ag-platform .ag-contact__inner { grid-template-columns:1fr; gap:24px; }
+  .ag-platform .ag-contact__copy h2 { font-size:27px; }
+  .ag-platform .ag-contact__buttons { grid-template-columns:1fr; gap:10px; }
+  .ag-order__hero { padding:118px 18px 63px; }
+  .ag-order__hero h1 { font-size:28px; }
+  .ag-order__catalog { padding:60px 0 70px; }
+  .ag-order__grid { grid-template-columns:1fr; gap:20px; }
+  .ag-order__card-image { padding:14px 14px 0; }
+  .ag-order__card-copy { padding:23px 25px 29px; }
+  .ag-order__card-copy h3 { font-size:27px; }
+  .ag-order__support { padding:49px 0; }
+  .ag-order__support-grid { grid-template-columns:1fr; gap:25px; }
+  .ag-order__support-actions { grid-template-columns:1fr; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .ag-platform .ag-entrance__visual-card > img,.ag-platform .ag-brand__image img,.ag-platform .ag-btn,.ag-order .ag-btn { transition:none; }
+}
+
+/* ==========================================================
+   STABILIZE LAYOUT FIX 2026-11-06 rev2
+   既存テーマとの競合で崩れやすい箇所を追加補正
+   ========================================================== */
+.ag-platform *,
+.ag-order * { box-sizing: border-box; }
+
+.ag-platform img,
+.ag-order img { max-width: 100%; height: auto; }
+
+/* header */
+@media screen and (min-width:1000px){
+  .site-header__inner {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+  }
+  .site-header__nav-list {
+    gap:22px !important;
+  }
+  .site-header__nav-list a {
+    align-items:center;
+    text-align:center;
+  }
+  .site-header__nav-list span { font-size:12px !important; letter-spacing:.08em !important; }
+  .site-header__nav-list small { font-size:10px !important; }
+  .site-header__contact a {
+    min-width:110px !important;
+    padding:0 16px !important;
+    border-radius:4px !important;
+  }
+}
+
+/* hero */
+@media screen and (min-width:1000px){
+  .ag-platform .ag-hero__copy {
+    width:min(calc(100% - 72px), 1180px);
+    padding:138px 0 88px !important;
+  }
+  .ag-platform .ag-hero__copy h1 {
+    width:44%;
+    max-width:520px;
+    margin-bottom:22px;
+    line-height:1.48;
+  }
+  .ag-platform .ag-hero__lead {
+    width:42%;
+    max-width:470px;
+  }
+  .ag-platform .ag-hero__text {
+    width:41%;
+    max-width:455px;
+    font-size:14px !important;
+  }
+  .ag-platform .ag-hero__visual img {
+    object-position:center center;
+  }
+  .ag-platform .ag-buttons {
+    margin-top:28px;
+  }
+}
+
+/* section spacing */
+.ag-platform .ag-entrance,
+.ag-platform .ag-flow,
+.ag-platform .ag-salon,
+.ag-platform .ag-brands,
+.ag-platform .ag-contact { position:relative; z-index:1; }
+
+/* entrance cards */
+.ag-platform .ag-entrance__grid {
+  align-items:stretch;
+}
+.ag-platform .ag-entrance__visual-card {
+  height:100%;
+  border:1px solid #eee1d8;
+}
+.ag-platform .ag-entrance__visual-card > img {
+  width:100%;
+}
+@media screen and (min-width:1000px){
+  .ag-platform .ag-entrance__grid {
+    gap:22px;
+  }
+}
+
+/* flow */
+.ag-platform .ag-flow__list {
+  align-items:stretch;
+}
+.ag-platform .ag-flow__item {
+  min-width:0;
+}
+.ag-platform .ag-flow__item h3 {
+  min-height:2.8em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ag-platform .ag-flow__item p {
+  font-size:13px !important;
+  line-height:1.8;
+}
+@media screen and (min-width:1000px){
+  .ag-platform .ag-flow__list {
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:0;
+  }
+  .ag-platform .ag-flow__item {
+    flex:1 1 0;
+  }
+  .ag-platform .ag-flow__arrow {
+    flex:0 0 38px;
+    width:38px;
+    margin:34px 0 0;
+    transform:none;
+  }
+}
+
+/* story */
+@media screen and (min-width:1000px){
+  .ag-platform .ag-story__inner {
+    grid-template-columns:50% 50%;
+    min-height:560px;
+  }
+  .ag-platform .ag-story__body {
+    padding-right:48px;
+  }
+  .ag-platform .ag-story__photo,
+  .ag-platform .ag-story__photo img {
+    min-height:560px;
+  }
+}
+
+/* salon cards */
+.ag-platform .ag-salon__grid {
+  align-items:stretch;
+}
+.ag-platform .ag-salon__card {
+  justify-content:flex-start;
+}
+.ag-platform .ag-salon__card h3 {
+  margin-bottom:10px;
+}
+.ag-platform .ag-salon__card p {
+  text-align:left;
+}
+@media screen and (min-width:1000px){
+  .ag-platform .ag-salon__grid { gap:16px; }
+  .ag-platform .ag-salon__card {
+    min-height:220px;
+    padding:22px 14px;
+  }
+  .ag-platform .ag-salon__card h3 {
+    min-height:54px;
+    font-size:16px;
+    line-height:1.45;
+  }
+  .ag-platform .ag-salon__card p {
+    font-size:12px !important;
+    line-height:1.75;
+  }
+}
+
+/* brands */
+.ag-platform .ag-brands__grid {
+  align-items:stretch;
+}
+.ag-platform .ag-brand {
+  height:100%;
+  border:1px solid #eadfd8;
+}
+.ag-platform .ag-brand__details {
+  min-height:150px;
+}
+
+/* contact */
+.ag-platform .ag-contact__copy h2,
+.ag-platform .ag-contact__copy p {
+  margin-top:0;
+}
+@media screen and (min-width:1000px){
+  .ag-platform .ag-contact__inner {
+    grid-template-columns:minmax(0, 1fr) auto;
+  }
+  .ag-platform .ag-contact__buttons {
+    grid-template-columns:repeat(2, minmax(190px, 240px));
+    justify-content:end;
+  }
+}
+
+/* footer */
+footer.site-footer .site-footer__brand p {
+  line-height:1.8 !important;
+}
+footer.site-footer .site-footer__nav ul {
+  align-items:start;
+}
+footer.site-footer .site-footer__nav a,
+footer.site-footer .site-footer__policy a,
+footer.site-footer .site-footer__copy {
+  font-size:12px !important;
+  line-height:1.8 !important;
+}
+@media screen and (min-width:1000px){
+  footer.site-footer .site-footer__top {
+    gap:80px !important;
+  }
+  footer.site-footer .site-footer__nav ul {
+    gap:10px 28px !important;
+  }
+}
+
+/* floating account icons */
+@media screen and (min-width:1000px){
+  article.my_account { z-index:20; }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 490" preserveAspectRatio="xMidYMid slice">
+ <defs>
+  <linearGradient id="base" x2="1" y2="0"><stop offset="0" stop-color="#ded1cd"/><stop offset=".16" stop-color="#f4eae6"/><stop offset=".55" stop-color="#f9f1ec"/><stop offset="1" stop-color="#e9dcd5"/></linearGradient>
+  <linearGradient id="cloth" x2="1" y2="0"><stop stop-color="#d5c1b9" stop-opacity=".2"/><stop offset=".15" stop-color="#fff" stop-opacity=".65"/><stop offset=".3" stop-color="#dcc6bf" stop-opacity=".09"/><stop offset=".53" stop-color="#fff" stop-opacity=".62"/><stop offset=".7" stop-color="#e8d4cd" stop-opacity=".1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="21"/></filter><filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+  <radialGradient id="bright"><stop stop-color="#ffffff" stop-opacity=".8"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+ </defs>
+ <rect width="1600" height="490" fill="url(#base)"/>
+ <g opacity=".48" filter="url(#blur)"><path d="M-110 490Q100 40 210-20L330-20Q140 130 115 490Z" fill="#fff"/><path d="M10 490Q250 70 430-30L555-30Q250 155 245 490Z" fill="#cab7ae" opacity=".3"/><path d="M600 520Q770 45 930-40L1000-40Q805 155 830 510Z" fill="#fff" opacity=".45"/></g>
+ <rect width="1600" height="490" fill="url(#cloth)" opacity=".9"/>
+ <ellipse cx="790" cy="240" rx="650" ry="370" fill="url(#bright)" opacity=".45"/>
+ <g stroke="#827366" stroke-width="15" stroke-linecap="round" stroke-opacity=".17" fill="none" filter="url(#soft)">
+  <path d="M1620 -60Q1540 90 1420 177T1250 370"/><path d="M1505 34Q1510 132 1600 208"/><path d="M1460 140Q1360 130 1285 62"/><path d="M1410 180Q1372 266 1425 368"/><path d="M1335 253Q1245 243 1200 180"/><path d="M1480 72Q1375 62 1330 -10"/>
+ </g>
+ <g fill="#6c6459" opacity=".18" filter="url(#blur)">
+  <ellipse cx="1410" cy="134" rx="40" ry="102" transform="rotate(28 1410 134)"/><ellipse cx="1310" cy="94" rx="33" ry="85" transform="rotate(-40 1310 94)"/><ellipse cx="1517" cy="220" rx="38" ry="108" transform="rotate(-42 1517 220)"/><ellipse cx="1245" cy="260" rx="39" ry="110" transform="rotate(-57 1245 260)"/><ellipse cx="1422" cy="355" rx="30" ry="90" transform="rotate(26 1422 355)"/><ellipse cx="1580" cy="56" rx="55" ry="105" transform="rotate(-40 1580 56)"/>
+ </g>
+</svg>

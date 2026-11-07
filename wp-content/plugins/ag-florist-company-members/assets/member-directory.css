@@ -1,0 +1,6 @@
+/* Native Welcart member list columns */
+#mainDataTable .agcm-native-member-head{min-width:110px;white-space:nowrap}
+#mainDataTable .agcm-native-member-cell{font-size:12px;white-space:nowrap}
+#mainDataTable .agcm-native-member-type[data-agcm-kind="company"]{color:#a0446b;font-weight:600}
+#mainDataTable .agcm-native-member-type[data-agcm-kind="fixed"]{color:#275f75;font-weight:600}
+#mainDataTable .agcm-native-member-company{max-width:220px;white-space:normal;overflow-wrap:anywhere}

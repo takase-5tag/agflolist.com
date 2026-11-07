@@ -1,0 +1,64 @@
+/* AG FLOLIST business dashboard — mobile first */
+.agcm-admin{max-width:1200px;color:#41333b;font-size:14px}
+.agcm-heading{display:block;margin:26px 0 24px}
+.agcm-heading h1{font-size:25px;font-weight:600;letter-spacing:.04em;margin:5px 0 12px;color:#342730}
+.agcm-eyebrow{letter-spacing:.2em;font-size:10px;color:#b85178;font-weight:700;margin:0}
+.agcm-heading .description{margin:0;line-height:1.8}
+.agcm-heading>a{margin-top:16px}
+.agcm-companies-nav{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}
+.agcm-companies-nav a{padding:10px 15px;text-decoration:none;border:1px solid #e9d4db;background:#fff;border-radius:4px;color:#6a4554}
+.agcm-companies-nav a.is-selected,.agcm-companies-nav a:hover{color:#a8436c;background:#fcf2f6;border-color:#dcb3c2}
+.agcm-card{border:1px solid #f0e0e5;background:#fff;padding:20px 14px;margin-bottom:22px;box-shadow:0 8px 35px rgba(55,20,38,.03);border-radius:5px}
+.agcm-card-title{display:flex;align-items:center;gap:12px;margin-bottom:19px}
+.agcm-card-title h2{font-size:18px;line-height:1.4;font-weight:600;margin:0}
+.agcm-number{color:#b55279;background:#fdf1f5;padding:5px 10px;border-radius:3px;font-size:11px;font-weight:700}
+.agcm-card p{line-height:1.8}
+.agcm-field{display:block;margin:18px 0}
+.agcm-field>label{display:block;margin-bottom:8px;font-weight:600}
+.agcm-field input{width:100%;max-width:590px;height:43px;border:1px solid #dec7d0}
+.agcm-check{display:flex;align-items:center;gap:8px;font-weight:600}.agcm-check input{margin:0}
+.agcm-url-row{display:block}.agcm-url-row input{width:100%;min-width:0;height:43px;background:#fdf9fa;border:1px solid #e6d5dd;font-family:monospace}
+.agcm-url-row button{white-space:nowrap;margin-top:9px}
+.agcm-product-table-wrap{overflow-x:auto;border:1px solid #eadde1;margin-top:17px}
+.agcm-product-table{border:0!important;min-width:720px!important}
+.agcm-product-table th{background:#f9eff3;padding:14px 12px!important;border-bottom:1px solid #eddae1}
+.agcm-product-table td{padding:12px!important;vertical-align:middle!important}
+.agcm-product-name{font-weight:600}.agcm-rate-wrap{display:flex;align-items:center;gap:5px;min-width:90px}
+.agcm-rate-wrap input{width:78px;text-align:right}.agcm-rate-wrap span{font-size:12px;color:#8e6978}
+.agcm-calculated{font-weight:700;color:#a94770}.agcm-actions{margin:24px 0 34px}
+.agcm-actions .button-primary{background:#b34f76;border-color:#b34f76}.agcm-actions .button-primary:hover{background:#923959;border-color:#923959}
+.agcm-add-member{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 24px}.agcm-add-member input{max-width:180px}
+.agcm-member-table td{vertical-align:middle!important}.agcm-member-table td,.agcm-member-table th{padding:10px!important}
+.agcm-danger{border-color:#efd0d0}.agcm-list>a{display:flex;gap:14px;align-items:center;padding:13px 5px;border-bottom:1px solid #f1e8eb;text-decoration:none}
+.agcm-list>a>span:last-child{margin-left:auto}.agcm-status{font-size:11px;color:#aa5e3a;background:#fff6ef;padding:4px 9px;border-radius:3px}
+.agcm-status.is-active{color:#337554;background:#eff8f1}
+.agcm-qrbox{display:flex;align-items:center;gap:12px;margin:20px 0;padding:16px;border:1px dashed #ead8df;flex-wrap:wrap;background:#fffafb}
+#agcm-qr-preview svg{width:186px;height:186px;background:white;max-width:100%;display:block}
+#agcm-qr-preview:empty{display:none}
+#agcm-qr-save{margin-left:0;margin-top:10px}
+@media (min-width:783px){
+  .agcm-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:32px 0 25px}
+  .agcm-heading h1{font-size:27px}.agcm-heading>a{margin-top:0}
+  .agcm-card{padding:28px 30px}.agcm-card-title h2{font-size:20px}
+  .agcm-field{display:grid;grid-template-columns:160px 1fr;align-items:center;gap:12px}
+  .agcm-field>label{margin:0}.agcm-url-row{display:flex;align-items:stretch;gap:8px}
+  .agcm-url-row button{margin:0}.agcm-qrbox{gap:24px}#agcm-qr-save{margin:0 0 0 9px}
+}
+
+/* Registered member directory / fixed URL members - mobile first */
+.agcm-member-directory{max-width:1200px}
+.agcm-fixed-roster{max-width:1200px;margin-top:32px}
+.agcm-roster-card{margin-top:20px}
+.agcm-roster-count{margin-left:auto;color:#9c5370;font-weight:600;background:#fdf0f5;border-radius:30px;padding:5px 12px;font-size:12px}
+.agcm-roster-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.agcm-roster-filters a{padding:8px 13px;background:#fff;border:1px solid #e7cfd9;border-radius:4px;text-decoration:none;color:#664e59}
+.agcm-roster-filters a.is-selected{background:#b34f76;border-color:#b34f76;color:#fff}
+.agcm-roster-scroll{max-width:100%;overflow-x:auto}
+.agcm-roster-table{min-width:760px}
+.agcm-roster-table th{background:#fbf3f6}
+.agcm-roster-table th,.agcm-roster-table td{padding:12px!important;vertical-align:middle!important}
+.agcm-kind{font-size:12px;display:inline-block;padding:5px 8px;border-radius:4px;white-space:nowrap}
+.agcm-kind--company{background:#fbecf3;color:#993e67}
+.agcm-kind--fixed{background:#eef6f9;color:#2b6170}
+.agcm-kind--unknown{background:#f2f2f2;color:#555}
+.agcm-roster-pages{display:flex;align-items:center;gap:14px;justify-content:flex-end;margin:20px 0}

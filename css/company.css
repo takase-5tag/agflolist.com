@@ -1,0 +1,607 @@
+@charset "utf-8";
+/* ============================================================
+   AG FLOLIST | COMPANY
+   Mobile First / TOP・SALONのタイポグラフィと表示幅に合わせる
+   /css/company.css 完全差し替え用
+   ============================================================ */
+
+.page-company {
+  --company-pink: #c6ad9d;
+  --company-soft: #fffbf8;
+  --company-text: #252525;
+  color: var(--company-text);
+  background: #fff;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+.page-company *,
+.page-company *::before,
+.page-company *::after { box-sizing: border-box; }
+.page-company img { display: block; max-width: 100%; height: auto; }
+.page-company a { text-decoration: none; }
+
+.page-company .ag-lower__container,
+.page-company .ag-subhero__inner,
+.page-company .ag-brands .ag-container {
+  width: min(calc(100% - 36px), 1120px);
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.page-company .ag-lower__section { padding: 54px 0 40px; }
+
+/* 01 HERO：見出し・本文の左端を統一。ヘッダーとの重なりを避ける */
+.page-company .ag-subhero {
+  display: flex;
+  align-items: center;
+  min-height: 425px;
+  margin: 0;
+  padding: 110px 0 54px;
+  background-color: #c8e4df;
+  background-image: linear-gradient(90deg, rgba(224,245,240,.27), rgba(224,245,240,0)), url("../img/company/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 63% center;
+}
+.page-company .ag-subhero .ag-subhero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  text-align: left;
+}
+.page-company .ag-subhero .ag-subhero__copy {
+  display: block;
+  flex: 0 1 670px;
+  width: 100%;
+  max-width: 670px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.page-company .ag-subhero .ag-subhero__copy h1 {
+  margin: 0 0 25px;
+  color: #272629;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(27px, 6vw, 36px);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: .045em;
+  text-align: left;
+}
+.page-company .ag-subhero .ag-subhero__copy p {
+  max-width: 630px;
+  margin: 0 0 22px;
+  color: #343137;
+  font-size: 16px;
+  line-height: 1.95;
+  letter-spacing: .015em;
+  text-align: left;
+}
+.page-company .ag-subhero .ag-subhero__copy p:last-child { margin-bottom: 0; }
+
+/* 02 BEAUTY & WELLNESS：SVGと文章のバランス */
+.page-company .company-wellness {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+.page-company .company-wellness__copy { min-width: 0; }
+.page-company .company-wellness h2 {
+  margin: 0 0 16px;
+  color: #26252a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 6vw, 34px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: .015em;
+  text-align: left;
+}
+.page-company .company-wellness h3 {
+  margin: 0 0 26px;
+  color: #28262a;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(20px, 4.8vw, 24px);
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: .04em;
+  text-align: left;
+}
+.page-company .company-wellness p {
+  margin: 0 0 21px;
+  color: #4a4649;
+  font-size: 16px;
+  line-height: 1.95;
+  letter-spacing: .015em;
+  text-align: left;
+}
+.page-company .company-wellness p:last-child { margin-bottom: 0; }
+.page-company .company-care {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+}
+.page-company .company-care img {
+  display: block;
+  width: min(100%, 410px);
+  max-width: 410px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 03 BRANDS：トップページと同じ見出し／2ブランド */
+.page-company .ag-brands {
+  padding: 46px 0 72px;
+  background: #fff;
+}
+.page-company .ag-brands h2.ag-heading {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+.page-company .ag-brands h2.ag-heading > .ag-heading__en {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: auto;
+  margin: 0 12px 0 0;
+  padding: 0 12px 0 0;
+  border-right: 1px solid var(--company-pink);
+  color: var(--company-pink);
+  font-family: "Times New Roman", "Yu Mincho", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.page-company .ag-brands h2.ag-heading > .ag-heading__ja {
+  display: inline-block;
+  flex: 0 1 auto;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .02em;
+  text-align: left;
+}
+.page-company .ag-brands h2.ag-heading > span::before,
+.page-company .ag-brands h2.ag-heading > span::after { content: none; }
+.page-company .ag-brands .ag-brands__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+.page-company .ag-brands .ag-brand {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: #f9f2ed;
+}
+.page-company .ag-brands .ag-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.8 / 1;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+@media (hover: hover) {
+  .page-company .ag-brands .ag-brand:hover img { transform: scale(1.025); }
+}
+
+/* 04 CTA：ほかのページと同様にコピー左／ボタン右 */
+.page-company .company-message {
+  margin: 0;
+  padding: 54px 0;
+  background: var(--company-soft);
+  text-align: left;
+}
+.page-company .company-message__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+}
+.page-company .company-message__copy { min-width: 0; }
+.page-company .company-message h2 {
+  margin: 0 0 16px;
+  color: var(--company-pink);
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(24px, 5vw, 28px);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: .035em;
+  text-align: left;
+}
+.page-company .company-message p {
+  margin: 0;
+  color: #484047;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: left;
+}
+.page-company .company-message__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.page-company .company-message__actions .ag-lower__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 54px;
+  padding: 13px 24px;
+  border: 1px solid var(--company-pink);
+  border-radius: 5px;
+  background: var(--company-pink);
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  transition: opacity .2s ease;
+}
+.page-company .company-message__actions .ag-lower__btn:hover { opacity: .8; }
+
+/* TABLET */
+@media (min-width: 600px) {
+  .page-company .ag-lower__container,
+  .page-company .ag-subhero__inner,
+  .page-company .ag-brands .ag-container { width: min(calc(100% - 48px), 1120px); }
+  .page-company .ag-lower__section { padding: 70px 0 45px; }
+  .page-company .company-wellness { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; }
+  .page-company .company-care img { width: min(100%, 400px); }
+  .page-company .ag-brands .ag-brands__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .page-company .company-message__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; }
+}
+
+/* PC */
+@media (min-width: 900px) {
+  .page-company .ag-subhero {
+    min-height: 535px;
+    padding: 118px 0 72px;
+    background-image: linear-gradient(90deg, rgba(224,245,240,.22), rgba(224,245,240,0) 70%), url("../img/company/hero.jpg");
+    background-position: center center;
+  }
+  .page-company .ag-subhero .ag-subhero__copy h1 { font-size: 40px; margin-bottom: 28px; }
+  .page-company .ag-lower__section { padding: 90px 0 55px; }
+  .page-company .company-wellness { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 70px; }
+  .page-company .company-wellness h2 { margin-bottom: 20px; font-size: 35px; }
+  .page-company .company-wellness h3 { margin-bottom: 28px; font-size: 25px; }
+  .page-company .company-care img { width: min(100%, 440px); max-width: 440px; }
+  .page-company .ag-brands { padding: 55px 0 96px; }
+  .page-company .ag-brands h2.ag-heading { margin-bottom: 38px; }
+  .page-company .ag-brands h2.ag-heading > .ag-heading__en { margin-right: 15px; padding-right: 15px; font-size: 36px; }
+  .page-company .ag-brands h2.ag-heading > .ag-heading__ja { font-size: 25px; white-space: nowrap; }
+  .page-company .ag-brands .ag-brands__grid { gap: 32px; }
+  .page-company .company-message { padding: 72px 0; }
+  .page-company .company-message__inner { grid-template-columns: minmax(0, 1fr) minmax(0, .88fr); gap: 52px; }
+  .page-company .company-message__actions { justify-content: flex-end; }
+  .page-company .company-message__actions .ag-lower__btn { width: auto; min-width: 355px; max-width: 100%; }
+}
+
+/* LARGE PC */
+@media (min-width: 1300px) {
+  .page-company .ag-lower__container,
+  .page-company .ag-subhero__inner,
+  .page-company .ag-brands .ag-container { width: min(calc(100% - 80px), 1200px); max-width: 1200px; }
+}
+
+/* ============================================================
+   AG FLOLIST / COMPANY 追加微調整 (2026-10-17)
+   ① ヒーロー：お問い合わせ・サロンと同じ左余白、見出し／本文を揃える
+   ② BEAUTY & WELLNESS：テキストとSVGの余白／サイズを調整
+   既存 company.css の末尾へ追記可。モバイルファースト。
+   ============================================================ */
+
+/* ヒーロー：幅をページ中央のコンテナに縛らず左端基準で配置 */
+.page-company .ag-subhero .ag-subhero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-inline: 18px;
+  text-align: left;
+}
+
+.page-company .ag-subhero .ag-subhero__copy {
+  display: block;
+  flex: 0 1 670px;
+  width: 100%;
+  max-width: 670px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  transform: none;
+  text-align: left;
+}
+
+/* 見出しと本文の始点を厳密に統一 */
+.page-company .ag-subhero .ag-subhero__copy > h1,
+.page-company .ag-subhero .ag-subhero__copy > p {
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+  text-indent: 0;
+  text-align: left;
+  transform: none;
+}
+.page-company .ag-subhero .ag-subhero__copy > h1 {
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+.page-company .ag-subhero .ag-subhero__copy > p {
+  max-width: 640px;
+}
+
+/* WELLNESS：本文を広く取りすぎず、画像との対比を自然に */
+.page-company .company-wellness {
+  width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  gap: 22px;
+}
+.page-company .company-wellness > div:first-child {
+  min-width: 0;
+  align-self: center;
+}
+.page-company .company-wellness h2 {
+  margin-bottom: 13px;
+  font-size: clamp(26px, 5vw, 32px);
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+.page-company .company-wellness h3 {
+  margin-bottom: 18px;
+  line-height: 1.55;
+}
+.page-company .company-wellness p {
+  margin-bottom: 16px;
+  line-height: 1.9;
+}
+.page-company .company-care {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+}
+.page-company .company-care img {
+  display: block;
+  width: min(100%, 410px);
+  max-width: 410px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 600px) {
+  .page-company .ag-subhero .ag-subhero__inner {
+    padding-inline: 28px;
+  }
+  .page-company .company-wellness {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 26px;
+  }
+  .page-company .company-wellness h2 {
+    font-size: clamp(26px, 3vw, 32px);
+  }
+  .page-company .company-care img {
+    width: min(100%, 400px);
+  }
+}
+
+@media (min-width: 900px) {
+  /* 先に調整したサロンページと同じ左側の余白 */
+  .page-company .ag-subhero .ag-subhero__inner {
+    padding-left: clamp(56px, 6.8vw, 120px);
+    padding-right: 32px;
+  }
+  .page-company .company-wellness {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(24px, 3vw, 42px);
+  }
+  .page-company .company-wellness h2 {
+    margin-bottom: 18px;
+    font-size: clamp(28px, 2.5vw, 34px);
+  }
+  .page-company .company-wellness h3 { margin-bottom: 22px; }
+  .page-company .company-wellness p { margin-bottom: 17px; }
+  .page-company .company-care img {
+    width: min(100%, 430px);
+    max-width: 430px;
+  }
+}
+
+
+/* ===============================================================
+   HERO V4 - CONTACTと同じレイアウト幅・見出し・本文左端
+   Mobile First. ヒーロー以外のセクションは変更しない
+   =============================================================== */
+.page-company.ag-lower > .ag-subhero > .ag-subhero__inner {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  width: min(calc(100% - 36px), 1120px) !important;
+  max-width: 1120px !important;
+  min-width: 0;
+  margin-inline: auto !important;
+  padding: 0 !important;
+  text-align: left !important;
+  transform: none !important;
+}
+.page-company.ag-lower > .ag-subhero > .ag-subhero__inner > .ag-subhero__copy {
+  position: static !important;
+  display: block !important;
+  flex: 0 1 710px !important;
+  width: 100% !important;
+  max-width: 710px !important;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  inset: auto !important;
+  float: none !important;
+  transform: none !important;
+  text-align: left !important;
+}
+.page-company.ag-lower .ag-subhero__copy > .ag-subhero__eyebrow,
+.page-company.ag-lower .ag-subhero__copy > h1,
+.page-company.ag-lower .ag-subhero__copy > p {
+  display: block;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  text-indent: 0 !important;
+  text-align: left !important;
+  transform: none !important;
+}
+.page-company.ag-lower .ag-subhero__copy > .ag-subhero__eyebrow {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+  color: #272629;
+  font: 400 13px/1.5 Georgia, 'Times New Roman', serif;
+  letter-spacing: .19em;
+}
+.page-company.ag-lower .ag-subhero__copy > h1 {
+  max-width: 710px;
+  margin: 0 0 22px !important;
+  font-size: clamp(27px, 6vw, 36px) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  letter-spacing: .04em;
+}
+.page-company.ag-lower .ag-subhero__copy > p:not(.ag-subhero__eyebrow) {
+  max-width: 640px;
+  margin: 0 0 17px !important;
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 1.95 !important;
+  letter-spacing: .025em;
+}
+.page-company.ag-lower .ag-subhero__copy > p:last-child {
+  margin-bottom: 0 !important;
+}
+@media (min-width: 600px) {
+  .page-company.ag-lower > .ag-subhero > .ag-subhero__inner {
+    width: min(calc(100% - 48px), 1120px) !important;
+  }
+}
+@media (min-width: 900px) {
+  .page-company.ag-lower > .ag-subhero > .ag-subhero__inner {
+    width: min(calc(100% - 80px), 1120px) !important;
+  }
+  .page-company.ag-lower .ag-subhero__copy > h1 {
+    font-size: 40px !important;
+  }
+}
+@charset "utf-8";
+
+/* ===============================================================
+   HERO V4 - CONTACTと同じレイアウト幅・見出し・本文左端
+   Mobile First. ヒーロー以外のセクションは変更しない
+   =============================================================== */
+.page-company.ag-lower > .ag-subhero > .ag-subhero__inner {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  width: min(calc(100% - 36px), 1120px) !important;
+  max-width: 1120px !important;
+  min-width: 0;
+  margin-inline: auto !important;
+  padding: 0 !important;
+  text-align: left !important;
+  transform: none !important;
+}
+.page-company.ag-lower > .ag-subhero > .ag-subhero__inner > .ag-subhero__copy {
+  position: static !important;
+  display: block !important;
+  flex: 0 1 710px !important;
+  width: 100% !important;
+  max-width: 710px !important;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  inset: auto !important;
+  float: none !important;
+  transform: none !important;
+  text-align: left !important;
+}
+.page-company.ag-lower .ag-subhero__copy > .ag-subhero__eyebrow,
+.page-company.ag-lower .ag-subhero__copy > h1,
+.page-company.ag-lower .ag-subhero__copy > p {
+  display: block;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  text-indent: 0 !important;
+  text-align: left !important;
+  transform: none !important;
+}
+.page-company.ag-lower .ag-subhero__copy > .ag-subhero__eyebrow {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+  color: #272629;
+  font: 400 13px/1.5 Georgia, 'Times New Roman', serif;
+  letter-spacing: .19em;
+}
+.page-company.ag-lower .ag-subhero__copy > h1 {
+  max-width: 710px;
+  margin: 0 0 22px !important;
+  font-size: clamp(27px, 6vw, 36px) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  letter-spacing: .04em;
+}
+.page-company.ag-lower .ag-subhero__copy > p:not(.ag-subhero__eyebrow) {
+  max-width: 640px;
+  margin: 0 0 17px !important;
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 1.95 !important;
+  letter-spacing: .025em;
+}
+.page-company.ag-lower .ag-subhero__copy > p:last-child {
+  margin-bottom: 0 !important;
+}
+@media (min-width: 600px) {
+  .page-company.ag-lower > .ag-subhero > .ag-subhero__inner {
+    width: min(calc(100% - 48px), 1120px) !important;
+  }
+}
+@media (min-width: 900px) {
+  .page-company.ag-lower > .ag-subhero > .ag-subhero__inner {
+    width: min(calc(100% - 80px), 1120px) !important;
+  }
+  .page-company.ag-lower .ag-subhero__copy > h1 {
+    font-size: 40px !important;
+  }
+}

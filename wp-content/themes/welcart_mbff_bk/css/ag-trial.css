@@ -1,0 +1,528 @@
+@charset "UTF-8";
+/*
+ * AG FLOLIST | 初回限定トライアル専用デザイン
+ * 既存の商品カード・購入機能はそのまま使用し、このページの見た目だけを調整。
+ * ag-category-premium.css の後に読み込んでください。
+ */
+
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial {
+  --ag-trial-ink: #342c30;
+  --ag-trial-muted: #756e72;
+  --ag-trial-accent: #8e705f;
+  --ag-trial-line: #f2e7df;
+  --ag-trial-pale: #fffbf8;
+  padding: 112px 0 100px;
+  background: #fff;
+  color: var(--ag-trial-ink);
+}
+
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-container {
+  width: min(calc(100% - 48px), 1200px);
+  margin-inline: auto;
+}
+
+/* 上部：余白を整理し、案内を一行の落ち着いた帯にする */
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-header.ag-trial-header {
+  max-width: 900px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-eyebrow {
+  margin: 0 0 12px;
+  color: var(--ag-trial-accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .20em;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-header h1 {
+  margin: 0 0 14px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Zen Old Mincho", serif;
+  font-size: clamp(25px, 3.2vw, 34px);
+  letter-spacing: .09em;
+  font-weight: 500;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-header h1::after {
+  width: 30px;
+  height: 1px;
+  margin: 14px auto 0;
+  background: var(--ag-trial-accent);
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-header p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ag-trial-muted);
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-trial-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 22px;
+  margin: 0 0 24px;
+  padding: 12px 22px;
+  background: #fffbf8;
+  border: 1px solid #f2e7df;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #655c61;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-trial-notice strong {
+  flex: 0 0 auto;
+  color: #8e705f;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* 一覧の見出しとカート状況 */
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper-summary {
+  margin: 0 0 28px;
+  padding: 11px 16px;
+  border: 1px solid var(--ag-trial-line);
+  background: #fff;
+  box-shadow: none;
+  border-radius: 3px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper-summary a {
+  min-height: 34px;
+  padding: 6px 12px;
+  background: #fff;
+  border-radius: 2px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-section {
+  margin: 0 0 34px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-section__head {
+  margin: 0 0 17px;
+  padding: 0 0 11px;
+  border-color: #f2e7df;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-section__num {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  font-size: 14px;
+  background: #f9f2ed;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-section__head h2 {
+  font-size: 23px;
+  font-weight: 500;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-section__head small {
+  font-size: 14px;
+  color: #a19a9e;
+}
+
+/* 旧サイトに近い「写真左・商品情報右」の1列構成。
+   高さを揃え、巨大な画像領域や過剰な余白をなくす。 */
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-items {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  min-height: 256px;
+  border: 1px solid var(--ag-trial-line);
+  border-radius: 3px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: none;
+  transition: border-color .2s ease;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product:hover {
+  border-color: #e8d8cd;
+  box-shadow: none;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual {
+  display: grid;
+  align-items: center;
+  padding: 17px;
+  background: var(--ag-trial-pale);
+  min-width: 0;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual > a,
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual > span:not(.ag-list-product__placeholder) {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1px;
+  background: #fff;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  min-height: 0;
+  max-height: 220px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+  background: #fff;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__placeholder {
+  min-height: 220px;
+  padding: 14px;
+  background: #fff;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__placeholder span { font-size: 17px; }
+
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+  padding: 24px 34px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__label { display: none; }
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content h3 {
+  margin: 0 0 7px;
+  padding: 0;
+  font-size: clamp(18px, 2vw, 21px);
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: .015em;
+  color: var(--ag-trial-ink);
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__subtitle {
+  margin: 0 0 6px;
+  font-size: 15px;
+  line-height: 1.65;
+  font-weight: 500;
+  color: #6f626a;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__intro {
+  margin: 3px 0 9px;
+  color: var(--ag-trial-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+/* 詳細リンクはPHPから出力しない。この指定は以前の部品への表示対策。 */
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__detail { display: none !important; }
+
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__purchase {
+  margin: auto 0 0;
+  padding: 6px 0 0;
+  border: 0;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__member-note {
+  display: block;
+  width: fit-content;
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #917d86;
+  font-size: 14px;
+  line-height: 1.6;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__form { margin: 0; }
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__sku + .ag-list-product__sku {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--ag-trial-line);
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__sku-label {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-block {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 8px 18px;
+  flex-wrap: wrap;
+  margin: 0 0 9px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-title {
+  font-size: 14px;
+  color: #82757c;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-line { gap: 4px; }
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-line strong {
+  font-size: 25px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #8e705f;
+  letter-spacing: .005em;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-line small { font-size: 14px; }
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-line del { font-size: 14px; }
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__actions--stepper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #847780;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls {
+  grid-template-columns: 44px 62px 44px;
+  border: 1px solid #f2e7df;
+  border-radius: 3px;
+  box-shadow: none;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls button {
+  min-height: 44px;
+  font-size: 19px;
+  background: #fffbf8;
+  color: var(--ag-trial-accent);
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls output {
+  font-size: 14px;
+  line-height: 44px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__help {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #9d9298;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-trial-catalog-link {
+  margin: 35px 0 0;
+  text-align: center;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-trial-catalog-link a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 10px 25px;
+  background: #fff;
+  color: var(--ag-trial-accent);
+  border: 1px solid #e8d8cd;
+  border-radius: 3px;
+  font-size: 14px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-trial-catalog-link a:hover {
+  background: #fffbf8;
+  color: #735747;
+}
+
+@media (max-width: 800px) {
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial { padding: 95px 0 75px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-container { width: calc(100% - 32px); }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product { grid-template-columns: minmax(0, 225px) minmax(0, 1fr); }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual { padding: 12px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual img { height: 200px; max-height: 200px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content { padding: 20px 24px; }
+}
+
+@media (max-width: 600px) {
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-header.ag-trial-header { margin-bottom: 20px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-header h1 { font-size: 25px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-header p { font-size: 14px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-break-pc { display: none; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-trial-notice {
+    display: block;
+    padding: 12px 14px;
+    margin-bottom: 19px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-trial-notice strong { display: block; margin-bottom: 3px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper-summary { margin-bottom: 20px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-section__head { margin-bottom: 14px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-section__head h2 { font-size: 18px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-items { gap: 12px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product {
+    grid-template-columns: minmax(0, 35%) minmax(0, 1fr);
+    min-height: 0;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual { padding: 9px; align-items: start; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual > a,
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual > span:not(.ag-list-product__placeholder) { min-height: 0; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual img {
+    height: 132px;
+    min-height: 0;
+    max-height: 132px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__placeholder { min-height: 132px; padding: 6px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__placeholder span { font-size: 14px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__placeholder small { font-size: 14px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content { padding: 13px 12px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content h3 { font-size: 14px; margin-bottom: 6px; line-height: 1.55; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__subtitle { font-size: 14px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__intro { font-size: 14px; margin: 1px 0 7px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__member-note { font-size: 14px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-block { gap: 3px 9px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-title { font-size: 14px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-line strong { font-size: 20px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper { align-items: flex-start; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls { grid-template-columns: 40px 52px 40px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls button { min-height: 42px; font-size: 20px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls output { line-height: 42px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__help { font-size: 14px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-trial-catalog-link { margin-top: 25px; }
+}
+
+@media (max-width: 370px) {
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-container { width: calc(100% - 22px); }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product { grid-template-columns: minmax(0, 34%) minmax(0, 1fr); }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual { padding: 6px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual img { height: 112px; max-height: 112px; }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content { padding: 10px; }
+}
+
+/* 文字サイズの下限: トライアルページ内の補足表示も14px以上に統一 */
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial {
+  font-size: 14px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial :is(
+  .ag-list-product__placeholder small,
+  .ag-list-product__qty,
+  .ag-list-product__price-error,
+  .ag-list-product__submit :is(input[type="submit"], button),
+  .ag-list-tiers__heading strong,
+  .ag-list-tiers__heading small,
+  .ag-list-tiers__item small,
+  .ag-list-tiers__note,
+  .ag-stepper-status,
+  .ag-list-product__price-line small,
+  .ag-list-product__price-line del
+) {
+  font-size: 14px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content h3 {
+  font-size: clamp(18px, 2vw, 21px);
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-line strong {
+  font-size: 25px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls output {
+  font-size: 16px;
+}
+#main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls button {
+  font-size: 22px;
+}
+
+/* スマートフォンでは14pxを維持したまま情報を折り返せるレイアウトに変更 */
+@media (max-width: 560px) {
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-container {
+    width: calc(100% - 28px);
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual {
+    padding: 16px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual img {
+    height: 205px;
+    min-height: 0;
+    max-height: 205px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__placeholder {
+    min-height: 205px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content {
+    padding: 18px 18px 22px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-block {
+    gap: 8px 14px;
+    margin-bottom: 12px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__actions--stepper {
+    gap: 8px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial * { transition: none !important; }
+}
+
+
+/* 2026-10-20 追加調整 | PCでは商品一覧を2カラム化して、全体をすっきり表示 */
+@media (min-width: 1100px) {
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-container {
+    width: min(calc(100% - 48px), 1280px);
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product {
+    grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+    min-height: 238px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual {
+    padding: 14px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual img {
+    height: 190px;
+    max-height: 190px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__placeholder {
+    min-height: 190px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content {
+    padding: 20px 22px 22px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__content h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__subtitle,
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__intro,
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-title,
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__label,
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__help,
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__member-note {
+    font-size: 14px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__price-line strong {
+    font-size: 22px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__actions--stepper {
+    gap: 8px 12px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper {
+    gap: 6px 8px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls {
+    grid-template-columns: 40px 54px 40px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls button {
+    min-height: 40px;
+    font-size: 20px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-stepper__controls output {
+    font-size: 16px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1240px) {
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product {
+    grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__visual img {
+    height: 180px;
+    max-height: 180px;
+  }
+  #main.ag-product-category.ag-product-category--premium.ag-product-category--trial .ag-list-product__placeholder {
+    min-height: 180px;
+  }
+}

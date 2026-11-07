@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* AG FLOLIST V13 | guest purchase presentation, no pricing/checkout engine changes */
+.ag-guest-banner{display:flex;justify-content:space-between;align-items:center;gap:24px;margin:26px 0 0;padding:22px 26px;border:1px solid #e3d3c8;border-radius:10px;background:#fbf5f0;color:#59463c;text-align:left}
+.ag-guest-banner strong{display:block;font-weight:600;font-size:17px;line-height:1.6}
+.ag-guest-banner p{margin:5px 0 0!important;font-size:13px!important;line-height:1.9;color:#6b5b51}
+.ag-guest-banner__link,.ag-guest-product-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 20px;color:#fff!important;background:#795c4b;border-radius:4px;text-decoration:none;line-height:1.6;font-size:13px;white-space:nowrap;transition:background .2s}
+.ag-guest-banner__link:hover,.ag-guest-product-button:hover{background:#594234;color:#fff!important;opacity:1}
+.ag-guest-product-button{width:100%;margin:8px auto 0;white-space:normal;font-size:14px}
+.ag-guest-detail-notice,.ag-guest-checkout-intro{padding:18px 20px;margin:18px 0 24px!important;border-left:3px solid #91725e;background:#f7f0ea;color:#5e493d;font-size:14px;line-height:1.9}
+.ag-guest-checkout-intro strong{display:block;margin:0 0 3px;font-size:17px}
+.ag-guest-checkout-intro p{margin:0;font-size:13px}
+.site-header__actions .site-header__cart{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 10px;color:#664d40;font-size:13px;text-decoration:none;white-space:nowrap}
+.sp-menu__actions .sp-menu__cart{display:block;max-width:100%;padding:12px 16px;margin:0 0 10px;border:1px solid rgba(255,255,255,.4);color:#fff;text-decoration:none;text-align:center}
+@media(max-width:1100px){.ag-guest-banner{flex-direction:column;align-items:flex-start}.ag-guest-banner__link{white-space:normal}}
+@media(max-width:599px){.ag-guest-banner{padding:17px;margin-top:18px}.ag-guest-banner strong{font-size:15px}.ag-guest-banner__link{width:100%}}

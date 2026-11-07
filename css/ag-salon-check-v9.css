@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* AG FLOLIST | Salon recommendation refinement V9
+   /salon/ 内の .salon-check のみ。V8と共存し、他ページのスタイルに触れません。 */
+
+/* V5および旧salon.cssの2カラム指定より優先し、カード型にまとめる */
+.page-salon .ag-lower__section .salon-check {
+  display: grid !important;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr) !important;
+  align-items: stretch;
+  column-gap: clamp(26px, 3.4vw, 48px) !important;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-width: 0;
+  margin: 62px 0 0 !important;
+  padding: clamp(28px, 3.15vw, 42px) !important;
+  border: 1px solid #e9ddd3 !important;
+  border-radius: 16px !important;
+  background: linear-gradient(115deg, #f4ebe4 0%, #faf5f0 39%, #fbf8f5 100%) !important;
+  box-shadow: 0 12px 34px rgba(92, 62, 45, .055);
+  isolation: isolate;
+}
+.page-salon .ag-lower__section .salon-check::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  width: 225px;
+  height: 225px;
+  top: -140px;
+  right: -125px;
+  border: 1px solid rgba(154, 120, 98, .22);
+  border-radius: 50%;
+  box-shadow: 0 0 0 27px rgba(255, 255, 255, .19), 0 0 0 55px rgba(255,255,255,.10);
+}
+.page-salon .salon-check .salon-check__intro {
+  position: relative;
+  align-self: center;
+  min-width: 0;
+  text-align: left;
+}
+.page-salon .salon-check .salon-check__eyebrow {
+  margin: 0 0 21px !important;
+  padding: 0 0 0 17px;
+  position: relative;
+  color: #8c6e5b;
+  font: italic 13px/1.5 Georgia, "Times New Roman", serif;
+  letter-spacing: .16em;
+}
+.page-salon .salon-check .salon-check__eyebrow::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: #a9846c;
+}
+.page-salon .salon-check h2.salon-check__title {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #4f3c33 !important;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif !important;
+  font-size: clamp(24px, 2.1vw, 30px) !important;
+  font-weight: 400 !important;
+  line-height: 1.66 !important;
+  letter-spacing: .065em !important;
+  text-align: left !important;
+}
+.page-salon .salon-check .salon-check__lead {
+  margin: 19px 0 0 !important;
+  color: #8b7568;
+  font-size: 13px;
+  line-height: 1.95;
+  letter-spacing: .02em;
+}
+.page-salon .salon-check ul.salon-check__list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-content: center;
+  align-items: stretch;
+  gap: 12px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0;
+  width: 100%;
+  list-style: none;
+}
+.page-salon .salon-check ul.salon-check__list > li.salon-check__item {
+  position: relative;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center !important;
+  justify-content: flex-start;
+  column-gap: 13px;
+  min-width: 0;
+  width: 100%;
+  min-height: 91px;
+  margin: 0 !important;
+  padding: 18px 37px 18px 19px !important;
+  border: 1px solid #ebded4 !important;
+  border-radius: 9px;
+  background: rgba(255,255,255,.86) !important;
+  box-shadow: 0 4px 12px rgba(86,65,51,.025);
+  list-style: none !important;
+  color: #524138 !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+  letter-spacing: .015em;
+  text-align: left !important;
+}
+/* 旧CSSの大きい茶色の丸や下線は使用しない */
+.page-salon .salon-check ul.salon-check__list > li.salon-check__item::before {
+  content: none !important;
+  display: none !important;
+}
+.page-salon .salon-check .salon-check__icon {
+  flex: 0 0 29px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  margin: 0 !important;
+  padding: 0;
+  border-radius: 50%;
+  background: #f1e6dd;
+  color: #7c5e4e;
+  font: 600 15px/1 Arial, sans-serif;
+}
+.page-salon .salon-check .salon-check__text {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: block;
+  overflow-wrap: anywhere;
+}
+.page-salon .salon-check .salon-check__number {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  color: #cdb8aa;
+  font: 12px/1.2 Georgia, "Times New Roman", serif;
+  letter-spacing: .07em;
+}
+@media (max-width: 1050px) {
+  .page-salon .ag-lower__section .salon-check {
+    grid-template-columns: minmax(0, 230px) minmax(0,1fr) !important;
+    column-gap: 24px !important;
+    padding: 30px !important;
+  }
+  .page-salon .salon-check ul.salon-check__list > li.salon-check__item {
+    padding: 17px 30px 17px 15px !important;
+    column-gap: 10px;
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 780px) {
+  .page-salon .ag-lower__section .salon-check {
+    grid-template-columns: 1fr !important;
+    row-gap: 24px !important;
+    padding: 30px 26px !important;
+    margin-top: 48px !important;
+  }
+  .page-salon .salon-check .salon-check__intro {
+    align-self: start;
+  }
+  .page-salon .salon-check .salon-check__eyebrow {margin-bottom: 8px !important;}
+  .page-salon .salon-check h2.salon-check__title {font-size: 27px !important;line-height: 1.5 !important;}
+  .page-salon .salon-check .salon-check__lead {margin-top: 10px !important;}
+}
+@media (max-width: 580px) {
+  .page-salon .ag-lower__section .salon-check {
+    row-gap: 22px !important;
+    margin-top: 38px !important;
+    padding: 27px 19px !important;
+    border-radius: 12px !important;
+  }
+  .page-salon .salon-check ul.salon-check__list {
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+  }
+  .page-salon .salon-check ul.salon-check__list > li.salon-check__item {
+    min-height: 70px;
+    padding: 14px 34px 14px 15px !important;
+    font-size: 14px !important;
+  }
+  .page-salon .salon-check .salon-check__lead {font-size: 12px;}
+}

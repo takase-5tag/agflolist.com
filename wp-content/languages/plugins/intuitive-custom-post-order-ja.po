@@ -1,0 +1,113 @@
+# Translation of Plugins - Intuitive Custom Post Order - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Intuitive Custom Post Order - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-08-05 11:21:30+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Intuitive Custom Post Order - Stable (latest release)\n"
+
+#: intuitive-custom-post-order.php:295
+msgid "Failed to save the order."
+msgstr "順序の保存に失敗しました。"
+
+#: intuitive-custom-post-order.php:434 intuitive-custom-post-order.php:538
+#: intuitive-custom-post-order.php:652
+msgid "Invalid order payload."
+msgstr "無効な順序ペイロードです。"
+
+#: intuitive-custom-post-order.php:428 intuitive-custom-post-order.php:532
+#: intuitive-custom-post-order.php:646
+msgid "Missing order payload."
+msgstr "順序ペイロードがありません。"
+
+#: intuitive-custom-post-order.php:294
+msgid "Order saved."
+msgstr "順序が保存されました。"
+
+#: intuitive-custom-post-order.php:522 intuitive-custom-post-order.php:586
+#: intuitive-custom-post-order.php:637 intuitive-custom-post-order.php:675
+msgid "Order updated."
+msgstr "順序が更新されました。"
+
+#: intuitive-custom-post-order.php:425
+msgid "You are not allowed to reorder posts."
+msgstr "投稿の順序を変更する権限がありません。"
+
+#: intuitive-custom-post-order.php:643
+msgid "You are not allowed to reorder sites."
+msgstr "サイトの順序を変更する権限がありません。"
+
+#: intuitive-custom-post-order.php:529
+msgid "You are not allowed to reorder terms."
+msgstr "タームの順序を変更する権限がありません。"
+
+#: admin/settings-network.php:32
+msgid "Sites"
+msgstr "サイト"
+
+#: admin/settings-network.php:24
+msgid "Sortable Objects"
+msgstr "ソート可能なオブジェクト"
+
+#: admin/settings-network.php:3
+msgid "Intuitive Custom Post Order Network Settings"
+msgstr "直感的なカスタム投稿オーダーネットワーク設定"
+
+#: intuitive-custom-post-order.php:181 intuitive-custom-post-order.php:182
+#: intuitive-custom-post-order.php:196 intuitive-custom-post-order.php:197
+msgid "Intuitive CPO"
+msgstr "並び替え設定"
+
+#: admin/settings.php:11
+msgid "Intuitive Custom Post Order Settings"
+msgstr "並び替え設定"
+
+#: admin/settings.php:33
+msgid "Sortable Post Types"
+msgstr "カスタム投稿タイプ"
+
+#: admin/settings.php:67 admin/settings.php:107
+msgid "All Check"
+msgstr "すべて選択"
+
+#: admin/settings.php:74
+msgid "Sortable Taxonomies"
+msgstr "カスタムタクソノミー"
+
+#: admin/settings-network.php:8 admin/settings.php:16
+msgid "Settings saved."
+msgstr "設定を保存しました。"
+
+#: admin/settings-network.php:39 admin/settings.php:110
+msgid "Update"
+msgstr "更新"
+
+#. Author URI of the plugin
+#: intuitive-custom-post-order.php
+msgid "http://hijiriworld.com/web/"
+msgstr "http://hijiriworld.com/web/"
+
+#. Author of the plugin
+#: intuitive-custom-post-order.php
+msgid "hijiri"
+msgstr "hijiri"
+
+#. Plugin URI of the plugin
+#: intuitive-custom-post-order.php
+msgid "http://hijiriworld.com/web/plugins/intuitive-custom-post-order/"
+msgstr "http://hijiriworld.com/web/plugins/intuitive-custom-post-order/"
+
+#. Plugin Name of the plugin
+#: intuitive-custom-post-order.php
+msgid "Intuitive Custom Post Order"
+msgstr "Intuitive Custom Post Order"
+
+#. Description of the plugin
+#: intuitive-custom-post-order.php
+msgid "Intuitively, Order Items (Posts, Pages, ,Custom Post Types, Custom Taxonomies, Sites) using a Drag and Drop Sortable JavaScript."
+msgstr "ドラッグ & ドロップで並べ替え可能な JavaScript を使って、直感的に項目 (投稿、ページ、カスタム投稿タイプ、カスタムタクソノミー、サイト) の順序を変えることができます。"

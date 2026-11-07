@@ -1,0 +1,1346 @@
+@charset "utf-8";
+
+/* ==========================================================
+   AG FLOLIST TOP PAGE
+   Mobile First
+   common.css / header / footer は既存テーマを使用
+   ========================================================== */
+
+.ag-platform {
+  --ag-pink: #c6ad9d;
+  --ag-pink-light: #fffbf8;
+  --ag-text: #252525;
+  --ag-border: #c6ad9d;
+  color: var(--ag-text);
+  background: #fff;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  font-size: 17px;
+}
+
+.ag-platform *,
+.ag-platform *::before,
+.ag-platform *::after {
+  box-sizing: border-box;
+}
+
+.ag-platform img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.ag-platform a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ag-container {
+  width: min(calc(100% - 36px), 1120px);
+  margin-inline: auto;
+}
+
+.pc {
+  display: none;
+}
+
+/* ==========================================================
+   BUTTON
+   ========================================================== */
+
+.ag-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid var(--ag-pink);
+  border-radius: 7px;
+  font-size: 1em;
+  line-height: 1.4;
+  transition: opacity .25s ease, background-color .25s ease, color .25s ease;
+}
+
+.ag-btn:hover {
+  opacity: .75;
+}
+
+.ag-btn--fill {
+  background: var(--ag-pink);
+  color: #fff !important;
+}
+
+.ag-btn--line {
+  background: #fff;
+  color: var(--ag-pink) !important;
+}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.ag-hero {
+  padding-top: 70px;
+  background: #eee9e5;
+}
+
+.ag-hero__inner {
+  width: 100%;
+  background: transparent;
+}
+
+.ag-hero__copy {
+  padding: 34px 20px 26px;
+}
+
+.ag-hero__copy h1 {
+  margin: 0 0 20px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: .06em;
+}
+
+.ag-hero__lead {
+  max-width: 560px;
+  margin: 0 0 12px;
+  font-size: 1em;
+  line-height: 1.8;
+  letter-spacing: .04em;
+}
+
+.ag-hero__text {
+  max-width: 560px;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.8;
+}
+
+.ag-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.ag-buttons .ag-btn {
+  width: 100%;
+  min-width: 0;
+  padding-inline: 8px;
+}
+
+.ag-hero__visual {
+  margin: 0;
+  overflow: hidden;
+}
+
+.ag-hero__visual img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ==========================================================
+   ENTRANCE
+   ========================================================== */
+
+.ag-entrance {
+  padding: 42px 0 45px;
+}
+
+.ag-entrance__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.ag-entrance__card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 18px;
+  border: 2px solid #bbb;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.ag-entrance__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.ag-entrance__icon {
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+}
+
+.ag-entrance__icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.ag-entrance__title {
+  flex: 1;
+  min-width: 0;
+}
+
+.ag-entrance__title h2 {
+  margin: 0 0 7px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.18em;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.ag-entrance__title p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.ag-entrance__body {
+  width: 100%;
+}
+
+.ag-entrance__body p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.7;
+}
+
+.ag-entrance__more {
+  margin-top: auto;
+  padding-top: 8px;
+  text-align: center;
+}
+
+.ag-entrance__more a {
+  display: inline-block;
+  color: var(--ag-pink);
+  font-size: 1em;
+  line-height: 1.4;
+  transition: opacity .25s ease;
+}
+
+.ag-entrance__more a:hover {
+  opacity: .65;
+}
+
+/* ==========================================================
+   FLOW
+   ========================================================== */
+
+.ag-flow {
+  padding: 35px 0 55px;
+}
+
+.ag-section-title,
+.ag-heading {
+  margin: 0 0 30px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.ag-section-title {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.ag-section-title span {
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+}
+
+.ag-section-title p {
+  margin: 0;
+}
+
+.ag-flow__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ag-flow__item {
+  width: 100%;
+  text-align: center;
+}
+
+.ag-flow__icon {
+  display: grid;
+  width: 92px;
+  height: 92px;
+  place-items: center;
+  margin: 0 auto 10px;
+  padding: 10px;
+  border-radius: 50%;
+  background: #f2e7df;
+}
+
+.ag-flow__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ag-flow__item h3 {
+  margin: 0 0 8px;
+  font-size: 1.05em;
+  font-weight: 500;
+}
+
+.ag-flow__item p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.ag-flow__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 52px;
+  margin: 8px auto;
+  padding: 0;
+  transform: rotate(90deg);
+}
+
+.ag-flow__arrow img {
+  display: block;
+  width: 32px;
+  height: auto;
+  object-fit: contain;
+}
+
+.ag-flow__more {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 28px;
+  padding: 0 18px;
+}
+
+.ag-flow__more .ag-btn {
+  width: 100%;
+  max-width: 320px;
+  min-width: 0;
+  min-height: 48px;
+  gap: 18px;
+  padding: 11px 22px;
+  background: #fff;
+  color: var(--ag-pink) !important;
+  font-size: 1em;
+}
+
+.ag-flow__more .ag-btn span {
+  font-size: 24px;
+  line-height: 1;
+  transition: transform .25s ease;
+}
+
+.ag-flow__more .ag-btn:hover {
+  background: var(--ag-pink);
+  color: #fff !important;
+  opacity: 1;
+}
+
+.ag-flow__more .ag-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* ==========================================================
+   STORY
+   ========================================================== */
+
+.ag-story {
+  background: var(--ag-pink-light);
+}
+
+.ag-story__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.ag-story figure {
+  margin: 0;
+}
+
+.ag-story figure img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.ag-story__body {
+  padding: 30px 20px 36px;
+}
+
+.ag-story__en {
+  margin: 0 0 8px;
+  color: var(--ag-pink);
+  font-size: 1em;
+}
+
+.ag-story__body h2 {
+  margin: 0 0 16px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.45em;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.ag-story__body > p:not(.ag-story__en) {
+  margin: 0 0 20px;
+  font-size: 1em;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   FOR SALON
+   ========================================================== */
+
+.ag-salon {
+  padding: 55px 0 60px;
+}
+
+.ag-heading {
+  display: block;
+  margin-bottom: 26px;
+  line-height: 1;
+}
+
+.ag-heading__en {
+  display: block;
+  padding: 0;
+  color: var(--ag-pink);
+  font-size: 27px;
+  line-height: 1.15;
+}
+
+.ag-heading__ja {
+  display: block;
+  margin-top: 8px;
+  padding: 0;
+  color: #222;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.ag-salon__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ag-salon__card {
+  min-height: 210px;
+  padding: 16px 10px;
+  border: 1px solid var(--ag-border);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.ag-salon__card:last-child {
+  grid-column: 1 / -1;
+  width: calc(50% - 6px);
+  justify-self: center;
+}
+
+.ag-salon__card img {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 10px;
+  object-fit: contain;
+}
+
+.ag-salon__card h3 {
+  min-height: 45px;
+  margin: 0 0 10px;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.ag-salon__card p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.ag-salon__more {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 28px;
+  padding: 0 18px;
+}
+
+.ag-salon__more .ag-btn {
+  width: 100%;
+  max-width: 350px;
+  min-width: 0;
+  min-height: 48px;
+  gap: 18px;
+  padding: 11px 20px;
+  background: var(--ag-pink);
+  color: #fff !important;
+  font-size: 1em;
+}
+
+.ag-salon__more .ag-btn span {
+  font-size: 24px;
+  line-height: 1;
+  transition: transform .25s ease;
+}
+
+.ag-salon__more .ag-btn:hover {
+  background: #fff;
+  color: var(--ag-pink) !important;
+  opacity: 1;
+}
+
+.ag-salon__more .ag-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* ==========================================================
+   BRANDS
+   ========================================================== */
+
+.ag-brands {
+  padding: 50px 0 60px;
+}
+
+.ag-brands__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.ag-brand {
+  display: block;
+  overflow: hidden;
+  background: #f9f2ed;
+}
+
+.ag-brand img {
+  width: 100%;
+  aspect-ratio: 1.8 / 1;
+  object-fit: cover;
+}
+
+/* ==========================================================
+   CONTACT
+   ========================================================== */
+
+.ag-contact {
+  padding: 48px 0;
+  background: var(--ag-pink-light);
+}
+
+.ag-contact__inner {
+  display: grid;
+  gap: 22px;
+}
+
+.ag-contact__copy h2 {
+  margin: 0 0 12px;
+  color: var(--ag-pink);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.7em;
+  font-weight: 400;
+}
+
+.ag-contact__copy p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.9;
+}
+
+.ag-contact__buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.ag-contact__buttons .ag-btn {
+  width: 100%;
+  border-radius: 0;
+}
+
+/* ==========================================================
+   TABLET
+   600px 以上
+   ========================================================== */
+
+@media screen and (min-width: 600px) {
+
+  .ag-container {
+    width: min(calc(100% - 48px), 1120px);
+  }
+
+  .ag-hero__copy {
+    padding-inline: 40px;
+  }
+
+  .ag-entrance__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .ag-entrance__card {
+    padding: 20px;
+  }
+
+  .ag-flow__list {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr) 36px
+      minmax(0, 1fr) 36px
+      minmax(0, 1fr) 36px
+      minmax(0, 1fr) 36px
+      minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .ag-flow__arrow {
+    width: 36px;
+    height: auto;
+    margin: 34px 0 0;
+    transform: none;
+  }
+
+  .ag-flow__arrow img {
+    width: 36px;
+  }
+
+  .ag-salon__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .ag-salon__card:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+
+  .ag-brands__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+/* ==========================================================
+   PC
+   900px 以上
+   ========================================================== */
+
+@media screen and (min-width: 900px) {
+
+  .pc {
+    display: initial;
+  }
+
+  .ag-hero {
+    padding-top: 0;
+  }
+
+  .ag-hero__inner {
+    display: grid;
+    grid-template-columns: 48% 54%;
+    width: min(100%, 1320px);
+    min-height: 580px;
+    margin: 0 auto;
+  }
+
+  .ag-hero__copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 104px 34px 54px 58px;
+  }
+
+  .ag-hero__copy h1 {
+    max-width: 560px;
+    margin-bottom: 34px;
+    font-size: 3.35em;
+    line-height: 1.42;
+  }
+
+  .ag-hero__lead {
+    font-size: 1.18em;
+    line-height: 1.9;
+  }
+
+  .ag-hero__text {
+    line-height: 1.9;
+  }
+
+  .ag-buttons {
+    display: flex;
+    grid-template-columns: none;
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .ag-buttons .ag-btn {
+    width: auto;
+    min-height: 50px;
+    padding: 10px 27px;
+    font-size: 1.05em;
+  }
+
+  .ag-hero__visual {
+    height: 580px;
+  }
+
+  .ag-hero__visual img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+
+  .ag-entrance {
+    padding: 70px 0;
+  }
+
+  .ag-entrance__grid {
+    gap: 36px;
+  }
+
+  .ag-entrance__card {
+    /* min-height: 230px; */
+    padding: 22px 28px 18px;
+    border-radius: 30px;
+    /* width: 33%; */
+  }
+
+  .ag-entrance__head {
+    gap: 0px;
+    margin-bottom: 14px;
+  }
+
+  .ag-entrance__icon {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 80px;
+  }
+
+  .ag-entrance__icon img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ag-entrance__title h2 {
+    font-size: 1.45em;
+  }
+
+  .ag-entrance__title p {
+    white-space: nowrap;
+  }
+
+  .ag-entrance__body p {
+    line-height: 1.8;
+  }
+
+  .ag-entrance__more {
+    padding-top: 10px;
+  }
+
+  .ag-flow {
+    padding: 60px 0 90px;
+  }
+
+  .ag-section-title {
+    margin-bottom: 34px;
+    font-size: 1.6em;
+  }
+
+  .ag-flow__list {
+    grid-template-columns:
+      minmax(0, 1fr) 52px
+      minmax(0, 1fr) 52px
+      minmax(0, 1fr) 52px
+      minmax(0, 1fr) 52px
+      minmax(0, 1fr);
+  }
+
+  .ag-flow__icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 14px;
+    padding: 12px;
+  }
+
+  .ag-flow__arrow {
+    width: 52px;
+    margin-top: 38px;
+  }
+
+  .ag-flow__arrow img {
+    width: 52px;
+  }
+
+  .ag-flow__item h3 {
+    margin-bottom: 18px;
+    font-size: 1.15em;
+  }
+
+  .ag-flow__item p {
+    /* max-width: 175px; */
+    margin-inline: auto;
+  }
+
+  .ag-flow__more {
+    margin-top: 38px;
+    padding: 0;
+  }
+
+  .ag-flow__more .ag-btn {
+    width: auto;
+    min-width: 250px;
+    min-height: 50px;
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+
+  .ag-story__inner {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    width: min(100%, 1320px);
+    min-height: 385px;
+    margin: 0 auto;
+  }
+
+  .ag-story figure {
+    height: 385px;
+  }
+
+  .ag-story figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  .ag-story__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 54px 42px 18px;
+  }
+
+  .ag-story__body h2 {
+    max-width: 650px;
+    margin-bottom: 22px;
+    font-size: 2.05em;
+    line-height: 1.55;
+  }
+
+  .ag-story__body > p:not(.ag-story__en) {
+    max-width: 620px;
+    margin-bottom: 18px;
+  }
+
+  .ag-story__body .ag-btn {
+    align-self: flex-start;
+    border-radius: 14px;
+  }
+
+  .ag-salon {
+    padding: 90px 0 100px;
+  }
+
+  .ag-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 34px;
+    white-space: nowrap;
+  }
+
+  .ag-heading__en {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 15px 0 0;
+    border-right: 1px solid var(--ag-pink);
+    font-size: 31px;
+    white-space: nowrap;
+  }
+
+  .ag-heading__ja {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 15px;
+    font-size: 21px;
+    line-height: 1.4;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .ag-salon__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .ag-salon__card {
+    min-height: 232px;
+    padding: 18px 16px;
+    border: 2px solid var(--ag-pink);
+    border-radius: 16px;
+  }
+
+  .ag-salon__card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 16px;
+  }
+
+  .ag-salon__card h3 {
+    min-height: 61px;
+    margin-bottom: 14px;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .ag-salon__card p {
+    line-height: 1.7;
+  }
+
+  .ag-salon__more {
+    margin-top: 38px;
+    padding: 0;
+  }
+
+  .ag-salon__more .ag-btn {
+    width: auto;
+    min-width: 342px;
+    min-height: 50px;
+    padding: 12px 30px;
+    font-size: 17px;
+  }
+
+  .ag-brands {
+    padding: 80px 0 100px;
+  }
+
+  .ag-brands .ag-heading {
+    margin-bottom: 38px;
+  }
+
+  .ag-brands__grid {
+    gap: 42px;
+  }
+
+  .ag-contact {
+    padding: 80px 0;
+  }
+
+  .ag-contact__inner {
+    grid-template-columns: 40% 60%;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .ag-contact__copy h2 {
+    font-size: 2em;
+  }
+
+  .ag-contact__copy p {
+    font-size: 1.05em;
+    line-height: 1.8;
+  }
+
+  .ag-contact__buttons {
+    grid-template-columns: 1fr 1.05fr;
+    gap: 34px;
+  }
+
+  .ag-contact__buttons .ag-btn {
+    min-height: 62px;
+    font-size: 1.05em;
+  }
+}
+
+/* ==========================================================
+   LARGE PC
+   1300px 以上
+   ========================================================== */
+
+@media screen and (min-width: 1300px) {
+
+  .ag-container {
+    width: min(calc(100% - 80px), 1300px);
+  }
+
+  .ag-hero__inner {
+    min-height: 600px;
+  }
+
+  .ag-hero__visual {
+    height: 600px;
+  }
+
+  .ag-hero__copy {
+    padding-left: 70px;
+  }
+}
+/* ==========================================================
+   AG HEADING FINAL
+   FOR SALON / BRANDS 共通
+   ========================================================== */
+
+.ag-platform .ag-salon h2.ag-heading,
+.ag-platform .ag-brands h2.ag-heading {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 auto 34px !important;
+  padding: 0 !important;
+
+  gap: 0 !important;
+
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+
+/* =========================
+   英字部分
+   ========================= */
+
+.ag-platform .ag-salon h2.ag-heading .ag-heading__en,
+.ag-platform .ag-brands h2.ag-heading .ag-heading__en {
+  position: relative !important;
+  display: inline-block !important;
+  flex: none !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 14px 0 0 !important;
+  padding: 0 14px 0 0 !important;
+  color: #c6ad9d !important;
+  font-family:
+    "Times New Roman",
+    "Yu Mincho",
+    serif !important;
+  font-size: 36px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+
+
+/* 縦線 */
+.ag-platform .ag-salon h2.ag-heading .ag-heading__en::after,
+.ag-platform .ag-brands h2.ag-heading .ag-heading__en::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  right: 0 !important;
+  display: block !important;
+  width: 1px !important;
+  height: 30px !important;
+  margin: 0 !important;
+  /* background: #c6ad9d !important; */
+  transform: translateY(-50%) !important;
+}
+
+
+/* =========================
+   日本語部分
+   ========================= */
+
+.ag-platform .ag-salon h2.ag-heading .ag-heading__ja,
+.ag-platform .ag-brands h2.ag-heading .ag-heading__ja {
+  position: static !important;
+  display: inline-block !important;
+  flex: none !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #222 !important;
+  font-family:
+    "Yu Mincho",
+    "YuMincho",
+    "Hiragino Mincho ProN",
+    "Hiragino Mincho Pro",
+    "Noto Serif JP",
+    serif !important;
+  font-size: 25px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  letter-spacing: .04em !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+
+
+/* 日本語側の既存疑似要素を削除 */
+.ag-platform .ag-salon h2.ag-heading .ag-heading__ja::before,
+.ag-platform .ag-salon h2.ag-heading .ag-heading__ja::after,
+.ag-platform .ag-brands h2.ag-heading .ag-heading__ja::before,
+.ag-platform .ag-brands h2.ag-heading .ag-heading__ja::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* ==========================================================
+   SP
+   ========================================================== */
+
+@media screen and (max-width: 599px) {
+
+  .ag-platform .ag-salon h2.ag-heading,
+  .ag-platform .ag-brands h2.ag-heading {
+    margin-bottom: 26px !important;
+  }
+
+  .ag-platform .ag-salon h2.ag-heading .ag-heading__en,
+  .ag-platform .ag-brands h2.ag-heading .ag-heading__en {
+    margin-right: 9px !important;
+    padding-right: 9px !important;
+
+    font-size: 20px !important;
+  }
+
+  .ag-platform .ag-salon h2.ag-heading .ag-heading__en::after,
+  .ag-platform .ag-brands h2.ag-heading .ag-heading__en::after {
+    height: 23px !important;
+  }
+
+  .ag-platform .ag-salon h2.ag-heading .ag-heading__ja,
+  .ag-platform .ag-brands h2.ag-heading .ag-heading__ja {
+    font-size: 14px !important;
+    letter-spacing: 0 !important;
+  }
+
+}
+
+/* ==========================================================
+   NORMAL TEXT SIZE FINAL
+   通常の本文テキストを 16px に統一
+   ========================================================== */
+
+.ag-platform .ag-hero__lead,
+.ag-platform .ag-hero__text,
+.ag-platform .ag-entrance__title p,
+.ag-platform .ag-entrance__body p,
+.ag-platform .ag-flow__item p,
+.ag-platform .ag-story__body > p:not(.ag-story__en),
+.ag-platform .ag-salon__card p,
+.ag-platform .ag-contact__copy p {
+  font-size: 16px !important;
+}
+
+/* カード内・フロー内でも16pxを維持 */
+@media screen and (min-width: 600px) {
+  .ag-platform .ag-hero__lead,
+  .ag-platform .ag-hero__text,
+  .ag-platform .ag-entrance__title p,
+  .ag-platform .ag-entrance__body p,
+  .ag-platform .ag-flow__item p,
+  .ag-platform .ag-story__body > p:not(.ag-story__en),
+  .ag-platform .ag-salon__card p,
+  .ag-platform .ag-contact__copy p {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .ag-platform .ag-hero__lead,
+  .ag-platform .ag-hero__text,
+  .ag-platform .ag-entrance__title p,
+  .ag-platform .ag-entrance__body p,
+  .ag-platform .ag-flow__item p,
+  .ag-platform .ag-story__body > p:not(.ag-story__en),
+  .ag-platform .ag-salon__card p,
+  .ag-platform .ag-contact__copy p {
+    font-size: 16px !important;
+  }
+}
+
+/* ==========================================================
+   ENTRANCE 3 CARDS - EQUAL LAYOUT
+   SALON / COMPANY / PERSONAL
+   ========================================================== */
+
+.ag-platform .ag-entrance__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.ag-platform .ag-entrance__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.ag-platform .ag-entrance__body {
+  flex: 1;
+  width: 100%;
+}
+
+.ag-platform .ag-entrance__more {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 600px) {
+
+  .ag-platform .ag-entrance__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .ag-platform .ag-entrance__card {
+    min-width: 0;
+    height: 100%;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+
+  .ag-platform .ag-entrance__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  .ag-platform .ag-entrance__card {
+    padding: 18px 15px 18px;
+  }
+
+  .ag-platform .ag-entrance__head {
+    min-height: 100px;
+    margin-bottom: 18px;
+  }
+
+  .ag-platform .ag-entrance__body {
+    flex: 1;
+  }
+
+  .ag-platform .ag-entrance__more {
+    margin-top: auto;
+    padding-top: 22px;
+  }
+
+}
+
+/* ==========================================================
+   FOR SALON 5 CARDS - EQUAL LAYOUT FINAL
+   5項目を均等幅・均等高で配置
+   ========================================================== */
+
+.ag-platform .ag-salon__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 12px;
+}
+
+.ag-platform .ag-salon__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+/* 見出し位置を揃える */
+.ag-platform .ag-salon__card h3 {
+  width: 100%;
+}
+
+/* 本文エリアを均等に使用 */
+.ag-platform .ag-salon__card p {
+  width: 100%;
+  flex: 1;
+}
+
+/* SPでは5枚目を中央配置 */
+.ag-platform .ag-salon__card:last-child {
+  grid-column: 1 / -1;
+  width: calc(50% - 6px);
+  justify-self: center;
+}
+
+
+/* TABLET */
+@media screen and (min-width: 600px) and (max-width: 899px) {
+
+  .ag-platform .ag-salon__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .ag-platform .ag-salon__card:last-child {
+    grid-column: auto;
+    width: 100%;
+    justify-self: stretch;
+  }
+
+}
+
+
+/* PC */
+@media screen and (min-width: 900px) {
+
+  .ag-platform .ag-salon__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .ag-platform .ag-salon__card {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .ag-platform .ag-salon__card:last-child {
+    grid-column: auto;
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  /* アイコン位置を統一 */
+  .ag-platform .ag-salon__card img {
+    flex: 0 0 auto;
+  }
+
+  /* 2行タイトルを含め見出し領域の高さを統一 */
+  .ag-platform .ag-salon__card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 62px;
+  }
+
+}
+
