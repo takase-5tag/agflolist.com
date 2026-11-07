@@ -118,13 +118,34 @@ function agcm_is_mbff_product($post_id) {
     return false;
 }
 
+/**
+ * MBFF for Professional (ID 16) and child categories are sold at full
+ * Welcart SKU price. Keep trial-only SKUs under their existing trial rules.
+ */
+function agcm_is_mbff_professional_product($post_id) {
+    $post_id = (int)$post_id;
+    if ($post_id < 1) { return false; }
+    if (function_exists('agfl_trial_is_product') && agfl_trial_is_product($post_id)) { return false; }
+    $terms = wp_get_post_categories($post_id);
+    if (!is_array($terms) || is_wp_error($terms)) { return false; }
+    foreach ($terms as $term_id) {
+        $term_id = (int)$term_id;
+        if ($term_id === 16) { return true; }
+        $ancestors = get_ancestors($term_id, 'category', 'taxonomy');
+        if (is_array($ancestors) && in_array(16, array_map('intval', $ancestors), true)) { return true; }
+    }
+    return false;
+}
+
 /** Count TANSA units of all SKUs/products; never count MBFF or other product categories. */
 function agcm_tansa_cart_quantity() {
     $total = 0;
     if (empty($_SESSION['usces_cart']) || !is_array($_SESSION['usces_cart'])) { return 0; }
     foreach ($_SESSION['usces_cart'] as $serial => $row) {
         $item = agcm_serial_item((string)$serial);
-        if (!$item || !agcm_is_tansa_product($item[0])) { continue; }
+        // The special 6-unit case (post 207) neither receives a tier discount
+        // nor pushes other TANSA products into a cheaper quantity bracket.
+        if (!$item || (int)$item[0] === 207 || !agcm_is_tansa_product($item[0])) { continue; }
         $total += max(0, (int)($row['quant'] ?? 0));
     }
     return $total;
@@ -139,8 +160,9 @@ function agcm_member_price($post_id, $sku, $standard) {
     $kind = agcm_current_member_type();
     // Compute once from the original Welcart SKU selling price. Never compound
     // a previous QR/company rate, fixed TANSA tier, or cart discount.
-    if (($kind === 'company' || $kind === 'fixed') && agcm_is_mbff_product((int)$post_id)) {
-        return floor($base * 70 / 100);
+    if ($kind === 'company' || $kind === 'fixed') {
+        $locked_rate = agcm_locked_sale_rate((int)$post_id);
+        if ($locked_rate !== null) { return floor($base * $locked_rate / 100.0); }
     }
     if ($kind === 'company') {
         return agcm_price(agcm_current_company_id(), (int)$post_id, (string)$sku, $base);
@@ -171,14 +193,14 @@ function agcm_fixed_member_admin() {
     if (!current_user_can(AGCM_MANAGE_CAP)) { wp_die('操作権限がありません。'); }
     ?>
     <div class="wrap"><h1>固定URL会員登録</h1>
-      <p>このURLから登録した固定会員は、TANSA数量別掛け率に加え、MBFF 3カテゴリー（ID 5・15・16）を一律70％で購入できます。</p>
+      <p>このURLから登録した固定会員は、TANSA数量別掛け率（商品ID 207は通常売価）、MBFF（ID 5・15）は70％、MBFF for Professional（ID 16）は100％で購入できます。</p>
       <label for="agcm-fixed-url"><strong>固定会員登録URL</strong></label><br>
       <input id="agcm-fixed-url" class="large-text code" type="text" readonly onclick="this.select()" value="<?php echo esc_attr(agcm_fixed_registration_url()); ?>">
       <p class="description">この登録URLを知っている人は登録できます。公開範囲にご注意ください。</p>
       <h2>TANSA商品のみ・合算数量別掛け率</h2>
-      <table class="widefat striped" style="max-width:720px"><thead><tr><th>カート内TANSA個数</th><th>販売掛け率</th></tr></thead>
+      <table class="widefat striped" style="max-width:720px"><thead><tr><th>カート内の割引対象TANSA数量</th><th>販売掛け率</th></tr></thead>
         <tbody><tr><td>1〜5個</td><td>65%（35%引き）</td></tr><tr><td>6〜11個</td><td>55%（45%引き）</td></tr><tr><td>12個以上</td><td>50%（50%引き）</td></tr></tbody></table>
-      <p>MBFF（カテゴリーID 5・15・16）は通常売価の70％（数量を問わず固定）。TANSAは従来の数量段階別掛け率、その他は通常売価です。</p>
+      <p>MBFF（カテゴリーID 5・15）は通常売価の70％、MBFF for Professional（カテゴリーID 16）は100％。TANSAは従来の数量段階別掛け率ですが、TANSA_FREUV 1ケース6個入り（商品ID 207）は売価100％で、数量別掛け率の計算対象数量からも除外します。</p>
       <?php if (function_exists('agcm_render_member_directory')) : ?>
         <div class="agcm-fixed-roster">
           <?php agcm_render_member_directory('fixed', false); ?>

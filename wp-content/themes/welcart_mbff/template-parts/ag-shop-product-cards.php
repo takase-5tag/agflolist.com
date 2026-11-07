@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
   $ag_tansa = function_exists('agcm_is_tansa_product')
     ? agcm_is_tansa_product($ag_post_id)
     : has_category('tansa_cate', $ag_post_id);
-  $ag_show_tiers = (!$ag_is_trial && $ag_member_type === 'fixed' && $ag_tansa);
+  $ag_show_tiers = (!$ag_is_trial && $ag_member_type === 'fixed' && $ag_tansa && $ag_post_id !== 207);
 
   $ag_subtitle = function_exists('get_field') ? get_field('sub_title', $ag_post_id) : '';
   $ag_intro = function_exists('get_field') ? get_field('line_text', $ag_post_id) : '';
@@ -89,8 +89,10 @@ if (!defined('ABSPATH')) {
             </div>
             <p class="ag-list-tiers__note">掛け率はカート内のTANSA合計数量で変わります。＋・－操作後に全対象商品の価格が更新されます。</p>
           </div>
+        <?php elseif ($ag_post_id === 207 && in_array($ag_member_type, array('company', 'fixed'), true)) : ?>
+          <p class="ag-list-product__member-note">こちらの商品は数量にかかわらず通常販売価格でのご案内です。</p>
         <?php elseif ($ag_member_type === 'company') : ?>
-          <p class="ag-list-product__member-note">企業ごとに設定された契約価格を表示しています。</p>
+          <p class="ag-list-product__member-note">会員契約に基づく販売価格を表示しています。</p>
         <?php endif; ?>
 
         <?php if ($ag_sku_count > 0 && function_exists('usces_have_skus')) : ?>
@@ -144,7 +146,7 @@ if (!defined('ABSPATH')) {
                       $ag_existing_qty = function_exists('agfl_step_find_row') ? agfl_step_find_row($ag_post_id, $ag_sku)[1] : 0;
                     ?>
                       <div class="ag-stepper" data-post-id="<?php echo (int)$ag_post_id; ?>"
-                        data-sku="<?php echo esc_attr($ag_sku); ?>" data-tansa="<?php echo $ag_tansa ? '1' : '0'; ?>">
+                        data-sku="<?php echo esc_attr($ag_sku); ?>" data-tansa="<?php echo ($ag_tansa && $ag_post_id !== 207) ? '1' : '0'; ?>">
                         <span class="ag-stepper__label">カート数量</span>
                         <div class="ag-stepper__controls" role="group" aria-label="<?php echo esc_attr(get_the_title($ag_post_id)); ?> の数量変更">
                           <button type="button" data-stepper-op="minus" aria-label="1点減らす" <?php disabled($ag_existing_qty < 1); ?>>−</button>
